@@ -39,14 +39,4 @@ function Button({
   );
 }
 
-// Button.propTypes = {
-//   children: PropTypes.node.isRequired,
-//   href: PropTypes.string,
-//   primary: PropTypes.bool,
-//   rounded: PropTypes.bool,
-//   outlined: PropTypes.bool,
-//   disabled: PropTypes.bool,
-//   loading: PropTypes.bool,
-//   className: PropTypes.string,
-// };
 export default Button;
