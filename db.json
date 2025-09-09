@@ -1,0 +1,453 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Đồ Nam",
+      "slug": "do-nam",
+      "type": "main",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Đồ Nữ",
+      "slug": "do-nu",
+      "type": "main",
+      "order": 2
+    }
+  ],
+  "subcategories": [
+    {
+      "id": 1,
+      "categoryId": 1,
+      "name": "Áo nam",
+      "slug": "ao-nam",
+      "order": 1
+    },
+    {
+      "id": 2,
+      "categoryId": 1,
+      "name": "Quần nam",
+      "slug": "quan-nam",
+      "order": 2
+    },
+    {
+      "id": 3,
+      "categoryId": 1,
+      "name": "Phụ kiện nam",
+      "slug": "phu-kien-nam",
+      "order": 3
+    },
+    {
+      "id": 4,
+      "categoryId": 1,
+      "name": "Đồ lót",
+      "slug": "do-lot-nam",
+      "order": 4
+    },
+    {
+      "id": 5,
+      "categoryId": 1,
+      "name": "Đồ bơi",
+      "slug": "do-boi-nam",
+      "order": 5
+    },
+    {
+      "id": 6,
+      "categoryId": 2,
+      "name": "Áo nữ",
+      "slug": "ao-nu",
+      "order": 1
+    },
+    {
+      "id": 7,
+      "categoryId": 2,
+      "name": "Quần nữ",
+      "slug": "quan-nu",
+      "order": 2
+    },
+    {
+      "id": 8,
+      "categoryId": 2,
+      "name": "Phụ kiện nữ",
+      "slug": "phu-kien-nu",
+      "order": 3
+    },
+    {
+      "id": 9,
+      "categoryId": 2,
+      "name": "Đồ lót",
+      "slug": "do-lot-nu",
+      "order": 4
+    },
+    {
+      "id": 10,
+      "categoryId": 2,
+      "name": "Đồ bơi",
+      "slug": "do-boi-nu",
+      "order": 5
+    }
+  ],
+  "productTypes": [
+    {
+      "id": 1,
+      "subcategoryId": 1,
+      "name": "Áo thun",
+      "slug": "ao-thun-nam"
+    },
+    {
+      "id": 2,
+      "subcategoryId": 1,
+      "name": "Áo polo",
+      "slug": "ao-polo-nam"
+    },
+    {
+      "id": 3,
+      "subcategoryId": 1,
+      "name": "Áo blazer",
+      "slug": "ao-blazer-nam"
+    },
+    {
+      "id": 4,
+      "subcategoryId": 1,
+      "name": "Áo sơ mi",
+      "slug": "ao-so-mi-nam"
+    },
+    {
+      "id": 5,
+      "subcategoryId": 1,
+      "name": "Áo khoác",
+      "slug": "ao-khoac-nam"
+    },
+    {
+      "id": 6,
+      "subcategoryId": 1,
+      "name": "Áo len",
+      "slug": "ao-len-nam"
+    },
+    {
+      "id": 7,
+      "subcategoryId": 1,
+      "name": "Áo nỉ",
+      "slug": "ao-ni-nam"
+    },
+    {
+      "id": 8,
+      "subcategoryId": 2,
+      "name": "Quần short",
+      "slug": "quan-short-nam"
+    },
+    {
+      "id": 9,
+      "subcategoryId": 2,
+      "name": "Jeans",
+      "slug": "jeans-nam"
+    },
+    {
+      "id": 10,
+      "subcategoryId": 2,
+      "name": "Quần Âu",
+      "slug": "quan-au-nam"
+    },
+    {
+      "id": 11,
+      "subcategoryId": 2,
+      "name": "Dài kaki",
+      "slug": "quan-kaki-nam"
+    },
+    {
+      "id": 12,
+      "subcategoryId": 2,
+      "name": "Quần nỉ",
+      "slug": "quan-ni-nam"
+    },
+    {
+      "id": 13,
+      "subcategoryId": 6,
+      "name": "Áo thun",
+      "slug": "ao-thun-nu"
+    },
+    {
+      "id": 14,
+      "subcategoryId": 6,
+      "name": "Áo polo",
+      "slug": "ao-polo-nu"
+    },
+    {
+      "id": 15,
+      "subcategoryId": 6,
+      "name": "Váy",
+      "slug": "vay"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "sku": "ATN001",
+      "name": "Áo thun nam cotton premium",
+      "slug": "ao-thun-nam-cotton-premium",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 1,
+      "price": 299000,
+      "salePrice": 249000,
+      "discount": 17,
+      "description": "Áo thun nam chất liệu cotton 100% cao cấp, thoáng mát, thấm hút mồ hôi tốt. Form dáng regular fit thoải mái.",
+      "shortDescription": "Áo thun cotton premium, form regular fit",
+      "images": [
+        "/assets/ao_thun_sss.webp",
+        "/assets/ao_thun_sss.webp",
+        "/assets/ao_thun_sss.webp"
+      ],
+      "colors": [
+        {
+          "name": "Trắng",
+          "hex": "#FFFFFF",
+          "image": "/images/products/atn001-white.jpg"
+        },
+        {
+          "name": "Đen",
+          "hex": "#000000",
+          "image": "/images/products/atn001-black.jpg"
+        },
+        {
+          "name": "Xanh navy",
+          "hex": "#000080",
+          "image": "/images/products/atn001-navy.jpg"
+        }
+      ],
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 15
+        },
+        {
+          "size": "M",
+          "stock": 20
+        },
+        {
+          "size": "L",
+          "stock": 25
+        },
+        {
+          "size": "XL",
+          "stock": 10
+        }
+      ],
+      "status": "in-stock",
+      "tags": ["best-seller", "new-arrival"],
+      "rating": 4.5,
+      "reviewCount": 128,
+      "soldCount": 456,
+      "viewCount": 2340,
+      "createdAt": "2024-01-15T08:00:00Z",
+      "updatedAt": "2024-01-20T10:30:00Z"
+    },
+    {
+      "id": 2,
+      "sku": "APN001",
+      "name": "Áo polo nam phối viền",
+      "slug": "ao-polo-nam-phoi-vien",
+      "categoryId": 1,
+      "subcategoryId": 1,
+      "productTypeId": 2,
+      "price": 399000,
+      "salePrice": 359000,
+      "discount": 10,
+      "description": "Áo polo nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
+      "shortDescription": "Áo polo phối viền, form slim fit",
+      "images": [
+        "/assets/ao_thun_tay_xanh_sss.webp",
+        "/assets/ao_thun_tay_xanh_sss.webp"
+      ],
+      "colors": [
+        {
+          "name": "Xanh dương",
+          "hex": "#0000FF",
+          "image": "/images/products/apn001-blue.jpg"
+        },
+        {
+          "name": "Đỏ",
+          "hex": "#FF0000",
+          "image": "/images/products/apn001-red.jpg"
+        }
+      ],
+      "sizes": [
+        {
+          "size": "M",
+          "stock": 12
+        },
+        {
+          "size": "L",
+          "stock": 8
+        },
+        {
+          "size": "XL",
+          "stock": 5
+        }
+      ],
+      "status": "in-stock",
+      "tags": ["sale"],
+      "rating": 4.3,
+      "reviewCount": 67,
+      "soldCount": 234,
+      "viewCount": 1456,
+      "createdAt": "2024-01-10T08:00:00Z",
+      "updatedAt": "2024-01-18T14:20:00Z"
+    },
+    {
+      "id": 3,
+      "sku": "VNU001",
+      "name": "Váy suông nữ họa tiết hoa",
+      "slug": "vay-suong-nu-hoa-tiet-hoa",
+      "categoryId": 2,
+      "subcategoryId": 6,
+      "productTypeId": 15,
+      "price": 599000,
+      "salePrice": null,
+      "discount": 0,
+      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
+      "shortDescription": "Váy suông họa tiết hoa, chất voan",
+      "images": [
+        "/assets/so_mi_nam.webp",
+        "/assets/so_mi_nam.webp",
+        "/assets/so_mi_nam.webp"
+      ],
+      "colors": [
+        {
+          "name": "Hồng pastel",
+          "hex": "#FFB6C1",
+          "image": "/images/products/vnu001-pink.jpg"
+        },
+        {
+          "name": "Xanh mint",
+          "hex": "#98FF98",
+          "image": "/images/products/vnu001-mint.jpg"
+        }
+      ],
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 7
+        },
+        {
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size": "L",
+          "stock": 5
+        }
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "createdAt": "2024-01-25T08:00:00Z",
+      "updatedAt": "2024-01-25T08:00:00Z"
+    }
+  ],
+  "banners": [
+    {
+      "id": 1,
+      "title": "Bộ sưu tập Xuân Hè 2024",
+      "subtitle": "Khám phá xu hướng mới nhất",
+      "image": "/images/banners/spring-summer-2024.jpg",
+      "link": "/collections/spring-summer-2024",
+      "type": "seasonal",
+      "position": "home-hero",
+      "order": 1,
+      "active": true
+    },
+    {
+      "id": 2,
+      "title": "Sale up to 50%",
+      "subtitle": "Hàng nghìn sản phẩm giảm giá",
+      "image": "/images/banners/sale-50.jpg",
+      "link": "/sale",
+      "type": "promotion",
+      "position": "home-hero",
+      "order": 2,
+      "active": true
+    },
+    {
+      "id": 3,
+      "title": "Phụ kiện & Nước hoa",
+      "subtitle": "Hoàn thiện phong cách của bạn",
+      "image": "/images/banners/accessories.jpg",
+      "link": "/collections/accessories",
+      "type": "collection",
+      "position": "home-secondary",
+      "order": 1,
+      "active": true
+    }
+  ],
+  "collections": [
+    {
+      "id": 1,
+      "name": "Best Sellers",
+      "slug": "best-sellers",
+      "description": "Những sản phẩm bán chạy nhất",
+      "image": "/assets/best_seller_banner.jpg",
+      "productIds": [1, 3],
+      "featured": true,
+      "order": 1
+    },
+    {
+      "id": 2,
+      "name": "Hàng mới về",
+      "slug": "new-arrivals",
+      "description": "Sản phẩm mới nhất trong tuần",
+      "image": "/assets/best_seller_banner.jpg",
+      "productIds": [3],
+      "featured": true,
+      "order": 2
+    },
+    {
+      "id": 3,
+      "name": "Sale",
+      "slug": "sale",
+      "description": "Ưu đãi hấp dẫn",
+      "image": "/assets/best_seller_banner.jpg",
+      "productIds": [1, 2],
+      "featured": true,
+      "order": 3
+    },
+    {
+      "id": 4,
+      "name": "Xuân Hè 2024",
+      "slug": "spring-summer-2024",
+      "description": "Bộ sưu tập mùa xuân hè",
+      "image": "/assets/best_seller_banner.jpg",
+      "productIds": [1, 2, 3],
+      "featured": false,
+      "order": 4
+    }
+  ],
+  "outfitSuggestions": [
+    {
+      "id": 1,
+      "name": "Phong cách công sở",
+      "description": "Lịch lãm và chuyên nghiệp cho ngày làm việc",
+      "image": "/images/outfits/office-style.jpg",
+      "productIds": [1, 2],
+      "tags": ["office", "formal"],
+      "dayOfWeek": "monday"
+    },
+    {
+      "id": 2,
+      "name": "Dạo phố cuối tuần",
+      "description": "Thoải mái và năng động",
+      "image": "/images/outfits/weekend-casual.jpg",
+      "productIds": [1, 3],
+      "tags": ["casual", "weekend"],
+      "dayOfWeek": "saturday"
+    }
+  ]
+  
+  
+ 
+  
+  
+}

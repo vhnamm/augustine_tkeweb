@@ -1,16 +1,15 @@
-import React from 'react';
-import classNames from 'classnames/bind';
-import styles from './Home.module.scss';
-import Button from '~/components/UI/Button/Button';
-import Card from '~/components/UI/Card/Card';
-import HomeProducts from '~/components/Components/HomeProducts/HomeProducts';
-const cx = classNames.bind(styles);
+import React from "react";
+import clsx from "clsx";
+import styles from "./Home.module.scss";
+
+import HomeProducts from "./components/HomeProducts/HomeProducts";
+
 const Home = () => {
-   return (
-      <div className={cx('body_container')}>
-         <HomeProducts />
-      </div>
-   );
+  return (
+    <div className={clsx(styles.body_container)}>
+      <HomeProducts />
+    </div>
+  );
 };
 
 export default Home;
