@@ -4,6 +4,8 @@ import Card from "~/components/UI/Card/Card";
 
 import styles from "./HomeCollectionsBlock.module.scss";
 import Button from "~/components/UI/Button/Button";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 const HomeCollectionsBlock = ({ products, collection }) => {
   return (
@@ -22,12 +24,18 @@ const HomeCollectionsBlock = ({ products, collection }) => {
               <div className={clsx("col", "lg-3", styles["home-item"])}>
                 <Card key={product.id} className={clsx(styles.item_in_col)}>
                   <div className={clsx(styles["collection_item-img"])}>
-                    <img src={product.images[0]} alt={product.name} />
+                    <img
+                      src={product.images[0]}
+                      alt={product.name}
+                      loading="lazy"
+                    />
                   </div>
-                  <h4 className={clsx(styles["collection_item-price"])}>
-                    {product.price}
-                  </h4>
-                  <h4>{product.name}</h4>
+                  <div className={clsx(styles.name_price_wrap)}>
+                    <h4 className={clsx(styles["collection_item-price"])}>
+                      {product.price}
+                    </h4>
+                    <h4>{product.name}</h4>
+                  </div>
                 </Card>
               </div>
             );
@@ -35,8 +43,8 @@ const HomeCollectionsBlock = ({ products, collection }) => {
         </div>
       </div>
 
-      <Button outline className={clsx(styles.more_btn)}>
-        Xem tất cả
+      <Button outlined rounded size="large" className={clsx(styles.more_btn)}>
+        Shop now <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </div>
   );
