@@ -6,22 +6,23 @@ import styles from "./HomeCollectionsBlock.module.scss";
 import Button from "~/components/UI/Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 const HomeCollectionsBlock = ({ products, collection }) => {
   return (
     <div className={clsx(styles.collection_wrap)}>
-      <div className={clsx(styles.collection_banner)}>
+      <Link to={`collection/${collection.slug}`} className={clsx(styles.collection_banner)}>
         <img src={collection.image} alt="banner" />
         <h2 className={clsx(styles["collection_banner-title"])}>
           {collection.description}
         </h2>
-      </div>
+      </Link>
 
       <div className={clsx("grid", "wide", styles.collection_item_wrap)}>
         <div className={clsx("row", styles["item-row"], "small-gutter")}>
           {products.map((product) => {
             return (
-              <div className={clsx("col", "lg-3", styles["home-item"])}>
+              <Link to={`/product/${product.slug}`} className={clsx("col", "lg-3", styles["home-item"])}>
                 <Card key={product.id} className={clsx(styles.item_in_col)}>
                   <div className={clsx(styles["collection_item-img"])}>
                     <img
@@ -48,13 +49,13 @@ const HomeCollectionsBlock = ({ products, collection }) => {
                     </div>
                   </div>
                 </Card>
-              </div>
+              </Link>
             );
           })}
         </div>
       </div>
 
-      <Button outlined rounded size="large" className={clsx(styles.more_btn)}>
+      <Button to={`collection/${collection.slug}/products`} outlined rounded size="large" className={clsx(styles.more_btn)}>
         Shop now <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </div>
