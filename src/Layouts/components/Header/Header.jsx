@@ -8,6 +8,7 @@ import SearchForm from "../Search/SearchForm";
 import Menu from "../Menu/Menu";
 import Collections from "../Collections/Collections";
 import CartHeader from "../CartHeader/CartHeader";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   // kết quả tìm kieemms khi call api:
@@ -18,7 +19,7 @@ const Header = () => {
       <div className={clsx(styles.header_wrap, "grid", "wide")}>
         <div className={clsx(styles.header_left_wrap)}>
           <div className={clsx(styles.logo)}>
-            <h2>augustine</h2>
+            <Link to="/" className={styles.name_web}>augustine</Link>
           </div>
 
           <Menu />

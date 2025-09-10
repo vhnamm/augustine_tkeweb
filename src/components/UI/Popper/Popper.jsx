@@ -1,8 +1,8 @@
 import React from "react";
 import clsx from "clsx";
 import styles from "./Popper.module.scss";
-const Popper = ({ children, className }) => {
-  return <div className={clsx(styles.popper, className)}>{children}</div>;
+const Popper = ({ children, className, hide=false}) => {
+  return <div className={clsx(styles.wrapper, className, hide? "hide" : "")}>{children}</div>;
 };
 
 export default Popper;

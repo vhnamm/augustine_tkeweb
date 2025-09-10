@@ -9,10 +9,14 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 import Button from "~/components/UI/Button/Button";
+//import { useNavigate } from "react-router-dom";
 
 const SearchForm = () => {
+ function handleSearch(e){
+  e.preventDefault()
+ }
   return (
-    <div className={clsx(styles.search_wrapper)}>
+    <form onSubmit={(e) => handleSearch(e)} className={clsx(styles.search_wrapper)}>
       <input
         type="text"
         placeholder="Tìm kiếm sản phẩm..."
@@ -29,7 +33,7 @@ const SearchForm = () => {
       <Button className={clsx(styles["search-btn"])}>
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </Button>
-    </div>
+    </form>
   );
 };
 

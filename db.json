@@ -3,14 +3,14 @@
     {
       "id": 1,
       "name": "Đồ Nam",
-      "slug": "do-nam",
+      "slug": "for-him",
       "type": "main",
       "order": 1
     },
     {
       "id": 2,
       "name": "Đồ Nữ",
-      "slug": "do-nu",
+      "slug": "for-her",
       "type": "main",
       "order": 2
     }
