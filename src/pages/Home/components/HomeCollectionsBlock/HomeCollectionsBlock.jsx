@@ -5,7 +5,7 @@ import Card from "~/components/UI/Card/Card";
 import styles from "./HomeCollectionsBlock.module.scss";
 import Button from "~/components/UI/Button/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight, faStar } from "@fortawesome/free-solid-svg-icons";
 
 const HomeCollectionsBlock = ({ products, collection }) => {
   return (
@@ -31,10 +31,21 @@ const HomeCollectionsBlock = ({ products, collection }) => {
                     />
                   </div>
                   <div className={clsx(styles.name_price_wrap)}>
+                    <h4 className={clsx(styles.item_name)}>{product.name}</h4>
                     <h4 className={clsx(styles["collection_item-price"])}>
-                      {product.price}
+                      {product.price + "đ"}
                     </h4>
-                    <h4>{product.name}</h4>
+                    
+                  </div>
+
+                  <div className={clsx(styles.item_bottom)}>
+                    <h4 className={clsx(styles.sold)}>Sold {product.soldCount}</h4>
+
+                    <div className={clsx(styles.rating)}>
+                      
+                      <span>{product.rating}/5</span>
+                      <FontAwesomeIcon className={clsx(styles.star)} icon={faStar} />
+                    </div>
                   </div>
                 </Card>
               </div>

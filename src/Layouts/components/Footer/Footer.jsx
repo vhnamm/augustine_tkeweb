@@ -18,7 +18,7 @@ const Footer = () => {
             Get exclusive updates on the collection's launch, personalised
             communication and our latest news.
           </h4>
-          <input type="text" placeholder="Your Email" />
+          <input type="text" placeholder="Your Email" className={clsx(styles.email_frm)}/>
         </div>
 
         <div className={clsx(styles.about_wrap, "row")}>

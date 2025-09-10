@@ -5,7 +5,9 @@ import styles from "./Collection.module.scss";
 const Collection = () => {
   return (
     <div className={clsx(styles.wrapper)}>
-      <Button primary>Clickme</Button>
+      <h1 style={{color : "#fff",
+        margin: "600px"
+      }}>Đây là trang  giới thiệu các bộ sưu tập</h1>
     </div>
   );
 };

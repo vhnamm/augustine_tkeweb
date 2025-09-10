@@ -71,3 +71,37 @@
   height: 90%;
   margin: 0 auto;
 }
+
+.name_price_wrap {
+  color: var(--text);
+  font-size: 1.6rem;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin: 12px 0;
+
+  .collection_item-price {
+    font-weight: 400;
+  }
+  .item_name {
+    font-weight: 600;
+  }
+}
+
+.item_bottom {
+  color: var(--text);
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.4rem;
+
+  .sold {
+    font-weight: 400;
+  }
+}
+
+.rating {
+  .star {
+    margin-left: 6px;
+    color: #fcdc08;
+  }
+}

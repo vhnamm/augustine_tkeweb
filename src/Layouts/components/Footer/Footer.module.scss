@@ -5,8 +5,12 @@
 }
 
 .update_wrap {
-  text-align: center;
   padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+
+  align-items: center;
   h3 {
     font-size: 2.2rem;
     color: #fff;
@@ -63,5 +67,16 @@
     font-family: "IM FELL DW Pica";
     font-style: italic;
     letter-spacing: 40px;
+  }
+}
+
+.email_frm {
+  background-color: transparent;
+  color: #fff;
+  width: 260px;
+  margin-top: 26px;
+  border-bottom: 1px solid #fff;
+  &::placeholder {
+    color: #fff;
   }
 }
