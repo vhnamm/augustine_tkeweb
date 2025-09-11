@@ -6,7 +6,7 @@ const HomeProducts = () => {
   const [products, setProducts] = useState([]);
   const [collections, setCollections] = useState([]);
 
-  console.log("123");
+  
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -37,15 +37,17 @@ const HomeProducts = () => {
     fetchCollection();
   }, []);
 
+  console.log(products)
   return (
     <>
       {collections.map((collection) => {
         const productsWithCollection = products.filter((product) => {
-          return collection.productIds.includes(product.id);
+          return collection.productIds.includes(Number(product.id));
         });
-        console.log(productsWithCollection);
+        console.log(productsWithCollection)
         return (
           <HomeCollectionsBlock
+            key={collection.id}
             products={productsWithCollection}
             collection={collection}
           />
