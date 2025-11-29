@@ -7,7 +7,7 @@ import {
   faMagnifyingGlass,
   faSpinner,
 } from "@fortawesome/free-solid-svg-icons";
-
+import Modal from "../../../components/UI/Modal/Modal";
 import Button from "~/components/UI/Button/Button";
 import { useNavigate } from "react-router-dom";
 
@@ -27,7 +27,9 @@ const SearchForm = () => {
     setKeyword(e.target.value)
  }
   return (
-    <form onSubmit={(e) => handleSearch(e)} className={clsx(styles.search_wrapper)}>
+    <>
+    {/* <Modal/> */}
+      <form onSubmit={(e) => handleSearch(e)} className={clsx(styles.search_wrapper)}>
       <input
         type="text"
         placeholder="Tìm kiếm sản phẩm..."
@@ -47,6 +49,7 @@ const SearchForm = () => {
         <FontAwesomeIcon icon={faMagnifyingGlass} />
       </Button>
     </form>
+    </>
   );
 };
 
