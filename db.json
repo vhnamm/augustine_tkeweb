@@ -308,7 +308,113 @@
       "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
       "shortDescription": "Váy suông họa tiết hoa, chất voan",
       "images": [
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
         "/assets/so_mi_nam.webp",
+        "/assets/so_mi_nam.webp"
+      ],
+      "colors": [
+        {
+          "name": "Hồng pastel",
+          "hex": "#FFB6C1",
+          "image": "/images/products/vnu001-pink.jpg"
+        },
+        {
+          "name": "Xanh mint",
+          "hex": "#98FF98",
+          "image": "/images/products/vnu001-mint.jpg"
+        }
+      ],
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 7
+        },
+        {
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size": "L",
+          "stock": 5
+        }
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "createdAt": "2024-01-25T08:00:00Z",
+      "updatedAt": "2024-01-25T08:00:00Z"
+    },
+        {
+      "id": 3,
+      "sku": "VNU001",
+      "name": "Váy suông nữ họa tiết hoa",
+      "slug": "vay-suong-nu-hoa-tiet-hoa",
+      "categoryId": 2,
+      "subcategoryId": 6,
+      "productTypeId": 15,
+      "price": 599000,
+      "salePrice": null,
+      "discount": 0,
+      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
+      "shortDescription": "Váy suông họa tiết hoa, chất voan",
+      "images": [
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+        "/assets/so_mi_nam.webp",
+        "/assets/so_mi_nam.webp"
+      ],
+      "colors": [
+        {
+          "name": "Hồng pastel",
+          "hex": "#FFB6C1",
+          "image": "/images/products/vnu001-pink.jpg"
+        },
+        {
+          "name": "Xanh mint",
+          "hex": "#98FF98",
+          "image": "/images/products/vnu001-mint.jpg"
+        }
+      ],
+      "sizes": [
+        {
+          "size": "S",
+          "stock": 7
+        },
+        {
+          "size": "M",
+          "stock": 10
+        },
+        {
+          "size": "L",
+          "stock": 5
+        }
+      ],
+      "status": "in-stock",
+      "tags": ["new-arrival", "best-seller"],
+      "rating": 4.7,
+      "reviewCount": 89,
+      "soldCount": 178,
+      "viewCount": 2890,
+      "createdAt": "2024-01-25T08:00:00Z",
+      "updatedAt": "2024-01-25T08:00:00Z"
+    },
+        {
+      "id": 3,
+      "sku": "VNU001",
+      "name": "Váy suông nữ họa tiết hoa",
+      "slug": "vay-suong-nu-hoa-tiet-hoa",
+      "categoryId": 2,
+      "subcategoryId": 6,
+      "productTypeId": 15,
+      "price": 599000,
+      "salePrice": null,
+      "discount": 0,
+      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
+      "shortDescription": "Váy suông họa tiết hoa, chất voan",
+      "images": [
+        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
         "/assets/so_mi_nam.webp",
         "/assets/so_mi_nam.webp"
       ],
