@@ -40,23 +40,32 @@ const SearchForm = () => {
     }
  }
 
- //fetch api search
+//fetch api search
  useEffect(() => {
   if (!keyword.trim()) {
     setSearchResult([]);
     return;
   }
   const timeID = setTimeout(async () => {
-    const seperatedKeywords = keyword.trim().split(/\s+/).filter(Boolean).map(key => `name_like=${encodeURIComponent(key)}`).join('&');
+      const serperatedKeywords = keyword.trim().split(/\s+/);
+      const queryString = serperatedKeywords
+        .map((word) => `name_like=${word}`)
+        .join("&");
+      try {
 
-    try {
-      const rawRes = await fetch(`http://localhost:3000/products?${seperatedKeywords}`)
-      const res = await rawRes.json()
-      setSearchResult(res)
-      console.log(res)
-    } catch (error) {
-      console.log(error)
-    }
+        const rawRes = await fetch(`http://localhost:3000/products?${queryString}`)
+        const res = await rawRes.json()
+
+        const filteredData = res.filter((prod) => {
+          return serperatedKeywords.every((word) =>
+            prod.name.toLowerCase().includes(word.toLowerCase())
+          );
+        });
+
+        setSearchResult(filteredData);
+      } catch (error) {
+        console.log(error);
+      }
   }, 600) 
 
  return () => clearTimeout(timeID)
@@ -75,7 +84,7 @@ useEffect(() => {
     <>
     {showModal && (
       <Modal className={clsx(styles.search_suggest_wrap , {[styles.animate] : animate})}>
-        <div>
+        <div className={styles.modal_header}>
           <h4 className={styles.txtKetqua}>Search result</h4>
           <h3>Xem tất cả</h3>
         </div>
@@ -87,8 +96,8 @@ useEffect(() => {
                 return(
 
                     <div className={clsx("col", "lg-2-5")}>
-                      <div className={styles["card-item"]}>
-                        <Link to="/product/ao-phong" className={styles.item_link}>
+                      <div className={styles["card-item"]} key={prod.id}>
+                        <Link to="/product/ao-phong" className={styles.item_link} onClick={() => setShowModal(false)}>
                           <div className={styles.item_img}>
                             <img src={prod.images[0]} alt="ảnh" />
                           </div>
