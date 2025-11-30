@@ -40,9 +40,6 @@
 }
 .option_item {
   font-size: 1.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &:hover {
     background-color: #ccc;
@@ -51,7 +48,9 @@
 
 .link {
   padding: 12px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   color: var(--primary);
 }
 

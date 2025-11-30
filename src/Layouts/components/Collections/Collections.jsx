@@ -32,11 +32,9 @@ const Collections = () => {
               <li className={clsx(styles.option_item)}>
                 <Link className={clsx(styles.link)} to={`collection/${collection.slug}`}>
                   {collection.name}
-                </Link>
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={faChevronRight}
-                />
+
+                  <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
+                </Link>               
               </li>
             );
           })}
