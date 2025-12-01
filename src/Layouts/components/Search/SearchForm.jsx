@@ -94,7 +94,7 @@ useEffect(() => {
               searchResult.map((prod) => {
 
                 return(
-
+                  
                     <div className={clsx("col", "lg-2-5")}>
                       <div className={styles["card-item"]} key={prod.id}>
                         <Link to="/product/ao-phong" className={styles.item_link} onClick={() => setShowModal(false)}>
@@ -102,6 +102,7 @@ useEffect(() => {
                             <img src={prod.images[0]} alt="ảnh" />
                           </div>
                         </Link>
+
                         <div className={styles.name_price_wrap}>
                           <h4>{prod.name}</h4>
                           <h4>{prod.price}</h4>

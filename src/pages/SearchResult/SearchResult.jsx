@@ -32,7 +32,7 @@ const SearchResult = () => {
   }
 
   fetchSearchResults();
-}, [])
+}, [keyword])
 
   return (
     <div className={clsx(styles.wrapper)}>
@@ -57,6 +57,7 @@ const SearchResult = () => {
                       <span className={styles.sold}>Sold {prod.soldCount}</span>
                       <span className={styles.rating}>Rating: {prod.rating}/5</span>
                     </div>
+
                   </div>
                 </div>
               </div>
