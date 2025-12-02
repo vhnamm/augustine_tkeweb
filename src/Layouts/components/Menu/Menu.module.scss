@@ -42,9 +42,6 @@
 .option_nam,
 .option_nu {
   font-size: 1.8rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 
   &:hover {
     background-color: #ccc;
@@ -53,12 +50,12 @@
 
 .link {
   padding: 12px;
-  display: block;
+  display: flex;
+  justify-content: space-between;
   color: var(--primary);
 }
 
 .icon {
-  margin-right: 12px;
   color: #666;
   font-weight: lighter;
 }

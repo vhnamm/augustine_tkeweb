@@ -14,6 +14,7 @@ const Collections = () => {
         const rawRes = await fetch("http://localhost:3000/collections");
         const res = await rawRes.json();
         setCollections(res);
+        console.log(res);
       } catch (err) {
         console.log(err);
       }
@@ -29,14 +30,12 @@ const Collections = () => {
         <ul className={clsx(styles.collections_options)}>
           {collections.map((collection) => {
             return (
-              <li className={clsx(styles.option_item)}>
+              <li className={clsx(styles.option_item)} key={collection.id}>
                 <Link className={clsx(styles.link)} to={`collection/${collection.slug}`}>
                   {collection.name}
-                </Link>
-                <FontAwesomeIcon
-                  className={styles.icon}
-                  icon={faChevronRight}
-                />
+
+                  <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
+                </Link>               
               </li>
             );
           })}
