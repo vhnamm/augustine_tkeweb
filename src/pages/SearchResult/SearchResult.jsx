@@ -38,7 +38,7 @@ const SearchResult = () => {
     <div className={clsx(styles.wrapper)}>
       <h2>Kết quả tìm kiếm cho: {keyword} <span>{searchResults.length} sản phẩm</span></h2>
       <div className={clsx("grid wide")}>
-        <div className={clsx("row", "small-gutter")}>
+        <div className={clsx("row")}>
           {searchResults.map(prod => {
             return (
               <div className={clsx("col", "lg-3")} key={prod.id}>

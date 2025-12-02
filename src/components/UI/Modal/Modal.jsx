@@ -2,8 +2,8 @@ import React from 'react';
 import ReactDOM from 'react-dom'
 import styles from './Modal.module.scss'
 import clsx from 'clsx';
-
-const Modal = ({ children, className, width = "medium", center=true }) => {
+import Button from '../Button/Button';
+const Modal = ({ children, className, width = "medium", center=true , closeBtn=false, onClose}) => {
   const classes = clsx(styles.modal, styles[width], className, {
     [styles.center]: center
   });
@@ -13,6 +13,8 @@ const Modal = ({ children, className, width = "medium", center=true }) => {
       <div className={classes}>
         {children}
       </div>
+      {console.log(onClose)}
+      {closeBtn && <Button onClick={() => onClose(false)} className={styles.close_btn} primary size="medium">Đóng</Button>}
     </div>,
     document.querySelector("#portal")
   );

@@ -13,6 +13,7 @@ import Button from "~/components/UI/Button/Button";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
+
 const SearchForm = () => {
   const [keyword, setKeyword] = useState('')
   const navigate = useNavigate()
@@ -83,11 +84,12 @@ useEffect(() => {
   return (
     <>
     {showModal && (
-      <Modal className={clsx(styles.search_suggest_wrap , {[styles.animate] : animate})}>
+      <Modal onClose={setShowModal} closeBtn={true} className={clsx(styles.search_suggest_wrap , {[styles.animate] : animate})}>
         <div className={styles.modal_header}>
           <h4 className={styles.txtKetqua}>Search result</h4>
           <h3>Xem tất cả</h3>
         </div>
+
         <div className={clsx("grid", styles.container)}>
           <div className={clsx("row", styles.item_row)}>
             {
@@ -121,14 +123,14 @@ useEffect(() => {
                     </div>
                 )
               })
-            }
-            
 
-         
-        
+
+            }
 
           </div>
-        </div>
+        </div>  
+
+       
       </Modal>
 
     )}

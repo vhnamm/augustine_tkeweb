@@ -18,3 +18,10 @@
   max-height: 80vh;
   overflow-y: scroll;
 }
+
+.close_btn{
+  position: absolute;
+  bottom: 20px;
+  right: 44%;
+  z-index: 1000;
+}
