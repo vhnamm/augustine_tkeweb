@@ -67,6 +67,8 @@ const SearchResult = () => {
               </div>
             )
           })}
+
+          
         </div>
       </div>
     </div>
