@@ -4,7 +4,7 @@ import styles from './SearchResult.module.scss'
 import { useSearchParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 const SearchResult = () => {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams] = useSearchParams();
   const [searchResults, setSearchResults] = useState([]);
   const keyword = decodeURIComponent(searchParams.get("keyword"))
 
