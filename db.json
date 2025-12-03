@@ -179,341 +179,287 @@
       "slug": "vay"
     }
   ],
+
   "products": [
-    {
-      "id": 1,
-      "sku": "ATN001",
-      "name": "Áo thun nam cotton premium",
-      "slug": "ao-thun-nam-cotton-premium",
-      "categoryId": 1,
-      "subcategoryId": 1,
-      "productTypeId": 1,
-      "price": 299000,
-      "salePrice": 249000,
-      "discount": 17,
-      "description": "Áo thun nam chất liệu cotton 100% cao cấp, thoáng mát, thấm hút mồ hôi tốt. Form dáng regular fit thoải mái.",
-      "shortDescription": "Áo thun cotton premium, form regular fit",
-      "images": [
-        "/assets/ao_thun_sss.webp",
-        "/assets/ao_thun_sss.webp",
-        "/assets/ao_thun_sss.webp"
-      ],
-      "colors": [
-        {
-          "name": "Trắng",
-          "hex": "#FFFFFF",
-          "image": "/images/products/atn001-white.jpg"
-        },
-        {
-          "name": "Đen",
-          "hex": "#000000",
-          "image": "/images/products/atn001-black.jpg"
-        },
-        {
-          "name": "Xanh navy",
-          "hex": "#000080",
-          "image": "/images/products/atn001-navy.jpg"
-        }
-      ],
-      "sizes": [
-        {
-          "size": "S",
-          "stock": 15
-        },
-        {
-          "size": "M",
-          "stock": 20
-        },
-        {
-          "size": "L",
-          "stock": 25
-        },
-        {
-          "size": "XL",
-          "stock": 10
-        }
-      ],
-      "status": "in-stock",
-      "tags": ["best-seller", "new-arrival"],
-      "rating": 4.5,
-      "reviewCount": 128,
-      "soldCount": 456,
-      "viewCount": 2340,
-      "createdAt": "2024-01-15T08:00:00Z",
-      "updatedAt": "2024-01-20T10:30:00Z"
-    },
-    {
-      "id": 2,
-      "sku": "APN001",
-      "name": "Áo polo nam phối viền",
-      "slug": "ao-polo-nam-phoi-vien",
-      "categoryId": 1,
-      "subcategoryId": 1,
-      "productTypeId": 2,
-      "price": 399000,
-      "salePrice": 359000,
-      "discount": 10,
-      "description": "Áo polo nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
-      "shortDescription": "Áo polo phối viền, form slim fit",
-      "images": [
-        "/assets/ao_thun_tay_xanh_sss.webp",
-        "/assets/ao_thun_tay_xanh_sss.webp"
-      ],
-      "colors": [
-        {
-          "name": "Xanh dương",
-          "hex": "#0000FF",
-          "image": "/images/products/apn001-blue.jpg"
-        },
-        {
-          "name": "Đỏ",
-          "hex": "#FF0000",
-          "image": "/images/products/apn001-red.jpg"
-        }
-      ],
-      "sizes": [
-        {
-          "size": "M",
-          "stock": 12
-        },
-        {
-          "size": "L",
-          "stock": 8
-        },
-        {
-          "size": "XL",
-          "stock": 5
-        }
-      ],
-      "status": "in-stock",
-      "tags": ["sale"],
-      "rating": 4.3,
-      "reviewCount": 67,
-      "soldCount": 234,
-      "viewCount": 1456,
-      "createdAt": "2024-01-10T08:00:00Z",
-      "updatedAt": "2024-01-18T14:20:00Z"
-    },
-    {
-      "id": 3,
-      "sku": "VNU001",
-      "name": "Váy suông nữ họa tiết hoa",
-      "slug": "vay-suong-nu-hoa-tiet-hoa",
-      "categoryId": 2,
-      "subcategoryId": 6,
-      "productTypeId": 15,
-      "price": 599000,
-      "salePrice": null,
-      "discount": 0,
-      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
-      "shortDescription": "Váy suông họa tiết hoa, chất voan",
-      "images": [
-        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-        "/assets/so_mi_nam.webp",
-        "/assets/so_mi_nam.webp"
-      ],
-      "colors": [
-        {
-          "name": "Hồng pastel",
-          "hex": "#FFB6C1",
-          "image": "/images/products/vnu001-pink.jpg"
-        },
-        {
-          "name": "Xanh mint",
-          "hex": "#98FF98",
-          "image": "/images/products/vnu001-mint.jpg"
-        }
-      ],
-      "sizes": [
-        {
-          "size": "S",
-          "stock": 7
-        },
-        {
-          "size": "M",
-          "stock": 10
-        },
-        {
-          "size": "L",
-          "stock": 5
-        }
-      ],
-      "status": "in-stock",
-      "tags": ["new-arrival", "best-seller"],
-      "rating": 4.7,
-      "reviewCount": 89,
-      "soldCount": 178,
-      "viewCount": 2890,
-      "createdAt": "2024-01-25T08:00:00Z",
-      "updatedAt": "2024-01-25T08:00:00Z"
-    },
-        {
-      "id": 4,
-      "sku": "VNU001",
-      "name": "Váy suông nữ họa tiết hoa",
-      "slug": "vay-suong-nu-hoa-tiet-hoa",
-      "categoryId": 2,
-      "subcategoryId": 6,
-      "productTypeId": 15,
-      "price": 599000,
-      "salePrice": null,
-      "discount": 0,
-      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
-      "shortDescription": "Váy suông họa tiết hoa, chất voan",
-      "images": [
-        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-        "/assets/so_mi_nam.webp",
-        "/assets/so_mi_nam.webp"
-      ],
-      "colors": [
-        {
-          "name": "Hồng pastel",
-          "hex": "#FFB6C1",
-          "image": "/images/products/vnu001-pink.jpg"
-        },
-        {
-          "name": "Xanh mint",
-          "hex": "#98FF98",
-          "image": "/images/products/vnu001-mint.jpg"
-        }
-      ],
-      "sizes": [
-        {
-          "size": "S",
-          "stock": 7
-        },
-        {
-          "size": "M",
-          "stock": 10
-        },
-        {
-          "size": "L",
-          "stock": 5
-        }
-      ],
-      "status": "in-stock",
-      "tags": ["new-arrival", "best-seller"],
-      "rating": 4.7,
-      "reviewCount": 89,
-      "soldCount": 178,
-      "viewCount": 2890,
-      "createdAt": "2024-01-25T08:00:00Z",
-      "updatedAt": "2024-01-25T08:00:00Z"
-    },
-        {
-      "id": 5,
-      "sku": "VNU001",
-      "name": "Váy suông nữ họa tiết hoa",
-      "slug": "vay-suong-nu-hoa-tiet-hoa",
-      "categoryId": 2,
-      "subcategoryId": 6,
-      "productTypeId": 15,
-      "price": 599000,
-      "salePrice": null,
-      "discount": 0,
-      "description": "Váy suông dáng A với họa tiết hoa nhí điệu đà, chất liệu voan mềm mại, phù hợp cho các buổi dạo phố, hẹn hò.",
-      "shortDescription": "Váy suông họa tiết hoa, chất voan",
-      "images": [
-        "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-        "/assets/so_mi_nam.webp",
-        "/assets/so_mi_nam.webp"
-      ],
-      "colors": [
-        {
-          "name": "Hồng pastel",
-          "hex": "#FFB6C1",
-          "image": "/images/products/vnu001-pink.jpg"
-        },
-        {
-          "name": "Xanh mint",
-          "hex": "#98FF98",
-          "image": "/images/products/vnu001-mint.jpg"
-        }
-      ],
-      "sizes": [
-        {
-          "size": "S",
-          "stock": 7
-        },
-        {
-          "size": "M",
-          "stock": 10
-        },
-        {
-          "size": "L",
-          "stock": 5
-        }
-      ],
-      "status": "in-stock",
-      "tags": ["new-arrival", "best-seller"],
-      "rating": 4.7,
-      "reviewCount": 89,
-      "soldCount": 178,
-      "viewCount": 2890,
-      "createdAt": "2024-01-25T08:00:00Z",
-      "updatedAt": "2024-01-25T08:00:00Z"
-    }
-  ],
-  "banners": [
-    {
-      "id": 1,
-      "title": "Bộ sưu tập Xuân Hè 2024",
-      "subtitle": "Khám phá xu hướng mới nhất",
-      "image": "/images/banners/spring-summer-2024.jpg",
-      "link": "/collections/spring-summer-2024",
-      "type": "seasonal",
-      "position": "home-hero",
-      "order": 1,
-      "active": true
-    },
-    {
-      "id": 2,
-      "title": "Sale up to 50%",
-      "subtitle": "Hàng nghìn sản phẩm giảm giá",
-      "image": "/images/banners/sale-50.jpg",
-      "link": "/sale",
-      "type": "promotion",
-      "position": "home-hero",
-      "order": 2,
-      "active": true
-    },
-    {
-      "id": 3,
-      "title": "Phụ kiện & Nước hoa",
-      "subtitle": "Hoàn thiện phong cách của bạn",
-      "image": "/images/banners/accessories.jpg",
-      "link": "/collections/accessories",
-      "type": "collection",
-      "position": "home-secondary",
-      "order": 1,
-      "active": true
-    }
-  ],
+  {
+    "id": 1,
+    "name": "Áo thun nam cotton premium",
+    "slug": "ao-thun-nam-cotton-premium",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 1,
+    "description": "Áo thun nam chất liệu cotton 100% cao cấp, thoáng mát, thấm hút mồ hôi tốt. Form dáng regular fit thoải mái.",
+    "shortDescription": "Áo thun cotton premium, form regular fit",
+    "images": [
+      "/assets/ao_thun_sss.webp",
+      "/assets/ao_thun_sss.webp",
+      "/assets/ao_thun_sss.webp"
+    ],
+    "price": 299000,
+    "status": "in-stock",
+    "tags": ["best-seller", "new-arrival"],
+    "rating": 4.5,
+    "reviewCount": 128,
+    "soldCount": 456,
+    "variants": [
+      {
+        "color": "Trắng",
+        "colorHex": "#FFFFFF",
+        "images": ["/images/products/atn001-white.jpg"],
+        
+
+        "sizes": [
+          { "size": "S", "stock": 15, "sku": "ATN001-WHT-S" },
+          { "size": "M", "stock": 20, "sku": "ATN001-WHT-M" },
+          { "size": "L", "stock": 25, "sku": "ATN001-WHT-L" },
+          { "size": "XL", "stock": 10, "sku": "ATN001-WHT-XL" }
+        ]
+      },
+      {
+        "color": "Đen",
+        "colorHex": "#000000",
+        "images": ["/images/products/atn001-black.jpg"],
+
+        "sizes": [
+          { "size": "S", "stock": 15, "sku": "ATN001-BLK-S" },
+          { "size": "M", "stock": 20, "sku": "ATN001-BLK-M" },
+          { "size": "L", "stock": 25, "sku": "ATN001-BLK-L" },
+          { "size": "XL", "stock": 10, "sku": "ATN001-BLK-XL" }
+        ]
+      },
+      {
+        "color": "Xanh navy",
+        "colorHex": "#000080",
+        "images": ["/images/products/atn001-navy.jpg"],
+
+        "sizes": [
+          { "size": "S", "stock": 15, "sku": "ATN001-NVY-S" },
+          { "size": "M", "stock": 20, "sku": "ATN001-NVY-M" },
+          { "size": "L", "stock": 25, "sku": "ATN001-NVY-L" },
+          { "size": "XL", "stock": 10, "sku": "ATN001-NVY-XL" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Áo thun Boxy Mickey",
+    "slug": "ao-thun-boxy-mickey",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 2,
+    "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
+    "shortDescription": "Áo thun phối viền, form slim fit",
+    "images": [
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black2.png",
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
+    ],
+    "status": "in-stock",
+    "tags": ["sale"],
+    "rating": 4.3,
+    "reviewCount": 67,
+    "soldCount": 234,
+    "viewCount": 1456,
+    "variants": [
+      {
+        "color": "Đen",
+        "colorHex": "#000000",
+        "images": [
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_black2.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
+        ],
+        "price": 399000,
+
+        "sizes": [
+          { "size": "M", "stock": 12, "sku": "APN001-BLK-M" },
+          { "size": "L", "stock": 8, "sku": "APN001-BLK-L" },
+          { "size": "XL", "stock": 5, "sku": "APN001-BLK-XL" }
+        ]
+      },
+      {
+        "color": "Xám",
+        "colorHex": "#808080",
+        "images": [
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray1.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray2.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray3.png",
+          "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray4.png"
+        ],
+        "price": 399000,
+        "salePrice": 359000,
+        "discount": 10,
+        "sizes": [
+          { "size": "M", "stock": 12, "sku": "APN001-GRY-M" },
+          { "size": "L", "stock": 8, "sku": "APN001-GRY-L" },
+          { "size": "XL", "stock": 5, "sku": "APN001-GRY-XL" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "name": "Áo thun Dior Mountain",
+    "slug": "ao-thun-dior-mountain",
+    "categoryId": 2,
+    "subcategoryId": 6,
+    "productTypeId": 15,
+    "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
+    "shortDescription": "Áo thun phối viền, form slim fit",
+    "images": [
+      "/assets/Him/AoThun/DiorMountain/diormountain.png"
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "variants": [
+      {
+        "color": "Trắng",
+        "colorHex": "#FFFFFF",
+        "images": ["/assets/Him/DiorMountain/diormountain.png"],
+        "price": 599000,
+
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "VNU001-WHT-S" },
+          { "size": "M", "stock": 10, "sku": "VNU001-WHT-M" },
+          { "size": "L", "stock": 5, "sku": "VNU001-WHT-L" }
+        ]
+      }
+     
+    ]
+  },
+  {
+    "id": 4,
+    "name": "Váy suông nữ họa tiết hoa",
+    "slug": "vay-suong-nu-hoa-tiet-hoa",
+    "categoryId": 2,
+    "subcategoryId": 6,
+    "productTypeId": 15,
+    "description": "Váy suông dáng A với họa tiết hoa nhí.",
+    "shortDescription": "Váy suông họa tiết hoa",
+    "images": [
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+      "/assets/so_mi_nam.webp",
+      "/assets/so_mi_nam.webp"
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "variants": [
+      {
+        "color": "Hồng pastel",
+        "colorHex": "#FFB6C1",
+        "images": ["/images/products/vnu001-pink.jpg"],
+        "price": 599000,
+        "salePrice": null,
+        "discount": 0,
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
+          { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
+          { "size": "L", "stock": 5, "sku": "VNU001-PNK-L" }
+        ]
+      },
+      {
+        "color": "Xanh mint",
+        "colorHex": "#98FF98",
+        "images": ["/images/products/vnu001-mint.jpg"],
+        "price": 599000,
+        "salePrice": null,
+        "discount": 0,
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
+          { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
+          { "size": "L", "stock": 5, "sku": "VNU001-MNT-L" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Váy suông nữ họa tiết hoa",
+    "slug": "vay-suong-nu-hoa-tiet-hoa",
+    "categoryId": 2,
+    "subcategoryId": 6,
+    "productTypeId": 15,
+    "description": "Váy suông họa tiết hoa.",
+    "shortDescription": "Váy suông họa tiết hoa",
+    "images": [
+      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
+      "/assets/so_mi_nam.webp",
+      "/assets/so_mi_nam.webp"
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "variants": [
+      {
+        "color": "Hồng pastel",
+        "colorHex": "#FFB6C1",
+        "images": ["/images/products/vnu001-pink.jpg"],
+        "price": 599000,
+        "salePrice": null,
+        "discount": 0,
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
+          { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
+          { "size": "L", "stock": 5, "sku": "VNU001-PNK-L" }
+        ]
+      },
+      {
+        "color": "Xanh mint",
+        "colorHex": "#98FF98",
+        "images": ["/images/products/vnu001-mint.jpg"],
+        "price": 599000,
+        "salePrice": null,
+        "discount": 0,
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
+          { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
+          { "size": "L", "stock": 5, "sku": "VNU001-MNT-L" }
+        ]
+      }
+    ]
+  }
+],
+
+  
   "collections": [
     {
       "id": 1,
-      "name": "Best Sellers",
-      "slug": "best-sellers",
+      "name": "Spring 2025",
+      "slug": "spring-2025",
       "description": "Những sản phẩm bán chạy nhất",
       "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 3],
+      "productIds": [1, 2, 3],
       "featured": true,
       "order": 1
     },
     {
       "id": 2,
-      "name": "Hàng mới về",
-      "slug": "new-arrivals",
+      "name": "Summer 2025",
+      "slug": "summer-2025",
       "description": "Sản phẩm mới nhất trong tuần",
       "image": "/assets/best_seller_banner.jpg",
-      "productIds": [3],
+      "productIds": [1, 2, 3],
       "featured": true,
       "order": 2
     },
     {
       "id": 3,
-      "name": "Sale",
-      "slug": "sale",
+      "name": "Autumn 2025",
+      "slug": "autumn-2025",
       "description": "Ưu đãi hấp dẫn",
       "image": "/assets/best_seller_banner.jpg",
       "productIds": [1, 2],
@@ -522,9 +468,9 @@
     },
     {
       "id": 4,
-      "name": "Xuân Hè 2024",
-      "slug": "spring-summer-2024",
-      "description": "Bộ sưu tập mùa xuân hè",
+      "name": "Winter 2025",
+      "slug": "winter-2025",
+      "description": "Bộ sưu tập mùa đông",
       "image": "/assets/best_seller_banner.jpg",
       "productIds": [1, 2, 3],
       "featured": false,
