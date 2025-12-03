@@ -36,8 +36,12 @@ const SearchResult = () => {
 
   return (
     <div className={clsx(styles.wrapper)}>
-      <h2>Kết quả tìm kiếm cho: {keyword} <span>{searchResults.length} sản phẩm</span></h2>
+      
       <div className={clsx("grid wide")}>
+        {searchResults.length > 0 ? <h2>Kết quả tìm kiếm cho: {keyword} <span>{searchResults.length} sản phẩm</span></h2> : 
+        
+        <h2>Không tìm thấy sản phẩm nào cho: {keyword}</h2>
+        }
         <div className={clsx("row")}>
           {searchResults.map(prod => {
             return (

@@ -8,15 +8,16 @@ import Explore from "~/pages/Explore/Explore";
 import Products from "../../pages/Produtcs/Products";
 import Collection from "~/pages/Collection/Collection";
 import Category from "../../pages/Category/Category";
-import Product from "../../pages/Product/Product";
+import Product from "../../pages/ProductDetail/Product";
 
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
       <Route index element={<Home />} />
+      <Route path="collection/spring-2025" element={<Explore />} />
       <Route path="collection/:slug">
         <Route index element={<Collection/>}/>
-        <Route path="products" element={<Products/>}/>
+        
       </Route>
 
       <Route path="product/:slug" element={<Product/>}/>
