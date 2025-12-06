@@ -257,14 +257,15 @@
       "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
     ],
     "status": "in-stock",
-    "tags": ["sale"],
+
     "rating": 4.3,
     "reviewCount": 67,
     "soldCount": 234,
     "viewCount": 1456,
+    "price": 399000,
     "variants": [
       {
-        "color": "Đen",
+        "color": "Black",
         "colorHex": "#000000",
         "images": [
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
@@ -272,7 +273,7 @@
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
         ],
-        "price": 399000,
+        
 
         "sizes": [
           { "size": "M", "stock": 12, "sku": "APN001-BLK-M" },
@@ -281,7 +282,7 @@
         ]
       },
       {
-        "color": "Xám",
+        "color": "Gray",
         "colorHex": "#808080",
         "images": [
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray1.png",
@@ -289,9 +290,7 @@
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray3.png",
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray4.png"
         ],
-        "price": 399000,
-        "salePrice": 359000,
-        "discount": 10,
+
         "sizes": [
           { "size": "M", "stock": 12, "sku": "APN001-GRY-M" },
           { "size": "L", "stock": 8, "sku": "APN001-GRY-L" },
@@ -318,17 +317,18 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Trắng",
+        "color": "White",
         "colorHex": "#FFFFFF",
         "images": ["/assets/Him/DiorMountain/diormountain.png"],
-        "price": 599000,
+        
 
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-WHT-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-WHT-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-WHT-L" }
+          { "size": "S", "stock": 7, "sku": "DMT001-WHT-S" },
+          { "size": "M", "stock": 10, "sku": "DMT001-WHT-M" },
+          { "size": "L", "stock": 5, "sku": "DMT001-WHT-L" }
         ]
       }
      
@@ -336,17 +336,16 @@
   },
   {
     "id": 4,
-    "name": "Váy suông nữ họa tiết hoa",
-    "slug": "vay-suong-nu-hoa-tiet-hoa",
-    "categoryId": 2,
-    "subcategoryId": 6,
-    "productTypeId": 15,
-    "description": "Váy suông dáng A với họa tiết hoa nhí.",
-    "shortDescription": "Váy suông họa tiết hoa",
+    "name": "Áo thun in hình .Boxy",
+    "slug": "ao-thun-boxy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 1,
+    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
+    "shortDescription": "Áo thun nam in hình Boxy",
     "images": [
-      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-      "/assets/so_mi_nam.webp",
-      "/assets/so_mi_nam.webp"
+      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+
     ],
     "status": "in-stock",
     "tags": ["new-arrival", "best-seller"],
@@ -354,48 +353,55 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Hồng pastel",
-        "colorHex": "#FFB6C1",
-        "images": ["/images/products/vnu001-pink.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "Black",
+        "colorHex": "#000",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+      ],
+        
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-PNK-L" }
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
         ]
-      },
+      }
+      ,
       {
-        "color": "Xanh mint",
-        "colorHex": "#98FF98",
-        "images": ["/images/products/vnu001-mint.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        
+      ],
+        
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-MNT-L" }
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
         ]
       }
     ]
   },
   {
     "id": 5,
-    "name": "Váy suông nữ họa tiết hoa",
-    "slug": "vay-suong-nu-hoa-tiet-hoa",
-    "categoryId": 2,
-    "subcategoryId": 6,
+    "name": "Áo phao chần bông nam",
+    "slug": "ao-phao-chan-bong-nam",
+    "categoryId": 1,
+    "subcategoryId": 1,
     "productTypeId": 15,
-    "description": "Váy suông họa tiết hoa.",
-    "shortDescription": "Váy suông họa tiết hoa",
+    "description": "Áo phao chần bông siêu nhẹ.",
+    "shortDescription": "Áo phao chần bông siêu nhẹ.",
     "images": [
-      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-      "/assets/so_mi_nam.webp",
-      "/assets/so_mi_nam.webp"
+      "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png"
+     
     ],
     "status": "in-stock",
     "tags": ["new-arrival", "best-seller"],
@@ -403,14 +409,18 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Hồng pastel",
-        "colorHex": "#FFB6C1",
-        "images": ["/images/products/vnu001-pink.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "Black",
+        "colorHex": "#000000",
+        "images": ["/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black2.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black3.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black4.png"
+      ],
+        
+
         "sizes": [
           { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
           { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
@@ -421,9 +431,7 @@
         "color": "Xanh mint",
         "colorHex": "#98FF98",
         "images": ["/images/products/vnu001-mint.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+
         "sizes": [
           { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
           { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
@@ -440,9 +448,11 @@
       "id": 1,
       "name": "Spring 2025",
       "slug": "spring-2025",
-      "description": "Những sản phẩm bán chạy nhất",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Spring collection 2025",
+      "description": "THE AWAKENING OF COLOR AND LIGHT.",
+      "sub_description": "Fresh fabrics, fluid motion, and the bright, vivid palettes signaling a new start. Step into the season with lightness and intention.",
+      "image": "/assets/Collections/spring/spring.png",
+      "productIds": [1, 2, 3, 4, 5],
       "featured": true,
       "order": 1
     },
@@ -450,9 +460,11 @@
       "id": 2,
       "name": "Summer 2025",
       "slug": "summer-2025",
-      "description": "Sản phẩm mới nhất trong tuần",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Summer collection 2025",
+      "description": "CHASING THE SUN: SUMMER '25 UNPACKED",
+      "sub_description": "Vibrant hues, breathable fabrics, and effortless designs built for endless coastal days and vibrant summer nights.",
+      "image": "/assets/Collections/summer/summer.png",
+      "productIds": [1, 2, 3, 4, 5],
       "featured": true,
       "order": 2
     },
@@ -460,9 +472,11 @@
       "id": 3,
       "name": "Autumn 2025",
       "slug": "autumn-2025",
-      "description": "Ưu đãi hấp dẫn",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2],
+      "title": "Fall collection 2025",
+      "description": "THE UNVEILING OF AUTUMN'S DEPTH",
+      "sub_description": "Discover our elevated knits, signature textures, and the essential layering pieces to define your Fall 2025 wardrobe.",
+      "image": "/assets/Collections/autumn/autumn.png",
+      "productIds": [1, 2,3,4],
       "featured": true,
       "order": 3
     },
@@ -470,36 +484,14 @@
       "id": 4,
       "name": "Winter 2025",
       "slug": "winter-2025",
-      "description": "Bộ sưu tập mùa đông",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Winter collection 2025",
+      "description": "A RETURN TO COZY LUXURY.",
+      "sub_description": "Deep textures, muted tones, and festive silhouettes designed to keep you sheltered and chic from the first snow through the holidays.",
+      "image": "/assets/Collections/winter/winter.png",
+      "productIds": [1, 2, 3, 4],
       "featured": false,
       "order": 4
     }
-  ],
-  "outfitSuggestions": [
-    {
-      "id": 1,
-      "name": "Phong cách công sở",
-      "description": "Lịch lãm và chuyên nghiệp cho ngày làm việc",
-      "image": "/images/outfits/office-style.jpg",
-      "productIds": [1, 2],
-      "tags": ["office", "formal"],
-      "dayOfWeek": "monday"
-    },
-    {
-      "id": 2,
-      "name": "Dạo phố cuối tuần",
-      "description": "Thoải mái và năng động",
-      "image": "/images/outfits/weekend-casual.jpg",
-      "productIds": [1, 3],
-      "tags": ["casual", "weekend"],
-      "dayOfWeek": "saturday"
-    }
   ]
-  
-  
- 
-  
   
 }

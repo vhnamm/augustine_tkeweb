@@ -1,14 +1,14 @@
 .collection_banner {
   position: relative;
   overflow-y: hidden;
-  height: 70vh;
+  height: 80vh;
   width: 100%;
   display: block;
   img {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    object-position: center;
+    object-position: center 40%;
   }
 
   &::after {
@@ -18,10 +18,10 @@
     bottom: 0%;
     left: 0;
     width: 100%;
-    height: 60%;
+    height: 80%;
     background: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.94),
       rgba(18, 18, 18, 0.01)
     );
   }
@@ -29,22 +29,51 @@
 
 .home-item {
   position: relative;
+  margin-bottom: 20px;
   &:hover {
     cursor: pointer;
     transform: translateY(-3px);
   }
 }
-
-.collection_banner-title {
+.collection_banner_text {
   position: absolute;
-  left: 40%;
-  bottom: 10%;
-  font-size: 3rem;
+  top: 70%;
+  left: 10%;
+  z-index: 2;
+  text-align: left;
+}
+.collection_banner-title {
+
+  font-size: 2.4rem;
   color: #fff;
-  z-index: 1;
+  
+  font-family: work sans;
+  font-weight: 300;
+  font-style: italic;
+}
+.collection_banner-description {
+  font-size: 1.6rem;
+  color: #fff;
+  margin-top: 12px;
+  font-family: work sans;
+  font-weight: 600;
+}
+.collection_banner-subdescription {
+  font-size: 1.4rem;
+  color: #fff;
+  margin-top: 8px;
+  font-family: work sans;
+  font-weight: 400;
+  max-width: 500px;
 }
 .collection_wrap {
   margin-bottom: 80px;
+}
+.featuring {
+  font-size: 2rem;
+  color: var(--text);
+  margin: 50px 0 50px 10px;
+  font-family: 'Montserrat', sans-serif;
 }
 .discover-btn {
   position: absolute;
@@ -52,10 +81,10 @@
   left: 50%;
 }
 .item-row {
-  margin: 60px 0 30px 0;
+  margin-bottom: 50px;
 }
 .collection_item-img {
-  height: 80%;
+  height: 90%;
   width: 100%;
   border-radius: 12px;
   overflow: hidden;

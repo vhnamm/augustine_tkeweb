@@ -13,12 +13,17 @@ const HomeCollectionsBlock = ({ products, collection }) => {
     <div className={clsx(styles.collection_wrap)}>
       <Link to={`collection/${collection.slug}`} className={clsx(styles.collection_banner)}>
         <img src={collection.image} alt="banner" />
-        <h2 className={clsx(styles["collection_banner-title"])}>
-          {collection.description}
+        <div className={styles.collection_banner_text}>
+          <h2 className={clsx(styles["collection_banner-title"])}>
+          {collection.title}
         </h2>
+        <p className={clsx(styles["collection_banner-description"])}>{collection.description}</p>
+        <p className={clsx(styles["collection_banner-subdescription"])}>{collection.sub_description}</p>
+        </div>
       </Link>
 
       <div className={clsx("grid", "wide", styles.collection_item_wrap)}>
+        <h2 className={styles.featuring}>FEATURING</h2>
         <div className={clsx("row", styles["item-row"], "small-gutter")}>
           {products.map((product) => {
             return (
