@@ -18,7 +18,10 @@ server.use(middlewares);
 
 // Middleware thêm X-Total-Count khi dùng pagination
 server.use((req, res, next) => {
-  if (req.method === "GET" && (req.query._page || req.query._limit || req.query._start || req.query._end)) {
+  if (
+    req.method === "GET" &&
+    (req.query._page || req.query._limit || req.query._start || req.query._end)
+  ) {
     const parts = req.path.split("/").filter(Boolean);
     const collection = parts[0] || "";
     try {
@@ -36,5 +39,5 @@ server.use(router);
 
 const PORT = 3000;
 server.listen(PORT, () => {
-  console.log(`✔ JSON Server running at http://localhost:${PORT}`);
+  console.log(`JSON Server running at http://localhost:${PORT}`);
 });

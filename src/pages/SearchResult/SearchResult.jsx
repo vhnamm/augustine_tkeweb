@@ -1,21 +1,23 @@
-import React, {useState, useEffect, use } from 'react';
+import React, {useState, useEffect} from 'react';
 import clsx from 'clsx';
 import styles from './SearchResult.module.scss'
 import { useSearchParams } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faAngleDown, faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleLeft, faAngleRight, faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
 import Filter from '~/components/UI/Filter/Filter';
 import Modal from '~/components/UI/Modal/Modal';
+import Button from '../../components/UI/Button/Button';
+
 
 const SearchResult = () => {
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
   const [searchResults, setSearchResults] = useState([]);
   const[opdenModal, setOpenModal] = useState(false);
   const [animate, setAnimate] = useState(false)
   const [page, setPage] = useState(1);
   const [totalProds, setTotalProds] = useState(0);
-
+  
   const keyword = decodeURIComponent(searchParams.get("keyword"))
   
 
@@ -54,6 +56,16 @@ const SearchResult = () => {
     setTimeout(() => {
       setOpenModal(false)
     } , 300);
+  }
+
+  function handleSwitchPage(index){
+    
+    setPage(index)
+    setSearchParams(prev => {
+      const params = new URLSearchParams(prev);
+      params.set("page", index);
+      return params;
+    });
   }
   return (
     
@@ -121,6 +133,28 @@ const SearchResult = () => {
           })}
 
           
+        </div>
+
+        <div className={styles.pagination}>
+          <Button size="small" className={styles.btn_prev} disabled = {page == 1} onClick={() => handleSwitchPage(page - 1)}>
+            <FontAwesomeIcon icon={faAngleLeft} />
+          </Button>
+          <ul className={styles.pagination_list}>
+
+            {Array(Math.ceil(totalProds/12)).fill().map((_ , index) => {
+              
+              return (
+                <li key={index} className={clsx(styles.btn_switch_page, {[styles.active] : page == index+1})}
+                  onClick={() => handleSwitchPage(index +1  )}
+                >
+                {index + 1}</li>
+              )
+            })}
+
+          </ul>
+          <Button size="small" className={styles.btn_next} disabled={page == Math.ceil(totalProds/12)} onClick={() => handleSwitchPage(page + 1) }>
+            <FontAwesomeIcon icon={faAngleRight} />
+          </Button>
         </div>
       </div>
     </div>
