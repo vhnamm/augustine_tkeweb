@@ -13,15 +13,17 @@ const Modal = ({ children, className, type= null,  closeBtn=false, onClose}) => 
      className={clsx(styles.overlay, {
       [styles.left] : type === "left",
       
-    })}>
+    })}
+    >
       
       <div 
        onClick={(e) => e.stopPropagation()}
-      className={classes}>
+      className={classes}
+      >
         {children}
       </div>
       {console.log(onClose)}
-      {closeBtn && <Button onClick={() => onClose()} className={styles.close_btn} primary size="medium">Đóng</Button>}
+      {closeBtn && <Button onClick={() => onClose()} className={styles.close_btn} primary size="medium">Close</Button>}
     </div>,
     document.querySelector("#portal")
   );

@@ -36,6 +36,8 @@ export const routes = (
       <Route path="category/:slug" element={<Category/>}>
         <Route index element={<CategoryProducts />} />
         <Route path=":subcategorySlug" element={<SubcategoryProducts />} />
+        <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
+        
       </Route>
       // ...existing code...
     </Route>

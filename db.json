@@ -2,14 +2,14 @@
   "categories": [
     {
       "id": 1,
-      "name": "Đồ Nam",
+      "name": "Him",
       "slug": "for-him",
       "type": "main",
       "order": 1
     },
     {
       "id": 2,
-      "name": "Đồ Nữ",
+      "name": "Her",
       "slug": "for-her",
       "type": "main",
       "order": 2
@@ -213,7 +213,7 @@
     "slug": "ao-thun-boxy-mickey",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 2,
+    "productTypeId": 1,
     "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
     "shortDescription": "Áo thun phối viền, form slim fit",
     "images": [
@@ -362,7 +362,7 @@
     "slug": "ao-phao-chan-bong-nam",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 15,
+    "productTypeId": 5,
     "description": "Áo phao chần bông siêu nhẹ.",
     "shortDescription": "Áo phao chần bông siêu nhẹ.",
     "images": [
@@ -409,15 +409,15 @@
 
   {
     "id": 6,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Quần denim nam cropped straight",
+    "slug": "quan-denim-cropped-straight",
     "categoryId": 1,
-    "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "subcategoryId": 2,
+    "productTypeId": 9,
+    "description": "Quần denim nam cropped straight",
+    "shortDescription": "Quần denim nam cropped straight",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/QuanJean/denimstraight_kem.png"
 
     ],
     "status": "in-stock",
@@ -428,30 +428,14 @@
     "viewCount": 2890,
     "price": 599000,
     "variants": [
-      {
-        "color": "Black",
-        "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
-        ]
-      }
-      ,
+      
       {
         "color": "Cream",
         "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        "images": ["/assets/Him/QuanJean/denimstraight_kem.png"
+        , "/assets/Him/QuanJean/denimstraight_kem2.png",
+        "/assets/Him/QuanJean/denimstraight_kem3.png",
+        "/assets/Him/QuanJean/denimstraight_kem4.png"
         
       ],
         
@@ -466,15 +450,15 @@
 
   {
     "id": 7,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo polo fitted",
+    "slug": "ao-polo-fitted",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 2,
+    "description": "Áo polo fitted",
+    "shortDescription": "Áo polo fitted",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/Polo/polofitted1.png"
 
     ],
     "status": "in-stock",
@@ -486,52 +470,35 @@
     "price": 599000,
     "variants": [
       {
-        "color": "Black",
-        "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "images": ["/assets/Him/Polo/polofitted1.png"
+        , "/assets/Him/Polo/polofitted2.png",
+        "/assets/Him/Polo/polofitted3.png",
+        "/assets/Him/Polo/polofitted4.png"
       ],
         
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+          { "size": "S", "stock": 7, "sku": "TBX001-WHT-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-WHT-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-WHT-M" }
         ]
       }
-      ,
-      {
-        "color": "Cream",
-        "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
-        
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
-        ]
-      }
+      
     ]
   },
 
   {
     "id": 8,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo polo sọc xanh",
+    "slug": "ao-polo-soc-xanh",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 2,
+    "description": "Áo polo sọc xanh",
+    "shortDescription": "Áo polo sọc xanh",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/Polo/PoloSoc/polosoc1.png"
 
     ],
     "status": "in-stock",
@@ -545,11 +512,10 @@
       {
         "color": "Black",
         "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "images": ["/assets/Him/Polo/PoloSoc/polosoc1.png"
+        , "/assets/Him/Polo/PoloSoc/polosoc2.png",
+        "/assets/Him/Polo/PoloSoc/polosoc3.png",
+        "/assets/Him/Polo/PoloSoc/polosoc4.png"
       ],
         
         "sizes": [
@@ -558,37 +524,21 @@
           { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
         ]
       }
-      ,
-      {
-        "color": "Cream",
-        "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
-        
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
-        ]
-      }
+      
     ]
   },
 
   {
     "id": 9,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo sơ mi kẻ sọc",
+    "slug": "ao-so-mi-ke-soc",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 4,
+    "description": "Áo sơ mi kẻ sọc",
+    "shortDescription": "Áo sơ mi kẻ sọc",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/SoMi/KeSoc/kexanh1.png"
 
     ],
     "status": "in-stock",
@@ -600,36 +550,19 @@
     "price": 599000,
     "variants": [
       {
-        "color": "Black",
+        "color": "Blue",
         "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "images": ["/assets/Him/SoMi/KeSoc/kexanh1.png"
+        , "/assets/Him/SoMi/KeSoc/kexanh2.png",
+        "/assets/Him/SoMi/KeSoc/kexanh3.png",
+        "/assets/Him/SoMi/KeSoc/kexanh4.png"
+
       ],
         
         "sizes": [
           { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
           { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
           { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
-        ]
-      }
-      ,
-      {
-        "color": "Cream",
-        "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
-        
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
         ]
       }
     ]
@@ -637,15 +570,15 @@
 
   {
     "id": 10,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo sơ mi polyeste",
+    "slug": "ao-so-mi-polyeste",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 4,
+    "description": "Áo sơ mi polyeste",
+    "shortDescription": "Áo sơ mi polyeste",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/SoMi/polyeste/somipoly.png"
 
     ],
     "status": "in-stock",
@@ -657,13 +590,13 @@
     "price": 599000,
     "variants": [
       {
-        "color": "Black",
-        "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "images": [
+          "/assets/Him/SoMi/polyeste/somipoly.png",
+          "/assets/Him/SoMi/polyeste/somipoly2.png",
+          "/assets/Him/SoMi/polyeste/somipoly3.png",
+          "/assets/Him/SoMi/polyeste/somipoly4.png"
       ],
         
         "sizes": [
@@ -672,37 +605,21 @@
           { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
         ]
       }
-      ,
-      {
-        "color": "Cream",
-        "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
-        
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
-        ]
-      }
+      
     ]
   },
 
   {
     "id": 11,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo sweater nam form loose",
+    "slug": "ao-sweater-loose",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 3,
+    "description": "Áo sweater nam form loose",
+    "shortDescription": "Áo sweater nam form loose",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/Sweater/loose_blk1.png"
 
     ],
     "status": "in-stock",
@@ -716,11 +633,11 @@
       {
         "color": "Black",
         "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "images": [
+          "/assets/Him/Sweater/loose_blk1.png",
+          "/assets/Him/Sweater/loose_blk2.png",
+          "/assets/Him/Sweater/loose_blk3.png",
+          "/assets/Him/Sweater/loose_blk4.png"
       ],
         
         "sizes": [
@@ -729,37 +646,21 @@
           { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
         ]
       }
-      ,
-      {
-        "color": "Cream",
-        "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
-        
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
-        ]
-      }
+      
     ]
   },
 
   {
     "id": 12,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo hoodie in hình .Boxy",
+    "slug": "ao-hoodie-boxy",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 6,
+    "description": "Áo hoodie in hình .Boxy",
+    "shortDescription": "Áo hoodie in hình .Boxy",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/Hoodie/Boxy/hoodieboxy.webp"
 
     ],
     "status": "in-stock",
@@ -771,13 +672,13 @@
     "price": 599000,
     "variants": [
       {
-        "color": "Black",
+        "color": "Brown",
         "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+        "images": [
+          "/assets/Him/Hoodie/Boxy/hoodieboxy.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy2.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy3.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy4.webp"
       ],
         
         "sizes": [
@@ -808,15 +709,15 @@
 
   {
     "id": 13,
-    "name": "Áo thun in hình .Boxy",
-    "slug": "ao-thun-boxy",
+    "name": "Áo khoác regular corduroy",
+    "slug": "ao-khoac-corduroy",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 1,
-    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
-    "shortDescription": "Áo thun nam in hình Boxy",
+    "productTypeId": 5,
+    "description": "Áo khoác regular corduroy",
+    "shortDescription": "Áo khoác regular corduroy",
     "images": [
-      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+      "/assets/Him/AoPhao/Coduroy/coduroi.png"
 
     ],
     "status": "in-stock",
@@ -827,30 +728,15 @@
     "viewCount": 2890,
     "price": 599000,
     "variants": [
-      {
-        "color": "Black",
-        "colorHex": "#000",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
-      ],
-        
-        "sizes": [
-          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
-          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
-          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
-        ]
-      }
-      ,
+      
       {
         "color": "Cream",
         "colorHex": "#FFFDD0",
-        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
-        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
-        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        "images": [
+          "/assets/Him/AoPhao/Coduroy/coduroi.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi2.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi3.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi4.png"
         
       ],
         

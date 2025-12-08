@@ -10,7 +10,7 @@ const colors = ['Black', 'Cream', 'Red', 'Gray', 'Brown', 'White'];
 const priceRanges = ['Under 200.000đ', '200.000đ - 499.000đ', '500.000đ - 999.000đ', 'Above 1.000.000đ'];
 const sizes = ["S", "M", "L", "XL", "XXL"];
 
-const Filter = ({onClose}) => {
+const Filter = ({onClose, gender=true}) => {
   const [activeColors, setActiveColors] = useState([]);
   const [activeSizes, setActiveSizes] = useState([]);
   
@@ -105,7 +105,8 @@ const Filter = ({onClose}) => {
             </div>           
         </div>
         </FilterProperty>
-        <FilterProperty type="Gender">
+
+        {gender && <FilterProperty type="Gender">
           <div className={clsx("grid")}>
             <div className={clsx("row", "small-gutter")}>
                 {
@@ -124,7 +125,7 @@ const Filter = ({onClose}) => {
             </div>
           </div>
           
-        </FilterProperty>
+        </FilterProperty>}
       </div>
 
       <div className={styles.filter_modal_bottom}>
