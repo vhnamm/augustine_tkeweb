@@ -17,7 +17,7 @@ import { Link } from "react-router-dom";
 const SearchForm = () => {
   const [keyword, setKeyword] = useState('')
   const navigate = useNavigate()
-  const [showModal, setShowModal] = useState(false);
+  const [openModal, setOpenModal] = useState(false);
   const [searchResult, setSearchResult] = useState([])
   const [animate, setAnimate] = useState(false);
 
@@ -25,7 +25,7 @@ const SearchForm = () => {
  function handleSearch(e){
   e.preventDefault()
   if(keyword.trim() == "") return
-  setShowModal(false)
+  setOpenModal(false)
   navigate(`search/?keyword=${encodeURIComponent(keyword.trim())}`)
 
  }
@@ -35,9 +35,9 @@ const SearchForm = () => {
     const value = e.target.value
     setKeyword(value)
     if(value.trim() !== ""){
-      setShowModal(true)
+      setOpenModal(true)
     }else{
-      setShowModal(false)
+      setOpenModal(false)
     }
  }
 
@@ -48,7 +48,7 @@ const SearchForm = () => {
     return;
   }
   const timeID = setTimeout(async () => {
-      const serperatedKeywords = keyword.trim().split(/\s+/);
+      const serperatedKeywords = keyword.trim().split(" ").filter(Boolean);
       const queryString = serperatedKeywords
         .map((word) => `name_like=${word}`)
         .join("&");
@@ -57,13 +57,13 @@ const SearchForm = () => {
         const rawRes = await fetch(`http://localhost:3000/products?${queryString}`)
         const res = await rawRes.json()
 
-        const filteredData = res.filter((prod) => {
-          return serperatedKeywords.every((word) =>
-            prod.name.toLowerCase().includes(word.toLowerCase())
-          );
-        });
-
-        setSearchResult(filteredData);
+        // const filteredData = res.filter((prod) => {
+        //   return serperatedKeywords.every((word) =>
+        //     prod.name.toLowerCase().includes(word.toLowerCase())
+        //   );
+        // });
+        console.log(res)
+        setSearchResult(res);
       } catch (error) {
         console.log(error);
       }
@@ -74,17 +74,20 @@ const SearchForm = () => {
 
 
 useEffect(() => {
-  if (showModal) {
+  if (openModal) {
     setTimeout(() => setAnimate(true), 10);
   } else {
     setAnimate(false);
   }
-}, [showModal]);
+}, [openModal]);
 
+function handleCloseModal(){
+  setOpenModal(false)
+}
   return (
     <>
-    {showModal && (
-      <Modal onClose={setShowModal} closeBtn={true} className={clsx(styles.search_suggest_wrap , {[styles.animate] : animate})}>
+    {openModal && (
+      <Modal onClose={handleCloseModal} closeBtn={true} className={clsx(styles.search_suggest_wrap , {[styles.animate] : animate})}>
         <div className={styles.modal_header}>
           <h4 className={styles.txtKetqua}>Search result</h4>
           <h3>Xem tất cả</h3>
@@ -99,7 +102,7 @@ useEffect(() => {
                   
                     <div className={clsx("col", "lg-2-5")}>
                       <div className={styles["card-item"]} key={prod.id}>
-                        <Link to="/product/ao-phong" className={styles.item_link} onClick={() => setShowModal(false)}>
+                        <Link to="/product/ao-phong" className={styles.item_link} onClick={() => setOpenModal(false)}>
                           <div className={styles.item_img}>
                             <img src={prod.images[0]} alt="ảnh" />
                           </div>
@@ -142,7 +145,7 @@ useEffect(() => {
         spellCheck={false}
         onChange={(e) => handleInput(e)}
 
-        onFocus={() => setShowModal(true)}
+        onFocus={() => setOpenModal(true)}
         value={keyword}
       />
       <Button className={clsx(styles["clear-btn"])}>

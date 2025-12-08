@@ -37,14 +37,28 @@ const HomeProducts = () => {
     fetchCollection();
   }, []);
 
-  console.log(products)
+  
+  let limit = 1;
   return (
     <>
-      {collections.map((collection) => {
+      {
+      
+      collections.map((collection) => {
+
         const productsWithCollection = products.filter((product) => {
-          return collection.productIds.includes(Number(product.id));
+          if(limit > 4){
+            
+            return false;
+            
+          }
+          if(collection.productIds.includes(Number(product.id))){
+           limit++ 
+           return true;
+            
+          };
         });
         console.log(productsWithCollection)
+        limit = 1;
         return (
           <HomeCollectionsBlock
             key={collection.id}
@@ -52,6 +66,7 @@ const HomeProducts = () => {
             collection={collection}
           />
         );
+        
       })}
     </>
   );

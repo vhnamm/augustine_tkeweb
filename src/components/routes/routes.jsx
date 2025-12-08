@@ -13,7 +13,8 @@ import SummerCollection from "~/pages/SummerCollection/SummerCollection";
 import AdminOverview from "../../pages/AdminOverview/AdminOverview";
 import WinterCollection from "~/pages/WinterCollection/WinterCollection";
 import AutumnCollection from "~/pages/AutumnCollection/AutumnCollection";
-
+import CategoryProducts from "../../pages/CategoryProducts/CategoryProducts";
+import SubcategoryProducts from "../../pages/SubcategoryProducts/SubcategoryProducts";
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
@@ -31,7 +32,14 @@ export const routes = (
       <Route path="product/:slug" element={<ProductDetail/>}/>
       <Route path="search" element={<SearchResult/>} />
 
-      <Route path="category/:slug" element={<Category/>}/>
+      // ...existing code...
+      <Route path="category/:slug" element={<Category/>}>
+        <Route index element={<CategoryProducts />} />
+        <Route path=":subcategorySlug" element={<SubcategoryProducts />} />
+        <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
+        
+      </Route>
+      // ...existing code...
     </Route>
 
     <Route path="/dashboard" element={<AdminOverview />}></Route>

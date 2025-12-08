@@ -2,14 +2,14 @@
   "categories": [
     {
       "id": 1,
-      "name": "Đồ Nam",
+      "name": "Him",
       "slug": "for-him",
       "type": "main",
       "order": 1
     },
     {
       "id": 2,
-      "name": "Đồ Nữ",
+      "name": "Her",
       "slug": "for-her",
       "type": "main",
       "order": 2
@@ -19,71 +19,65 @@
     {
       "id": 1,
       "categoryId": 1,
-      "name": "Áo nam",
+      "name": "Shirts",
       "slug": "ao-nam",
       "order": 1
     },
     {
       "id": 2,
       "categoryId": 1,
-      "name": "Quần nam",
+      "name": "Trousers",
       "slug": "quan-nam",
       "order": 2
     },
     {
       "id": 3,
       "categoryId": 1,
-      "name": "Phụ kiện nam",
+      "name": "Accessories",
       "slug": "phu-kien-nam",
       "order": 3
     },
     {
       "id": 4,
       "categoryId": 1,
-      "name": "Đồ lót",
+      "name": "Underwears",
       "slug": "do-lot-nam",
       "order": 4
     },
-    {
-      "id": 5,
-      "categoryId": 1,
-      "name": "Đồ bơi",
-      "slug": "do-boi-nam",
-      "order": 5
-    },
+    
     {
       "id": 6,
       "categoryId": 2,
-      "name": "Áo nữ",
+      "name": "Shirts",
       "slug": "ao-nu",
       "order": 1
     },
     {
       "id": 7,
       "categoryId": 2,
-      "name": "Quần nữ",
+      "name": "Trousers",
       "slug": "quan-nu",
       "order": 2
     },
     {
       "id": 8,
       "categoryId": 2,
-      "name": "Phụ kiện nữ",
-      "slug": "phu-kien-nu",
+      "name": "Dresses",
+      "slug": "vay-nu",
       "order": 3
     },
     {
       "id": 9,
       "categoryId": 2,
-      "name": "Đồ lót",
+      "name": "Underwears",
       "slug": "do-lot-nu",
       "order": 4
     },
     {
       "id": 10,
       "categoryId": 2,
-      "name": "Đồ bơi",
-      "slug": "do-boi-nu",
+      "name": "Accessories",
+      "slug": "phu-kien",
       "order": 5
     }
   ],
@@ -91,49 +85,44 @@
     {
       "id": 1,
       "subcategoryId": 1,
-      "name": "Áo thun",
+      "name": "T-shirt",
       "slug": "ao-thun-nam"
     },
     {
       "id": 2,
       "subcategoryId": 1,
-      "name": "Áo polo",
+      "name": "Polo shirt",
       "slug": "ao-polo-nam"
     },
     {
       "id": 3,
       "subcategoryId": 1,
-      "name": "Áo blazer",
-      "slug": "ao-blazer-nam"
+      "name": "Sweatshirt",
+      "slug": "ao-ni-nam"
     },
     {
       "id": 4,
       "subcategoryId": 1,
-      "name": "Áo sơ mi",
+      "name": "Shirt",
       "slug": "ao-so-mi-nam"
     },
     {
       "id": 5,
       "subcategoryId": 1,
-      "name": "Áo khoác",
+      "name": "Jacket",
       "slug": "ao-khoac-nam"
     },
     {
       "id": 6,
       "subcategoryId": 1,
-      "name": "Áo len",
-      "slug": "ao-len-nam"
+      "name": "Hoodie",
+      "slug": "hoodie-nam"
     },
+
     {
       "id": 7,
-      "subcategoryId": 1,
-      "name": "Áo nỉ",
-      "slug": "ao-ni-nam"
-    },
-    {
-      "id": 8,
       "subcategoryId": 2,
-      "name": "Quần short",
+      "name": "Short",
       "slug": "quan-short-nam"
     },
     {
@@ -145,39 +134,16 @@
     {
       "id": 10,
       "subcategoryId": 2,
-      "name": "Quần Âu",
+      "name": "Casual pants",
       "slug": "quan-au-nam"
     },
     {
       "id": 11,
       "subcategoryId": 2,
-      "name": "Dài kaki",
+      "name": "Khaki pants",
       "slug": "quan-kaki-nam"
-    },
-    {
-      "id": 12,
-      "subcategoryId": 2,
-      "name": "Quần nỉ",
-      "slug": "quan-ni-nam"
-    },
-    {
-      "id": 13,
-      "subcategoryId": 6,
-      "name": "Áo thun",
-      "slug": "ao-thun-nu"
-    },
-    {
-      "id": 14,
-      "subcategoryId": 6,
-      "name": "Áo polo",
-      "slug": "ao-polo-nu"
-    },
-    {
-      "id": 15,
-      "subcategoryId": 6,
-      "name": "Váy",
-      "slug": "vay"
     }
+
   ],
 
   "products": [
@@ -247,7 +213,7 @@
     "slug": "ao-thun-boxy-mickey",
     "categoryId": 1,
     "subcategoryId": 1,
-    "productTypeId": 2,
+    "productTypeId": 1,
     "description": "Áo thun nam với thiết kế phối viền tinh tế, chất liệu pique cotton mềm mại, form slim fit trẻ trung.",
     "shortDescription": "Áo thun phối viền, form slim fit",
     "images": [
@@ -257,14 +223,15 @@
       "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
     ],
     "status": "in-stock",
-    "tags": ["sale"],
+
     "rating": 4.3,
     "reviewCount": 67,
     "soldCount": 234,
     "viewCount": 1456,
+    "price": 399000,
     "variants": [
       {
-        "color": "Đen",
+        "color": "Black",
         "colorHex": "#000000",
         "images": [
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
@@ -272,7 +239,7 @@
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black3.png",
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_black4.png"
         ],
-        "price": 399000,
+        
 
         "sizes": [
           { "size": "M", "stock": 12, "sku": "APN001-BLK-M" },
@@ -281,7 +248,7 @@
         ]
       },
       {
-        "color": "Xám",
+        "color": "Gray",
         "colorHex": "#808080",
         "images": [
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray1.png",
@@ -289,9 +256,7 @@
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray3.png",
           "/assets/Him/AoThun/BoxyMickey/mickey_phong_gray4.png"
         ],
-        "price": 399000,
-        "salePrice": 359000,
-        "discount": 10,
+
         "sizes": [
           { "size": "M", "stock": 12, "sku": "APN001-GRY-M" },
           { "size": "L", "stock": 8, "sku": "APN001-GRY-L" },
@@ -318,17 +283,18 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Trắng",
+        "color": "White",
         "colorHex": "#FFFFFF",
         "images": ["/assets/Him/DiorMountain/diormountain.png"],
-        "price": 599000,
+        
 
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-WHT-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-WHT-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-WHT-L" }
+          { "size": "S", "stock": 7, "sku": "DMT001-WHT-S" },
+          { "size": "M", "stock": 10, "sku": "DMT001-WHT-M" },
+          { "size": "L", "stock": 5, "sku": "DMT001-WHT-L" }
         ]
       }
      
@@ -336,17 +302,16 @@
   },
   {
     "id": 4,
-    "name": "Váy suông nữ họa tiết hoa",
-    "slug": "vay-suong-nu-hoa-tiet-hoa",
-    "categoryId": 2,
-    "subcategoryId": 6,
-    "productTypeId": 15,
-    "description": "Váy suông dáng A với họa tiết hoa nhí.",
-    "shortDescription": "Váy suông họa tiết hoa",
+    "name": "Áo thun in hình .Boxy",
+    "slug": "ao-thun-boxy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 1,
+    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
+    "shortDescription": "Áo thun nam in hình Boxy",
     "images": [
-      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-      "/assets/so_mi_nam.webp",
-      "/assets/so_mi_nam.webp"
+      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+
     ],
     "status": "in-stock",
     "tags": ["new-arrival", "best-seller"],
@@ -354,14 +319,74 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Hồng pastel",
-        "colorHex": "#FFB6C1",
-        "images": ["/images/products/vnu001-pink.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "Black",
+        "colorHex": "#000",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      ,
+      {
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "name": "Áo phao chần bông nam",
+    "slug": "ao-phao-chan-bong-nam",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 5,
+    "description": "Áo phao chần bông siêu nhẹ.",
+    "shortDescription": "Áo phao chần bông siêu nhẹ.",
+    "images": [
+      "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png"
+     
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "Black",
+        "colorHex": "#000000",
+        "images": ["/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black2.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black3.png",
+              "/assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black4.png"
+      ],
+        
+
         "sizes": [
           { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
           { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
@@ -372,9 +397,7 @@
         "color": "Xanh mint",
         "colorHex": "#98FF98",
         "images": ["/images/products/vnu001-mint.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+
         "sizes": [
           { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
           { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
@@ -383,19 +406,19 @@
       }
     ]
   },
+
   {
-    "id": 5,
-    "name": "Váy suông nữ họa tiết hoa",
-    "slug": "vay-suong-nu-hoa-tiet-hoa",
-    "categoryId": 2,
-    "subcategoryId": 6,
-    "productTypeId": 15,
-    "description": "Váy suông họa tiết hoa.",
-    "shortDescription": "Váy suông họa tiết hoa",
+    "id": 6,
+    "name": "Quần denim nam cropped straight",
+    "slug": "quan-denim-cropped-straight",
+    "categoryId": 1,
+    "subcategoryId": 2,
+    "productTypeId": 9,
+    "description": "Quần denim nam cropped straight",
+    "shortDescription": "Quần denim nam cropped straight",
     "images": [
-      "/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png",
-      "/assets/so_mi_nam.webp",
-      "/assets/so_mi_nam.webp"
+      "/assets/Him/QuanJean/denimstraight_kem.png"
+
     ],
     "status": "in-stock",
     "tags": ["new-arrival", "best-seller"],
@@ -403,31 +426,381 @@
     "reviewCount": 89,
     "soldCount": 178,
     "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      
+      {
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": ["/assets/Him/QuanJean/denimstraight_kem.png"
+        , "/assets/Him/QuanJean/denimstraight_kem2.png",
+        "/assets/Him/QuanJean/denimstraight_kem3.png",
+        "/assets/Him/QuanJean/denimstraight_kem4.png"
+        
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 7,
+    "name": "Áo polo fitted",
+    "slug": "ao-polo-fitted",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 2,
+    "description": "Áo polo fitted",
+    "shortDescription": "Áo polo fitted",
+    "images": [
+      "/assets/Him/Polo/polofitted1.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
     "variants": [
       {
-        "color": "Hồng pastel",
-        "colorHex": "#FFB6C1",
-        "images": ["/images/products/vnu001-pink.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "images": ["/assets/Him/Polo/polofitted1.png"
+        , "/assets/Him/Polo/polofitted2.png",
+        "/assets/Him/Polo/polofitted3.png",
+        "/assets/Him/Polo/polofitted4.png"
+      ],
+        
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-PNK-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-PNK-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-PNK-L" }
+          { "size": "S", "stock": 7, "sku": "TBX001-WHT-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-WHT-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-WHT-M" }
         ]
-      },
+      }
+      
+    ]
+  },
+
+  {
+    "id": 8,
+    "name": "Áo polo sọc xanh",
+    "slug": "ao-polo-soc-xanh",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 2,
+    "description": "Áo polo sọc xanh",
+    "shortDescription": "Áo polo sọc xanh",
+    "images": [
+      "/assets/Him/Polo/PoloSoc/polosoc1.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
       {
-        "color": "Xanh mint",
-        "colorHex": "#98FF98",
-        "images": ["/images/products/vnu001-mint.jpg"],
-        "price": 599000,
-        "salePrice": null,
-        "discount": 0,
+        "color": "Black",
+        "colorHex": "#000",
+        "images": ["/assets/Him/Polo/PoloSoc/polosoc1.png"
+        , "/assets/Him/Polo/PoloSoc/polosoc2.png",
+        "/assets/Him/Polo/PoloSoc/polosoc3.png",
+        "/assets/Him/Polo/PoloSoc/polosoc4.png"
+      ],
+        
         "sizes": [
-          { "size": "S", "stock": 7, "sku": "VNU001-MNT-S" },
-          { "size": "M", "stock": 10, "sku": "VNU001-MNT-M" },
-          { "size": "L", "stock": 5, "sku": "VNU001-MNT-L" }
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      
+    ]
+  },
+
+  {
+    "id": 9,
+    "name": "Áo sơ mi kẻ sọc",
+    "slug": "ao-so-mi-ke-soc",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 4,
+    "description": "Áo sơ mi kẻ sọc",
+    "shortDescription": "Áo sơ mi kẻ sọc",
+    "images": [
+      "/assets/Him/SoMi/KeSoc/kexanh1.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "Blue",
+        "colorHex": "#000",
+        "images": ["/assets/Him/SoMi/KeSoc/kexanh1.png"
+        , "/assets/Him/SoMi/KeSoc/kexanh2.png",
+        "/assets/Him/SoMi/KeSoc/kexanh3.png",
+        "/assets/Him/SoMi/KeSoc/kexanh4.png"
+
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 10,
+    "name": "Áo sơ mi polyeste",
+    "slug": "ao-so-mi-polyeste",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 4,
+    "description": "Áo sơ mi polyeste",
+    "shortDescription": "Áo sơ mi polyeste",
+    "images": [
+      "/assets/Him/SoMi/polyeste/somipoly.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "White",
+        "colorHex": "#FFFFFF",
+        "images": [
+          "/assets/Him/SoMi/polyeste/somipoly.png",
+          "/assets/Him/SoMi/polyeste/somipoly2.png",
+          "/assets/Him/SoMi/polyeste/somipoly3.png",
+          "/assets/Him/SoMi/polyeste/somipoly4.png"
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      
+    ]
+  },
+
+  {
+    "id": 11,
+    "name": "Áo sweater nam form loose",
+    "slug": "ao-sweater-loose",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 3,
+    "description": "Áo sweater nam form loose",
+    "shortDescription": "Áo sweater nam form loose",
+    "images": [
+      "/assets/Him/Sweater/loose_blk1.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "Black",
+        "colorHex": "#000",
+        "images": [
+          "/assets/Him/Sweater/loose_blk1.png",
+          "/assets/Him/Sweater/loose_blk2.png",
+          "/assets/Him/Sweater/loose_blk3.png",
+          "/assets/Him/Sweater/loose_blk4.png"
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      
+    ]
+  },
+
+  {
+    "id": 12,
+    "name": "Áo hoodie in hình .Boxy",
+    "slug": "ao-hoodie-boxy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 6,
+    "description": "Áo hoodie in hình .Boxy",
+    "shortDescription": "Áo hoodie in hình .Boxy",
+    "images": [
+      "/assets/Him/Hoodie/Boxy/hoodieboxy.webp"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "Brown",
+        "colorHex": "#000",
+        "images": [
+          "/assets/Him/Hoodie/Boxy/hoodieboxy.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy2.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy3.webp",
+          "/assets/Him/Hoodie/Boxy/hoodieboxy4.webp"
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      ,
+      {
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 13,
+    "name": "Áo khoác regular corduroy",
+    "slug": "ao-khoac-corduroy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 5,
+    "description": "Áo khoác regular corduroy",
+    "shortDescription": "Áo khoác regular corduroy",
+    "images": [
+      "/assets/Him/AoPhao/Coduroy/coduroi.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      
+      {
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": [
+          "/assets/Him/AoPhao/Coduroy/coduroi.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi2.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi3.png",
+          "/assets/Him/AoPhao/Coduroy/coduroi4.png"
+        
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
+        ]
+      }
+    ]
+  },
+
+  {
+    "id": 14,
+    "name": "Áo thun in hình .Boxy",
+    "slug": "ao-thun-boxy",
+    "categoryId": 1,
+    "subcategoryId": 1,
+    "productTypeId": 1,
+    "description": "Áo thun nam in hình Boxy chất lượng, thoáng mát.",
+    "shortDescription": "Áo thun nam in hình Boxy",
+    "images": [
+      "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+
+    ],
+    "status": "in-stock",
+    "tags": ["new-arrival", "best-seller"],
+    "rating": 4.7,
+    "reviewCount": 89,
+    "soldCount": 178,
+    "viewCount": 2890,
+    "price": 599000,
+    "variants": [
+      {
+        "color": "Black",
+        "colorHex": "#000",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-4.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-black-5.png"
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-BLK-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-BLK-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-BLK-L" }
+        ]
+      }
+      ,
+      {
+        "color": "Cream",
+        "colorHex": "#FFFDD0",
+        "images": ["/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem.png"
+        , "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-2.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-3.png",
+        "/assets/Him/AoThun/ThunInBoxy/thunBoxy-kem-4.png"
+        
+      ],
+        
+        "sizes": [
+          { "size": "S", "stock": 7, "sku": "TBX001-CRE-S" },
+          { "size": "M", "stock": 10, "sku": "TBX002-CRE-M" },
+          { "size": "L", "stock": 5, "sku": "TBX002-CRE-L" }
         ]
       }
     ]
@@ -440,9 +813,11 @@
       "id": 1,
       "name": "Spring 2025",
       "slug": "spring-2025",
-      "description": "Những sản phẩm bán chạy nhất",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Spring collection 2025",
+      "description": "THE AWAKENING OF COLOR AND LIGHT.",
+      "sub_description": "Fresh fabrics, fluid motion, and the bright, vivid palettes signaling a new start. Step into the season with lightness and intention.",
+      "image": "/assets/Collections/spring/spring.png",
+      "productIds": [1, 2, 3, 4, 5],
       "featured": true,
       "order": 1
     },
@@ -450,9 +825,11 @@
       "id": 2,
       "name": "Summer 2025",
       "slug": "summer-2025",
-      "description": "Sản phẩm mới nhất trong tuần",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Summer collection 2025",
+      "description": "CHASING THE SUN: SUMMER '25 UNPACKED",
+      "sub_description": "Vibrant hues, breathable fabrics, and effortless designs built for endless coastal days and vibrant summer nights.",
+      "image": "/assets/Collections/summer/summer.png",
+      "productIds": [1, 2, 3, 4, 5],
       "featured": true,
       "order": 2
     },
@@ -460,9 +837,11 @@
       "id": 3,
       "name": "Autumn 2025",
       "slug": "autumn-2025",
-      "description": "Ưu đãi hấp dẫn",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2],
+      "title": "Fall collection 2025",
+      "description": "THE UNVEILING OF AUTUMN'S DEPTH",
+      "sub_description": "Discover our elevated knits, signature textures, and the essential layering pieces to define your Fall 2025 wardrobe.",
+      "image": "/assets/Collections/autumn/autumn.png",
+      "productIds": [1, 2,3,4],
       "featured": true,
       "order": 3
     },
@@ -470,36 +849,14 @@
       "id": 4,
       "name": "Winter 2025",
       "slug": "winter-2025",
-      "description": "Bộ sưu tập mùa đông",
-      "image": "/assets/best_seller_banner.jpg",
-      "productIds": [1, 2, 3],
+      "title": "Winter collection 2025",
+      "description": "A RETURN TO COZY LUXURY.",
+      "sub_description": "Deep textures, muted tones, and festive silhouettes designed to keep you sheltered and chic from the first snow through the holidays.",
+      "image": "/assets/Collections/winter/winter.png",
+      "productIds": [1, 2, 3, 4],
       "featured": false,
       "order": 4
     }
-  ],
-  "outfitSuggestions": [
-    {
-      "id": 1,
-      "name": "Phong cách công sở",
-      "description": "Lịch lãm và chuyên nghiệp cho ngày làm việc",
-      "image": "/images/outfits/office-style.jpg",
-      "productIds": [1, 2],
-      "tags": ["office", "formal"],
-      "dayOfWeek": "monday"
-    },
-    {
-      "id": 2,
-      "name": "Dạo phố cuối tuần",
-      "description": "Thoải mái và năng động",
-      "image": "/images/outfits/weekend-casual.jpg",
-      "productIds": [1, 3],
-      "tags": ["casual", "weekend"],
-      "dayOfWeek": "saturday"
-    }
   ]
-  
-  
- 
-  
   
 }

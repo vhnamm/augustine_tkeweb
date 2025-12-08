@@ -15,7 +15,7 @@ const Header = () => {
   //const [searchResult, setSearchResult] = useState([1]);
 
   return (
-    <header className={clsx(styles.wrapper)}>
+    <header className="wrapper_header">
       <div className={clsx(styles.header_wrap, "grid", "wide")}>
         <div className={clsx(styles.header_left_wrap)}>
           <div className={clsx(styles.logo)}>
