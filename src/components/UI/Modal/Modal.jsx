@@ -3,8 +3,8 @@ import ReactDOM from 'react-dom'
 import styles from './Modal.module.scss'
 import clsx from 'clsx';
 import Button from '../Button/Button';
-const Modal = ({ children, className, type= null,  closeBtn=false, onClose}) => {
-  const classes = clsx(styles.modal, className);
+const Modal = ({ children, className, type= null,  color="", closeBtn=false, onClose}) => {
+  const classes = clsx(styles.modal, className, styles[color]);
   
 
   return ReactDOM.createPortal(
