@@ -13,7 +13,7 @@
 .child_cate_item{
     
     display: block;
-    padding: 8px;
+    
     border: 1px solid var(--primary-btn);
     min-width: 80px;
     
@@ -24,7 +24,9 @@
         color: var(--primary-btn);
         text-align: center;
         display: block;
-        
+        padding: 8px;
+        height: 100%;
+        width: 100%;
     }
 }
 .child_cate_item.active{
@@ -87,12 +89,12 @@
   gap: 8px;
 }
 .item-name {
-  color: #fff;
+  color: var(--text);
   font-size: 16px;
   font-weight: 400;
 }
 .item-price {
-  color: #fff;
+  color: var(--text);
   font-size: 16px;
   font-weight: 600;
 }
@@ -107,7 +109,7 @@
 }
 .rating {
   font-size: 14px;
-  color: #fff;
+  color: var(--text);
 }
 .star {
   color: orange;

@@ -6,6 +6,7 @@
   top: var(--header-height);
   left: 0;
   z-index: 99;
+  backdrop-filter: blur(5px);
 }
 
 .modal {
@@ -34,7 +35,7 @@
   top: 0;
   left: 0;
   z-index: 99;
-
+  
   .modal{
     width: 28%;
     min-height: 100vh;
@@ -45,5 +46,10 @@
     padding: 20px 2%;
     max-height: 100vh;
     overflow-y: scroll;
+  }
+
+  .modal.dark{
+    background-color: var(--primary);
+    width: 36%;
   }
 }
