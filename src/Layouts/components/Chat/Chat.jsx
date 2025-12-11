@@ -4,12 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faAngleLeft, faPhone} from '@fortawesome/free-solid-svg-icons';
 import clsx from 'clsx';
 
-const Chat = () => {
+import Button from '../../../components/UI/Button/Button';
+const Chat = ({setOpenCenter}) => {
   return (
     <div className={styles.wrapper}>
         <div className={styles.chat_header}>
-            <div className={styles.btn_back}>
-                <FontAwesomeIcon icon={faAngleLeft} />
+            <div className={styles.btn_back} onClick={() => setOpenCenter(false)}>
+                <FontAwesomeIcon icon={faAngleLeft} className={styles.icon}/>
                 <span>Back</span>
             </div>
 
@@ -20,7 +21,7 @@ const Chat = () => {
 
             <div className={styles.btn_call}>
                 <a href="https://www.facebook.com/duymanhlemon#" target='_blank'>
-                    <FontAwesomeIcon icon={faPhone} />
+                    <FontAwesomeIcon icon={faPhone} className={styles.icon}/>
                 </a>
             </div>
         </div>
@@ -33,7 +34,12 @@ const Chat = () => {
             <p className={clsx(styles.chat_txt, styles.emp)}>Anh ơi anh cần hỗ trợ gì về việc đặt mua hàng thì bên em giải quyết chứ không liên quan đến cá nhân nào ạ.</p>
             <p className={clsx(styles.chat_txt, styles.emp)}>Nếu quý khách không còn vấn đề gì thì augustine xin phép đóng trò chuyện tại đây</p>
             <p className={clsx(styles.chat_txt, styles.cus)}>Thi ạ em còn trẻ quá trạc tuổi em trai của anh, sao em lại dại dột thế</p>
-            <p className={clsx(styles.chat_txt, styles.cus)}>Thi ạ em còn trẻ quá trạc tuổi em trai của anh, sao em lại dại dột thế</p>
+            
+        </div>
+
+        <div className={styles.chat_send_wrap}>
+            <input type="text" placeholder='Aa'className={styles.chat_form}/>
+            <Button primary size="medium">Send</Button>
         </div>
     </div>
   );
