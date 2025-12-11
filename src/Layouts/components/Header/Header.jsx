@@ -26,7 +26,7 @@ const Header = () => {
     <>
       {openCenter && (
         <Modal type="left" color="dark" onClose={handleCloseChat}>
-          <Chat></Chat>
+          <Chat setOpenCenter={setOpenCenter}></Chat>
         </Modal>
       )}
       <header className="wrapper_header">

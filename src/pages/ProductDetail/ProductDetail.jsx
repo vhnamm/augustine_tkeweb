@@ -5,8 +5,10 @@ import clsx from 'clsx';
 
 const Product = () => {
   return (
-       <div className={clsx(styles.test)}>
-         Đây là trang đổ giao diện phần CHI TIẾT SẢN PHẨM
+       <div className={clsx("grid wide")}>
+         <div className={clsx("row")}>
+          
+         </div>
          
        </div>
   );
