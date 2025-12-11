@@ -4,6 +4,7 @@ import MainLayout from "~/layouts/MainLayout/MainLayout";
 
 import Home from "~/pages/Home/Home";
 import SearchResult from "~/pages/SearchResult/SearchResult";
+import Cart from "~/pages/Cart/Cart";
 
 import Collection from "~/pages/Collection/Collection";
 import Category from "../../pages/Category/Category";
@@ -39,7 +40,8 @@ export const routes = (
         <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
         
       </Route>
-      // ...existing code...
+     
+     <Route path="cart" element={<Cart />} />
     </Route>
 
     <Route path="/dashboard" element={<AdminOverview />}></Route>
