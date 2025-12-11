@@ -33,6 +33,7 @@ const Chat = () => {
             <p className={clsx(styles.chat_txt, styles.emp)}>Anh ơi anh cần hỗ trợ gì về việc đặt mua hàng thì bên em giải quyết chứ không liên quan đến cá nhân nào ạ.</p>
             <p className={clsx(styles.chat_txt, styles.emp)}>Nếu quý khách không còn vấn đề gì thì augustine xin phép đóng trò chuyện tại đây</p>
             <p className={clsx(styles.chat_txt, styles.cus)}>Thi ạ em còn trẻ quá trạc tuổi em trai của anh, sao em lại dại dột thế</p>
+            <p className={clsx(styles.chat_txt, styles.cus)}>Thi ạ em còn trẻ quá trạc tuổi em trai của anh, sao em lại dại dột thế</p>
         </div>
     </div>
   );
