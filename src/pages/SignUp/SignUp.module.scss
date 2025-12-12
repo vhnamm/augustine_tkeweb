@@ -1,0 +1,165 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IM+Fell+DW+Pica:ital@0;1&family=Ultra&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&family=IM+Fell+DW+Pica:ital@0;1&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Ultra&display=swap');
+
+$bg-color: #050505;  
+$card-bg: #151515;
+$text-light: #e0e0e0;
+$text-dim: #797777;
+$accent-color: #D9D9D9;
+$border-color: #333333;
+
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+$font-logo:  'IM Fell DW Pica', serif;
+$font-body: 'PT Sans', sans-serif;
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.signUpContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-light;
+    font-family: $font-body;
+    
+    .brandLogo{
+        width: 100%;
+        text-align: center;
+        font-family: $font-logo;
+        font-weight: 25rem;
+        font-size: 2.2rem;
+        font-style: italic;
+        letter-spacing: 0%;
+        margin-bottom: 8rem;
+        margin-top: 10rem;
+        
+    }
+    .signUpCard{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 2rem;
+        
+        height: 44.755rem;
+        width: 87.5rem;
+        background-color: $card-bg;
+        border-radius: 0.625rem;
+        position: relative;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        padding: 5rem 5.5rem;
+        .headerText{
+            text-align: center;
+            h1{
+                font-family: $font-logo;
+                font-size: 1.5rem;
+                font-style: normal;
+                margin-bottom: 1rem;
+                .italicText{
+                    font-style: italic;
+                }
+            }
+            p{
+                color: $text-dim;
+                font-size: 0.875rem;
+            }
+        }
+        .btnBack{
+            font-size: 1rem;
+            position: absolute;
+            top: 5rem;
+            left: 8rem;
+
+            background: none;
+            border: none;
+            color: $text-light;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            opacity: 0.7;
+            transition: opacity 0.3s ,scale 0.3s ease-in-out;
+            &:hover {
+                opacity: 1;
+                scale: 1.2;
+            }
+        }
+        .signUpForm{
+            width: 31.125rem;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            .inputGroup{
+                input {
+                    width: 100%;
+                    background: transparent;
+                    border: none;
+                    border-bottom: 1px solid $border-color;
+                    
+                    padding: 0.8rem 0;
+                    color: $text-light;
+                    font-size: 2.5rem;
+                    font-family: $font-sans;
+                    
+                    outline: none; 
+                    transition: border-color 0.3s ease-in-out;
+
+                    &::placeholder {
+                        color: $text-dim;
+                        font-size: 0.95rem;
+                        font-weight: 300;
+                    }
+
+                    &:focus {
+                        border-bottom-color: $accent-color;
+                    }
+                }
+            }
+            .submitBtn {
+                width: 100%;
+                height: 3.625rem;
+                padding: 10px;
+                background-color: $accent-color;
+                color: $bg-color;
+                border: none;
+                border-radius: 5px;
+                gap:10px;
+                font-size: 1rem;
+                font-weight: 600;
+                cursor: pointer;
+                transition: background-color 0.3s,scale 0.3s ease-in-out;
+
+                &:hover {
+                    background-color: darken($accent-color, 10%);
+                    scale: 1.1;
+                }
+            }
+        }
+        .acceptTerms{
+            margin-top: -1.4rem;
+            font-size: 0.875rem;
+            color: $text-dim;
+            text-align: center;
+        }
+        .toLogin{
+            margin-top: 3rem;
+            font-size: 0.875rem;
+            color: $text-dim;
+            text-align: center;
+
+            a{
+                color: $text-light;
+                text-decoration: underline;
+                margin-left: 0.3rem;
+            }
+        }
+        
+    }
+}

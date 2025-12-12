@@ -16,6 +16,9 @@ import WinterCollection from "~/pages/WinterCollection/WinterCollection";
 import AutumnCollection from "~/pages/AutumnCollection/AutumnCollection";
 import CategoryProducts from "../../pages/CategoryProducts/CategoryProducts";
 import SubcategoryProducts from "../../pages/SubcategoryProducts/SubcategoryProducts";
+
+import Login from "~/pages/Login/Login";
+import SignUp from "~/pages/SignUp/SignUp";
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
@@ -24,10 +27,8 @@ export const routes = (
       <Route path="collection/summer-2025" element={<SummerCollection />} />
       <Route path="collection/winter-2025" element={<WinterCollection />} />
       <Route path="collection/autumn-2025" element={<AutumnCollection />} />
-
       <Route path="collection/:slug">
         <Route index element={<Collection/>}/>
-        
       </Route>
 
       <Route path="product/:slug" element={<ProductDetail/>}/>
@@ -43,7 +44,8 @@ export const routes = (
      
      <Route path="cart" element={<Cart />} />
     </Route>
-
+    <Route path="/login" element={<Login />}/>
+    <Route path="/signup" element={<SignUp />} />
     <Route path="/dashboard" element={<AdminOverview />}></Route>
   </>
 );
