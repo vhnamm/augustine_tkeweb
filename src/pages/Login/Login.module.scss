@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+$bg-color: #050505;   
+$card-bg: #151515;
+$text-light: #e0e0e0;
+$text-dim: #797777;
+$accent-color: #D9D9D9;
+$border-color: #333333;
+
+$font-serif: 'Playfair Display', serif;
+$font-sans: 'Inter', sans-serif;
+$font-logo:  'IM Fell DW Pica', serif;
+$font-body: 'PT Sans', sans-serif;
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.animateEnter {
+    opacity: 0;
+    animation: fadeInUp 0.8s ease-in-out forwards;
+    will-change: opacity, transform; 
+}
+
+.loginContainer {
+    width: 100vw;
+    height: 100vh;
+    background-color: $bg-color;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: $text-light;
+    font-family: $font-body;
+
+    .brandLogo {
+        width: 100%;
+        text-align: center;
+        font-family: $font-logo;
+        font-weight: 400;
+        font-size: 2.2rem;
+        font-style: italic;
+        margin-bottom: 5rem;
+        margin-top: 8rem;
+    }
+}
+
+.loginCard {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    
+    height: auto;
+    min-height: 44.755rem;
+    width: 87.5rem;
+    max-width: 90vw;
+    background-color: $card-bg;
+    border-radius: 0.625rem;
+    position: relative;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    padding: 5rem 5.5rem;
+
+    .btnBack {
+        font-size: 1rem;
+        position: absolute;
+        top: 3rem;
+        left: 3rem;
+        background: none;
+        border: none;
+        color: $text-light;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        opacity: 0.7;
+        transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
+        
+        &:hover {
+            opacity: 1;
+            scale:1.05;
+        }
+    }
+
+    .headerText {
+        text-align: center;
+        h1 {
+            font-family: $font-logo;
+            font-size: 1.8rem;
+            font-style: normal;
+            margin-bottom: 0.5rem;
+        }
+        p {
+            color: $text-dim;
+            font-size: 0.875rem;
+        }
+    }
+
+    .loginForm {
+        width: 100%;
+        max-width: 31.125rem;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
+    }
+
+    .inputGroup {
+        position: relative;
+        width: 100%;
+
+        input {
+            width: 100%;
+            background: transparent;
+            border: none;
+            border-bottom: 1px solid $border-color; 
+            padding: 0.8rem 0;
+            color: $text-light;
+            font-size: 1.25rem;
+            font-family: $font-sans;
+            outline: none;
+            transition: border-color 0.3s;
+
+            &::placeholder {
+                color: $text-dim;
+                font-size: 1rem;
+                font-weight: 300;
+            }
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1px;
+            background: $accent-color;
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.4s ease-in-out;
+        }
+
+        &:focus-within::after {
+            transform: scaleX(1);
+        }
+    }
+
+    .submitBtn {
+        width: 100%;
+        height: 3.625rem;
+        margin-top: 1rem;
+        background-color: $text-light;
+        color: $bg-color;
+        border: none;
+        border-radius: 4px;
+        font-size: 1rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: scale 0.3s ease-in-out, background-color 0.3s ease-in-out;
+
+        &:hover {
+            background-color: darken($text-light, 10%);
+            scale: 1.02;
+        }
+
+        &:active {
+            scale:0.96;
+            background-color: darken($text-light, 20%);
+            transition: transform 0.05s ease-in-out;
+        }
+    }
+
+    .socialLogin {
+        text-align: center;
+        p {
+            font-size: 0.875rem;
+            color: $text-dim;
+            margin-bottom: 1.5rem;
+        }
+
+        .socialIcons {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+
+            .socialBtn {
+                width: 3rem;
+                height: 3rem;
+                border-radius: 50%;
+                background: rgba(255, 255, 255, 0.05);
+                border: 1px solid $border-color;
+                color: $text-light;
+                font-size: 1.2rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                cursor: pointer;
+                transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
+
+                &:hover {
+                    background-color: rgba(255, 255, 255, 0.1);
+                    transform: scale(1.1);
+                    border-color: $text-light;
+                }
+                &.google{ color: #DB4437; }
+                &.facebook{ color: #4267B2; }
+                &.apple{ color: #ffffff; }
+                &:active {
+                    scale:0.96;
+                    transition: transform 0.05s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .footerLink {
+        margin-top: 0.5rem;
+        font-size: 0.875rem;
+        color: $text-dim;
+        text-align: center;
+
+        a {
+            color: $text-light;
+            text-decoration: none;
+            margin-left: 0.3rem;
+            border-bottom: 1px solid transparent;
+            transition: border-color 0.3s;
+            
+            &:hover {
+                border-bottom-color: $text-light;
+            }
+        }
+    }
+}
