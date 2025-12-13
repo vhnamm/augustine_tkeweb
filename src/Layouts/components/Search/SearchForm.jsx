@@ -102,7 +102,7 @@ function handleCloseModal(){
                   
                     <div className={clsx("col", "lg-2-5")}>
                       <div className={styles["card-item"]} key={prod.id}>
-                        <Link to="/product/ao-phong" className={styles.item_link} onClick={() => setOpenModal(false)}>
+                        <Link to={`product/${prod.slug}`} className={styles.item_link} onClick={() => setOpenModal(false)}>
                           <div className={styles.item_img}>
                             <img src={prod.images[0]} alt="ảnh" />
                           </div>
