@@ -267,6 +267,7 @@ li {
     padding-left: 5px;
     padding-right: 5px;
   }
+  
   .md-1,
   .md-2,
   .md-3,
@@ -356,6 +357,15 @@ li {
   .row.small-gutter .col {
     padding-left: 5px;
     padding-right: 5px;
+  }
+
+  .row.large-gutter{
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+  .row.large-gutter .col{
+    padding-left: 80px;
+    padding-right: 80px;
   }
   .lg-1,
   .lg-2,
