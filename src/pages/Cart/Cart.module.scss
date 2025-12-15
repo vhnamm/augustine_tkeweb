@@ -1,28 +1,27 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .pageContainer {
   min-height: 100vh;
-  background-color: #0a0a0a; /* Nền đen chính */
+  background-color: #0a0a0a;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  font-size: 1.6rem;
 }
 
-/* ========================================= */
-/* EMPTY STATE */
-/* ========================================= */
 .emptyStateWrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh; /* Căn giữa màn hình */
+  min-height: 70vh;
   text-align: center;
-  /* Nếu grid wide có padding thì cái này sẽ nằm gọn trong đó */
 }
 
 .emptyIconBox {
@@ -55,19 +54,15 @@
   line-height: 1.5;
 }
 
-/* ========================================= */
-/* FILLED STATE (Shopping Bag Layout) */
-/* ========================================= */
 .mainContent {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-/* Layout 2 cột: Trái (Sản phẩm) - Phải (Tổng) */
 .layoutGrid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr; /* Tỉ lệ cột giống Screenshot 708 */
-  gap: 80px; /* Khoảng cách lớn giữa 2 cột */
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
 }
 
 .columnHeader {
@@ -75,13 +70,18 @@
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 24px;
-  border-bottom: 1px solid transparent; /* Giữ khoảng cách */
+  border-bottom: 1px solid transparent;
 }
 
-.colTitle { font-size: 1rem; font-weight: 500; color: #ccc; }
-.colCount { font-size: 0.9rem; color: #666; }
+.colTitle {
+  font-weight: 500;
+  color: #ccc;
+}
 
-/* --- PRODUCT CARD --- */
+.colCount {
+  color: #666;
+}
+
 .productCard {
   background-color: #141414;
   border-radius: 8px;
@@ -92,15 +92,19 @@
 }
 
 .imageBox {
-  width: 220px; /* Ảnh lớn hình chữ nhật đứng */
-  height: 260px;
+  width: 280px;
+  height: 340px;
   background-color: #2a2a2a;
   border-radius: 4px;
   flex-shrink: 0;
   overflow: hidden;
 }
 
-.img { width: 100%; height: 100%; object-fit: cover; }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .cardDetails {
   flex: 1;
@@ -116,18 +120,28 @@
   align-items: flex-start;
 }
 
-.productName { font-size: 1.1rem; font-weight: 400; color: #fff; }
+.productName {
+  font-weight: 400;
+  color: #fff;
+}
 
 .removeBtn {
-  background: none; border: none; color: #666; cursor: pointer; padding: 4px;
-  &:hover { color: #fff; }
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .variantInfo {
   margin-top: auto;
   margin-bottom: auto;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1.6rem;
 }
 
 .variantRow {
@@ -146,7 +160,6 @@
   padding-top: 20px;
 }
 
-/* Qty Selector [ - 1 + ] */
 .qtyWrapper {
   display: flex;
   align-items: center;
@@ -156,17 +169,27 @@
   padding: 6px 12px;
   gap: 16px;
   color: #fff;
+
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+
+    &:hover {
+      color: #ccc;
+    }
+  }
 }
 
-.qtyWrapper button {
-  background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer;
-  &:hover { color: #ccc; }
+.itemPrice {
+  font-weight: 500;
 }
 
-.itemPrice { font-size: 1.1rem; font-weight: 500; }
-
-/* --- PACKAGING --- */
-.packagingSection { margin-top: 40px; }
+.packagingSection {
+  margin-top: 40px;
+  font-size: 1.6rem;
+}
 
 .packagingCard {
   background-color: #141414;
@@ -177,12 +200,30 @@
   align-items: center;
 }
 
-.packInfo { display: flex; align-items: center; gap: 16px; }
-.packPlaceholder { width: 60px; height: 60px; background-color: #333; border-radius: 4px; }
-.packName { font-size: 1rem; color: #fff; }
-.packCheckbox { width: 20px; height: 20px; accent-color: #fff; cursor: pointer; }
+.packInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
 
-/* --- SUMMARY (RIGHT COL) --- */
+.packPlaceholder {
+  width: 60px;
+  height: 60px;
+  background-color: #333;
+  border-radius: 4px;
+}
+
+.packName {
+  color: #fff;
+}
+
+.packCheckbox {
+  width: 20px;
+  height: 20px;
+  accent-color: #fff;
+  cursor: pointer;
+}
+
 .summaryCard {
   background-color: #141414;
   border-radius: 8px;
@@ -193,7 +234,6 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  font-size: 0.95rem;
   color: #ccc;
 }
 
@@ -208,31 +248,88 @@
 }
 
 .checkoutBtn {
-  width: 100%; padding: 16px;
-  background-color: #e0e0e0; color: #000;
-  border: none; border-radius: 4px; font-weight: 600; font-size: 1rem;
-  cursor: pointer; margin-bottom: 12px;
-  &:hover { background-color: #fff; }
+  width: 100%;
+  padding: 16px;
+  background-color: #e0e0e0;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+
+  &:hover {
+    background-color: #fff;
+  }
 }
 
 .continueBtn {
-  width: 100%; padding: 16px;
-  background: transparent; color: #fff;
-  border: 1px solid #333; border-radius: 4px; font-weight: 500; font-size: 1rem;
-  cursor: pointer; margin-bottom: 32px;
-  &:hover { border-color: #666; }
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  margin-bottom: 32px;
+
+  &:hover {
+    border-color: #666;
+  }
 }
 
-.noteWrapper label { display: block; margin-bottom: 12px; font-size: 0.9rem; color: #ccc; }
-.noteWrapper textarea {
-  width: 100%; height: 80px;
-  background-color: #222; border: none; border-radius: 4px;
-  padding: 12px; color: #fff; resize: none;
-  &:focus { outline: 1px solid #666; }
+.noteWrapper {
+  label {
+    display: block;
+    margin-bottom: 12px;
+    color: #ccc;
+  }
+
+  textarea {
+    width: 100%;
+    height: 120px;
+    background-color: #1a1a1a;
+    border: 1px solid #2a2a2a;
+    border-radius: 6px;
+    padding: 14px;
+    color: #fff;
+    resize: none;
+    line-height: 1.5;
+    font-family: inherit;
+
+    &:focus {
+      outline: none;
+      border-color: #444;
+    }
+
+    &::placeholder {
+      color: #666;
+    }
+
+    &::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    &::-webkit-scrollbar-track {
+      background: transparent;
+      border-radius: 10px;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      background: #444;
+      border-radius: 10px;
+
+      &:hover {
+        background: #555;
+      }
+    }
+
+    scrollbar-width: thin;
+    scrollbar-color: #444 transparent;
+  }
 }
 
-/* --- RESPONSIVE --- */
-/* Mobile/Tablet: Chuyển về 1 cột dọc */
 @media (max-width: 1024px) {
   .layoutGrid {
     grid-template-columns: 1fr;
@@ -245,10 +342,12 @@
     flex-direction: column;
     padding: 16px;
   }
+
   .imageBox {
     width: 100%;
     height: 300px;
   }
+
   .cardDetails {
     gap: 16px;
   }
