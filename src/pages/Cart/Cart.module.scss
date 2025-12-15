@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 .pageContainer {
   min-height: 100vh;
   background-color: #0a0a0a;
@@ -14,7 +13,6 @@
   flex-direction: column;
   font-size: 1.6rem;
 }
-
 
 .emptyStateWrapper {
   flex: 1;
@@ -26,13 +24,11 @@
   text-align: center;
 }
 
-
 .emptyIconBox {
   position: relative;
   margin-bottom: 24px;
   color: #fff;
 }
-
 
 .plusSign {
   position: absolute;
@@ -45,13 +41,11 @@
   padding: 0 4px;
 }
 
-
 .emptyTitle {
   font-size: 1.2rem;
   font-weight: 500;
   margin-bottom: 12px;
 }
-
 
 .emptyText {
   font-size: 0.95rem;
@@ -60,19 +54,16 @@
   line-height: 1.5;
 }
 
-
 .mainContent {
   padding-top: 60px;
   padding-bottom: 60px;
 }
-
 
 .layoutGrid {
   display: grid;
   grid-template-columns: 1.6fr 1fr;
   gap: 80px;
 }
-
 
 .columnHeader {
   display: flex;
@@ -82,17 +73,16 @@
   border-bottom: 1px solid transparent;
 }
 
-
 .colTitle {
+  font-family: "IM FELL DW Pica";
   font-weight: 500;
-  color: #ccc;
+  color: #ffffff;
 }
-
 
 .colCount {
   color: #666;
+  font-size: 1.6rem;
 }
-
 
 .productCard {
   background-color: #141414;
@@ -101,8 +91,49 @@
   display: flex;
   gap: 32px;
   margin-bottom: 24px;
+  position: relative;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    background: linear-gradient(#141414, #141414) padding-box,
+      linear-gradient(45deg, #ff8c00, #3f0101) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: gradientRotate 3s linear infinite;
+  }
 }
 
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 1.6rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
+.productCount {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 0%, 0% 50%;
+  }
+  50% {
+    background-position: 0% 0%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 50%;
+  }
+}
 
 .imageBox {
   width: 280px;
@@ -113,22 +144,19 @@
   overflow: hidden;
 }
 
-
 .img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
 
-
 .cardDetails {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 30px 10px;
 }
-
 
 .cardTop {
   display: flex;
@@ -136,12 +164,18 @@
   align-items: flex-start;
 }
 
-
 .productName {
   font-weight: 400;
   color: #fff;
 }
 
+.product {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
 
 .removeBtn {
   background: none;
@@ -150,12 +184,10 @@
   cursor: pointer;
   padding: 4px;
 
-
   &:hover {
     color: #fff;
   }
 }
-
 
 .variantInfo {
   margin-top: auto;
@@ -164,14 +196,12 @@
   font-size: 1.6rem;
 }
 
-
 .variantRow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
   max-width: 100%;
 }
-
 
 .cardBottom {
   display: flex;
@@ -181,7 +211,6 @@
   border-top: 1px solid #333;
   padding-top: 20px;
 }
-
 
 .qtyWrapper {
   display: flex;
@@ -193,69 +222,30 @@
   gap: 16px;
   color: #fff;
 
-
   button {
     background: none;
     border: none;
     color: #fff;
     cursor: pointer;
-
-
+    font-size: 1.6rem;
     &:hover {
       color: #ccc;
     }
   }
 }
 
-
 .itemPrice {
   font-weight: 500;
 }
 
-
-.packagingSection {
-  margin-top: 40px;
-  font-size: 1.6rem;
+.rightColumn {
+  position: relative;
 }
 
-
-.packagingCard {
-  background-color: #141414;
-  border-radius: 8px;
-  padding: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.stickyWrapper {
+  position: sticky;
+  top: 20px;
 }
-
-
-.packInfo {
-  display: flex;
-  align-items: center;
-  gap: 16px;
-}
-
-
-.packPlaceholder {
-  width: 60px;
-  height: 60px;
-  background-color: #333;
-  border-radius: 4px;
-}
-
-
-.packName {
-  color: #fff;
-}
-
-
-.packCheckbox {
-  width: 20px;
-  height: 20px;
-  accent-color: #fff;
-  cursor: pointer;
-}
-
 
 .summaryCard {
   background-color: #141414;
@@ -263,7 +253,6 @@
   padding: 32px;
   font-size: 1.6rem;
 }
-
 
 .summaryRow {
   display: flex;
@@ -273,7 +262,6 @@
   font-size: 1.6rem;
 }
 
-
 .totalRow {
   font-size: 1.6rem;
   margin-top: 24px;
@@ -281,10 +269,17 @@
   border-top: 1px solid #333;
   color: #fff;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 32px;
 }
 
+.total {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
 
 .checkoutBtn {
   width: 100%;
@@ -296,13 +291,11 @@
   font-weight: 600;
   cursor: pointer;
   margin-bottom: 12px;
-
-
+  font-size: 1.6rem;
   &:hover {
-    background-color: #fff;
+    background-color: #ffba7d;
   }
 }
-
 
 .continueBtn {
   width: 100%;
@@ -311,76 +304,90 @@
   color: #fff;
   border: 1px solid #333;
   border-radius: 4px;
+  font-size: 1.6rem;
   font-weight: 500;
   cursor: pointer;
-  margin-bottom: 32px;
-
 
   &:hover {
     border-color: #666;
   }
 }
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
 
-.noteWrapper {
-  label {
-    display: block;
-    margin-bottom: 12px;
-    color: #ccc;
-  }
+.modalContent {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 440px;
+  width: 90%;
+  border: 1px solid #333;
+}
 
+.modalTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
 
-  textarea {
-    width: 100%;
-    height: 120px;
-    background-color: #1a1a1a;
-    border: 1px solid #2a2a2a;
-    border-radius: 6px;
-    padding: 14px;
-    color: #fff;
-    resize: none;
-    line-height: 1.5;
-    font-family: inherit;
+.modalText {
+  font-family: '"IM FELL DW Pica", serif';
+  font-size: 1.5rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
 
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
 
-    &:focus {
-      outline: none;
-      border-color: #444;
-    }
+.modalCancelBtn {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
 
-
-    &::placeholder {
-      color: #666;
-    }
-
-
-    &::-webkit-scrollbar {
-      width: 6px;
-    }
-
-
-    &::-webkit-scrollbar-track {
-      background: transparent;
-      border-radius: 10px;
-    }
-
-
-    &::-webkit-scrollbar-thumb {
-      background: #444;
-      border-radius: 10px;
-
-
-      &:hover {
-        background: #555;
-      }
-    }
-
-
-    scrollbar-width: thin;
-    scrollbar-color: #444 transparent;
+  &:hover {
+    border-color: #666;
+    background-color: #222;
   }
 }
 
+.modalConfirmBtn {
+  flex: 1;
+  padding: 14px;
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b91c1c;
+  }
+}
 
 @media (max-width: 1024px) {
   .layoutGrid {
@@ -389,24 +396,18 @@
   }
 }
 
-
 @media (max-width: 600px) {
   .productCard {
     flex-direction: column;
     padding: 16px;
   }
 
-
   .imageBox {
     width: 100%;
     height: 300px;
   }
 
-
   .cardDetails {
     gap: 16px;
   }
 }
-
-
-

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
 import styles from "./Cart.module.scss";
 
-
 const Cart = () => {
+  const [showDeleteModal, setShowDeleteModal] = useState(false);
+  const [itemToDelete, setItemToDelete] = useState(null);
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
@@ -19,16 +20,51 @@ const Cart = () => {
       name: "Premium Denim Jeans",
       size: "32",
       color: "Blue",
-      price: 1.0,
+      price: 1800.0,
       quantity: 1,
       image:
-        "/assets/f6ed0820-c180-44c8-b098-8e59b183e54e.jpg?width=400&height=400&fit=crop",
+        "/assets/f6ed0820-c180-44c8-b098-8e59b183e54e.jpg?w=400&h=400&fit=crop",
+    },
+    {
+      id: 3,
+      name: "Cashmere Sweater",
+      size: "L",
+      color: "Grey",
+      price: 3200.0,
+      quantity: 2,
+      image: "/assets/áo1.jpg?w=400&h=400&fit=crop",
+    },
+    {
+      id: 4,
+      name: "Leather Jacket",
+      size: "M",
+      color: "Brown",
+      price: 4500.0,
+      quantity: 1,
+      image:
+        "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+    },
+    {
+      id: 5,
+      name: "Cotton T-Shirt",
+      size: "L",
+      color: "White",
+      price: 890.0,
+      quantity: 3,
+      image:
+        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+    },
+    {
+      id: 6,
+      name: "Wool Blazer",
+      size: "XL",
+      color: "Navy",
+      price: 3800.0,
+      quantity: 1,
+      image:
+        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=400&fit=crop",
     },
   ]);
-
-
-  const [isPackagingChecked, setIsPackagingChecked] = useState(false);
-
 
   const updateQuantity = (id, change) => {
     setCartItems((prev) =>
@@ -42,11 +78,21 @@ const Cart = () => {
     );
   };
 
-
   const removeItem = (id) => {
     setCartItems((prev) => prev.filter((item) => item.id !== id));
+    setShowDeleteModal(false);
+    setItemToDelete(null);
   };
 
+  const handleDeleteClick = (id) => {
+    setItemToDelete(id);
+    setShowDeleteModal(true);
+  };
+
+  const cancelDelete = () => {
+    setShowDeleteModal(false);
+    setItemToDelete(null);
+  };
 
   const formatPrice = (num) =>
     num.toLocaleString("en-US", {
@@ -54,14 +100,12 @@ const Cart = () => {
       maximumFractionDigits: 2,
     }) + "đ";
 
-
   const subtotal = cartItems.reduce(
     (acc, item) => acc + item.price * item.quantity,
     0
   );
   const taxes = subtotal * 0.09;
   const total = subtotal + taxes;
-
 
   if (cartItems.length === 0) {
     return (
@@ -95,7 +139,6 @@ const Cart = () => {
     );
   }
 
-
   return (
     <div className={styles.pageContainer}>
       <div className={`${styles.mainContent} grid wide`}>
@@ -108,8 +151,13 @@ const Cart = () => {
               </span>
             </div>
 
-
             <div className={styles.productList}>
+              <div className={styles.product}>
+                Products
+                <span className={styles.productCount}>
+                  {cartItems.length} product{cartItems.length > 1 ? "s" : ""}
+                </span>
+              </div>
               {cartItems.map((item) => (
                 <div key={item.id} className={styles.productCard}>
                   <div className={styles.imageBox}>
@@ -120,13 +168,12 @@ const Cart = () => {
                     />
                   </div>
 
-
                   <div className={styles.cardDetails}>
                     <div className={styles.cardTop}>
-                      <h3 className={styles.productName}>Product name</h3>
+                      <h3 className={styles.productName}>{item.name}</h3>
                       <button
                         className={styles.removeBtn}
-                        onClick={() => removeItem(item.id)}
+                        onClick={() => handleDeleteClick(item.id)}
                       >
                         <svg
                           width="24"
@@ -144,8 +191,7 @@ const Cart = () => {
                       </button>
                     </div>
 
-
-                  <div className={styles.variantInfo}>
+                    <div className={styles.variantInfo}>
                       <div className={styles.variantRow}>
                         <span>Size</span> <span>{item.size}</span>
                       </div>
@@ -153,7 +199,6 @@ const Cart = () => {
                         <span>Colour</span> <span>{item.color}</span>
                       </div>
                     </div>
-
 
                     <div className={styles.cardBottom}>
                       <div className={styles.qtyWrapper}>
@@ -166,7 +211,6 @@ const Cart = () => {
                         </button>
                       </div>
 
-
                       <div className={styles.itemPrice}>
                         {formatPrice(item.price * item.quantity)}
                       </div>
@@ -175,67 +219,63 @@ const Cart = () => {
                 </div>
               ))}
             </div>
-
-
-            <div className={styles.packagingSection}>
-              <div className={styles.columnHeader}>
-                <span className={styles.colTitle}>Packaging & Gifting</span>
-              </div>
-              <div className={styles.packagingCard}>
-                <div className={styles.packInfo}>
-                  <div className={styles.packPlaceholder}></div>
-                  <span className={styles.packName}>Standard Packaging</span>
-                </div>
-                <input
-                  type="checkbox"
-                  className={styles.packCheckbox}
-                  checked={isPackagingChecked}
-                  onChange={() => setIsPackagingChecked(!isPackagingChecked)}
-                />
-              </div>
-            </div>
           </div>
 
-
           <div className={styles.rightColumn}>
-            <div className={styles.columnHeader}>
-              <span className={styles.colTitle}>Total</span>
-            </div>
-
-
-            <div className={styles.summaryCard}>
-              <div className={styles.summaryRow}>
-                <span>Subtotal</span>
-                <span>{formatPrice(subtotal)}</span>
+            <div className={styles.stickyWrapper}>
+              <div className={styles.columnHeader}>
+                <span className={styles.colTitle}>Total</span>
               </div>
-              <div className={styles.summaryRow}>
-                <span>Taxes</span>
-                <span>{formatPrice(taxes)}</span>
-              </div>
-              <div className={`${styles.summaryRow} ${styles.totalRow}`}>
-                <span>Total</span>
-                <span>{formatPrice(total)}</span>
-              </div>
+              <div className={styles.total}>Total</div>
+              <div className={styles.summaryCard}>
+                <div className={styles.summaryRow}>
+                  <span>Subtotal</span>
+                  <span>{formatPrice(subtotal)}</span>
+                </div>
+                <div className={styles.summaryRow}>
+                  <span>Taxes</span>
+                  <span>{formatPrice(taxes)}</span>
+                </div>
+                <div className={`${styles.summaryRow} ${styles.totalRow}`}>
+                  <span>Total</span>
+                  <span>{formatPrice(total)}</span>
+                </div>
 
-
-              <button className={styles.checkoutBtn}>
-                Proceed to Checkout
-              </button>
-              <button className={styles.continueBtn}>Continue Shopping</button>
-
-
-              <div className={styles.noteWrapper}>
-                <label>Note</label>
-                <textarea></textarea>
+                <button className={styles.checkoutBtn}>
+                  Proceed to Checkout
+                </button>
+                <button className={styles.continueBtn}>
+                  Continue Shopping
+                </button>
               </div>
             </div>
           </div>
         </div>
       </div>
+
+      {showDeleteModal && (
+        <div className={styles.modalOverlay}>
+          <div className={styles.modalContent}>
+            <h3 className={styles.modalTitle}>Remove Item</h3>
+            <p className={styles.modalText}>
+              Are you sure you want to remove this item from your cart?
+            </p>
+            <div className={styles.modalActions}>
+              <button className={styles.modalCancelBtn} onClick={cancelDelete}>
+                Cancel
+              </button>
+              <button
+                className={styles.modalConfirmBtn}
+                onClick={() => removeItem(itemToDelete)}
+              >
+                Remove
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
-
 export default Cart;
-
