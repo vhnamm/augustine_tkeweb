@@ -109,9 +109,11 @@ const Product = () => {
 
                       </Button>
 
-                      <span className={styles.quantity}>1</span>
-
-                      <Button className={styles.plus}>
+                      
+                      <input type="text" 
+                        value={quantity}
+                      />
+                      <Button className={styles.plus} onClick={() => setQuantity(quantity + 1)}>
                         <FontAwesomeIcon icon={faPlus} />
                       </Button>
                     </div>

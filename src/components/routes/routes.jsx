@@ -23,7 +23,7 @@ import Login from "~/pages/Login/Login";
 import SignUpLayout from "~/pages/SignUp/SignUpLayout";
 import Step1_Account from "~/pages/SignUp/SignUp_Step1";
 import Step2_Name from "~/pages/SignUp/SignUp_Step2";
-import Step3_Categories from "~/pages/SignUp/SignUp_Step3";
+
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
@@ -54,7 +54,7 @@ export const routes = (
       <Route index element={<Navigate to="step_1" replace />} />
       <Route path="step_1" element={<Step1_Account />} />
       <Route path="step_2" element={<Step2_Name />} />
-      <Route path="step_3" element={<Step3_Categories />} />
+
     </Route>
     <Route path="/dashboard" element={<AdminOverview />}></Route>
   </>
