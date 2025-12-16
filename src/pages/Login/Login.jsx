@@ -40,17 +40,17 @@ const Login = () => {
                     <p className={styles.dividerText}>or sign in with</p>
 
                     <div className={styles.socialIcons}>
-                        <button className={clsx(styles.socialBtn, styles.google)}>
+                        <a href="https://www.google.com" target ="_blank" className={clsx(styles.socialBtn, styles.google)}>
                             <FontAwesomeIcon icon={faGoogle} />
-                        </button>
+                        </a>
                         
-                        <button className={clsx(styles.socialBtn, styles.apple)}>
+                        <a href="https://account.apple.com/sign-in" target="_blank" className={clsx(styles.socialBtn, styles.apple)}>
                             <FontAwesomeIcon icon={faApple} />
-                        </button>
-                        
-                        <button className={clsx(styles.socialBtn, styles.facebook)}>
+                        </a>
+
+                        <a href="https://www.facebook.com/tam.nguyen.18007" target="_blank" className={clsx(styles.socialBtn, styles.facebook)}>
                             <FontAwesomeIcon icon={faFacebookF} />
-                        </button>
+                        </a>
                     </div>
                 </div>
 
