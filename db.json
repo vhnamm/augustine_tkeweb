@@ -194,9 +194,9 @@
             "/assets/Him/AoThun/AoThunSSS/sssDen4.webp"
           ],
           "sizes": [
-            { "size": "S", "stock": 15, "sku": "SSS-BLK-XL" },
-            { "size": "M", "stock": 20, "sku": "SSS-BLK-XL" },
-            { "size": "L", "stock": 25, "sku": "SSS-BLK-XL" },
+            { "size": "S", "stock": 15, "sku": "SSS-BLK-S" },
+            { "size": "M", "stock": 20, "sku": "SSS-BLK-M" },
+            { "size": "L", "stock": 25, "sku": "SSS-BLK-L" },
             { "size": "XL", "stock": 10, "sku": "SSS-BLK-XL" }
           ]
         },

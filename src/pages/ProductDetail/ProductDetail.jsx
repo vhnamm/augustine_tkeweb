@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import styles from './ProductDetail.module.scss'
 import clsx from 'clsx';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faMinus, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faMinus, faPlus, faSpinner, faStar } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../../components/UI/Button/Button';
 import DetailTab from './DetailTab';
@@ -24,7 +24,7 @@ const Product = () => {
   const [variantId, setVariantId] = useState(0)
   const [size, setSize] = useState(0)
   const [quantity, setQuantity] = useState(1)
-  const [tab, setTab] = useState("Composition")
+  const [tabId, setTabId] = useState(1)
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -103,10 +103,12 @@ const Product = () => {
                         <span>Size</span>
                         <span className={styles.size_chart}>Size chart</span>
                     </div>
-                    <ul>
+                    <ul className={styles.size_list}>
                       {
                         product.variants[variantId].sizes.map((sizeItem, index) => {
-                          return <li className={styles.size_item} key={index}>{sizeItem.size}</li>
+                          return <li className={clsx(styles.size_item, {[styles.active] : size == index})} key={index}
+                            onClick={() => setSize(index)}
+                          >{sizeItem.size}</li>
                         })
                       }
                     </ul>
@@ -137,15 +139,15 @@ const Product = () => {
 
                     <ul className={styles.tab_container}>
                     {listInfo.map((tab) => {
-                      return <li key={tab.id} onClick={() => setTab(tab.name)}>{tab.name}</li>
+                      return <li key={tab.id} onClick={() => setTabId(tab.id)}
+                            className={clsx({[styles.active] : tabId == tab.id})}
+                      >{tab.name}
+                      
+                      </li>
                     })}
                   </ul>
-                  <DetailTab title={tab} prod={product}></DetailTab>
+                  <DetailTab title={tabId} prod={product}></DetailTab>
                 </div>
-
-                
-
-               
 
               </div>
             </div>
@@ -171,8 +173,46 @@ const Product = () => {
                 </div>
               </div>
             </div>
+
+          {/* suggest product list */}
+          <div className={styles.suggest_container}>
+            <h5 className={styles.suggest_title}>You May Also Like</h5>
+            <ul className={clsx(styles.suggest_list, "row")}>
+
+              {Array(4).fill().map(() => {
+
+                return(
+                    <li className={clsx("col lg-3")}>
+                
+                      <div className={styles.card_item}>
+                        <Link to={`/`} className={styles.item_link}>
+                          <div className={clsx(styles.item_img)}>
+                            <img src="/assets/ao_thun_tay_xanh_sss.webp" alt="anh"/>
+                          </div>
+                        </Link>
+
+                        <div className={styles.item_bottom_wrap}>
+                          <h3 className={styles["item-name"]}>Áo thun Augustine kẻ sọc</h3>
+                          <h4 className={styles["item-price"]}>300000đ</h4>
+
+                          <div className={styles.item_foot_wrap}>
+                            <span className={styles.sold}>Sold 200</span>
+                            <div>
+                              <span className={styles.rating}>4.0/5</span>
+                              <FontAwesomeIcon icon={faStar} className={styles.star}/>
+                            </div>
+                          </div>
+
+                        </div>
+                        </div>
+                    </li>
+                )
+              })}
+            </ul>
+
+            <Button className={styles.btn_allsuggest} outlined size="medium">View All <FontAwesomeIcon icon={faArrowRight} /></Button>
+          </div>
          </div>
-         
        </div>
   );
 };

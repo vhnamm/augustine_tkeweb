@@ -1,10 +1,10 @@
   .search_wrapper {
     width: var(--search-container-width);
     height: 44px;
-    padding-left: 16px;
-    background-color: #fff;
+    
+    background-color: #3e3e3e;
     border: 1.5px solid transparent;
-    border-radius: 92px;
+    border-radius: 16px;
     overflow: hidden;
     display: flex;
     
@@ -14,41 +14,23 @@
       flex: 1;
       height: 100%;
       color: var(--black);
-      caret-color: var(--primary);
+      
       font-size: 1.5rem;
       line-height: 1.6rem;
       padding: 12px 0;
       background: transparent;
-
+      caret-color: var(--text);
+      color: var(--text);
       &::placeholder {
-        color: var(--ui-text-placeholder);
+        color: var(--secondary-text);
       }
-    }
-    // If you want to check whether the input field is empty or not you can try this:
-    input:not(:placeholder-shown) ~ .search-btn {
-      color: rgba(22, 24, 35, 0.75);
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-      right: 52px;
-      height: 70%;
-      width: 1px;
-      background-color: rgba(22, 24, 35, 0.12);
-    }
-
-    &:focus-within {
-      border: 1.5px solid rgba(22, 24, 35, 0.2);
     }
 
     .search-btn {
       width: var(--search-btn-width);
       height: 100%;
-      font-size: 2rem;
-      color: rgba(22, 24, 35, 0.34);
+      font-size: 1.6rem;
+      color: var(--secondary-text);
       background-color: transparent;
       border: none;
       &:hover {
@@ -60,17 +42,6 @@
       }
     }
 
-    .loading-icon,
-    .clear-btn {
-      color: rgba(22, 24, 35, 0.34);
-      background-color: transparent;
-      border: none;
-      font-size: 1.6rem;
-      position: absolute;
-      right: calc(var(--search-btn-width) + 10px);
-      top: 50%;
-      transform: translateY(-50%);
-    }
   }
   .item_row {
     margin-top: 40px;

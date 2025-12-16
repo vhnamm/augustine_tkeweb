@@ -47,7 +47,7 @@ li {
 }
 
 .wrapper_header {
-  --search-btn-width: 52px;
+  --search-btn-width: 50px;
   --search-container-width: 400px;
   height: var(--header-height);
   box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
@@ -359,14 +359,7 @@ li {
     padding-left: 12px;
     padding-right: 12px;
   }
-  .row.small-gutter {
-    margin-left: -5px;
-    margin-right: -5px;
-  }
-  .row.small-gutter .col {
-    padding-left: 5px;
-    padding-right: 5px;
-  }
+  
 
   .row.large-gutter{
     margin-left: -80px;
@@ -384,6 +377,15 @@ li {
   .row.medium-gutter .col{
     padding-left: 20px;
     padding-right: 20px;
+  }
+
+  .row.small-gutter {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+  .row.small-gutter .col {
+    padding-left: 5px;
+    padding-right: 5px;
   }
   .lg-1,
   .lg-2,

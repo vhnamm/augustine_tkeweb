@@ -43,14 +43,15 @@ const Header = () => {
         <SearchForm />
 
         <div className={clsx(styles.header_actions)}>
-          <CartHeader />
+         
           <Button className={styles.contact} primary size="medium" onClick={() => setOpenCenter(true)}>
             Contact Us
           </Button>
-          
           <div className={styles.favourite}>
             <FontAwesomeIcon icon={faHeart} className={styles.fav_icon}/>
           </div>
+           <CartHeader />
+          
           <div className={styles.ava}>
             <img src="/assets/531d8d6e6b86f200b46cf8cf07cbcbf7.jpg" alt="ava" />
           </div>
