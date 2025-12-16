@@ -1,28 +1,27 @@
-/* Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .pageContainer {
   min-height: 100vh;
-  background-color: #0a0a0a; /* Nền đen chính */
+  background-color: #0a0a0a;
   color: #fff;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   overflow-x: hidden;
   display: flex;
   flex-direction: column;
+  font-size: 1.6rem;
 }
 
-/* ========================================= */
-/* EMPTY STATE */
-/* ========================================= */
 .emptyStateWrapper {
   flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  min-height: 70vh; /* Căn giữa màn hình */
+  min-height: 70vh;
   text-align: center;
-  /* Nếu grid wide có padding thì cái này sẽ nằm gọn trong đó */
 }
 
 .emptyIconBox {
@@ -55,19 +54,15 @@
   line-height: 1.5;
 }
 
-/* ========================================= */
-/* FILLED STATE (Shopping Bag Layout) */
-/* ========================================= */
 .mainContent {
   padding-top: 60px;
   padding-bottom: 60px;
 }
 
-/* Layout 2 cột: Trái (Sản phẩm) - Phải (Tổng) */
 .layoutGrid {
   display: grid;
-  grid-template-columns: 1.6fr 1fr; /* Tỉ lệ cột giống Screenshot 708 */
-  gap: 80px; /* Khoảng cách lớn giữa 2 cột */
+  grid-template-columns: 1.6fr 1fr;
+  gap: 80px;
 }
 
 .columnHeader {
@@ -75,13 +70,20 @@
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 24px;
-  border-bottom: 1px solid transparent; /* Giữ khoảng cách */
+  border-bottom: 1px solid transparent;
 }
 
-.colTitle { font-size: 1rem; font-weight: 500; color: #ccc; }
-.colCount { font-size: 0.9rem; color: #666; }
+.colTitle {
+  font-family: "IM FELL DW Pica";
+  font-weight: 500;
+  color: #ffffff;
+}
 
-/* --- PRODUCT CARD --- */
+.colCount {
+  color: #666;
+  font-size: 1.6rem;
+}
+
 .productCard {
   background-color: #141414;
   border-radius: 8px;
@@ -89,25 +91,71 @@
   display: flex;
   gap: 32px;
   margin-bottom: 24px;
+  position: relative;
+  border: 1px solid #2a2a2a;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+
+  &:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
+    border: 1px solid transparent;
+    background: linear-gradient(#141414, #141414) padding-box,
+      linear-gradient(45deg, #ff8c00, #3f0101) border-box;
+    background-size: 100% 100%, 300% 300%;
+    animation: gradientRotate 3s linear infinite;
+  }
+}
+
+.product {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 1.6rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
+.productCount {
+  color: #ffffff;
+  font-size: 1.6rem;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 100;
+}
+
+@keyframes gradientRotate {
+  0% {
+    background-position: 0% 0%, 0% 50%;
+  }
+  50% {
+    background-position: 0% 0%, 100% 50%;
+  }
+  100% {
+    background-position: 0% 0%, 0% 50%;
+  }
 }
 
 .imageBox {
-  width: 220px; /* Ảnh lớn hình chữ nhật đứng */
-  height: 260px;
+  width: 280px;
+  height: 340px;
   background-color: #2a2a2a;
   border-radius: 4px;
   flex-shrink: 0;
   overflow: hidden;
 }
 
-.img { width: 100%; height: 100%; object-fit: cover; }
+.img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 
 .cardDetails {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 8px 0;
+  padding: 30px 10px;
 }
 
 .cardTop {
@@ -116,18 +164,36 @@
   align-items: flex-start;
 }
 
-.productName { font-size: 1.1rem; font-weight: 400; color: #fff; }
+.productName {
+  font-weight: 400;
+  color: #fff;
+}
+
+.product {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
 
 .removeBtn {
-  background: none; border: none; color: #666; cursor: pointer; padding: 4px;
-  &:hover { color: #fff; }
+  background: none;
+  border: none;
+  color: #666;
+  cursor: pointer;
+  padding: 4px;
+
+  &:hover {
+    color: #fff;
+  }
 }
 
 .variantInfo {
   margin-top: auto;
   margin-bottom: auto;
   color: #fff;
-  font-size: 0.95rem;
+  font-size: 1.6rem;
 }
 
 .variantRow {
@@ -146,7 +212,6 @@
   padding-top: 20px;
 }
 
-/* Qty Selector [ - 1 + ] */
 .qtyWrapper {
   display: flex;
   align-items: center;
@@ -156,83 +221,174 @@
   padding: 6px 12px;
   gap: 16px;
   color: #fff;
+
+  button {
+    background: none;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.6rem;
+    &:hover {
+      color: #ccc;
+    }
+  }
 }
 
-.qtyWrapper button {
-  background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer;
-  &:hover { color: #ccc; }
+.itemPrice {
+  font-weight: 500;
 }
 
-.itemPrice { font-size: 1.1rem; font-weight: 500; }
-
-/* --- PACKAGING --- */
-.packagingSection { margin-top: 40px; }
-
-.packagingCard {
-  background-color: #141414;
-  border-radius: 8px;
-  padding: 24px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.rightColumn {
+  position: relative;
 }
 
-.packInfo { display: flex; align-items: center; gap: 16px; }
-.packPlaceholder { width: 60px; height: 60px; background-color: #333; border-radius: 4px; }
-.packName { font-size: 1rem; color: #fff; }
-.packCheckbox { width: 20px; height: 20px; accent-color: #fff; cursor: pointer; }
+.stickyWrapper {
+  position: sticky;
+  top: 20px;
+}
 
-/* --- SUMMARY (RIGHT COL) --- */
 .summaryCard {
   background-color: #141414;
   border-radius: 8px;
   padding: 32px;
+  font-size: 1.6rem;
 }
 
 .summaryRow {
   display: flex;
   justify-content: space-between;
   margin-bottom: 16px;
-  font-size: 0.95rem;
   color: #ccc;
+  font-size: 1.6rem;
 }
 
 .totalRow {
+  font-size: 1.6rem;
   margin-top: 24px;
   padding-top: 24px;
   border-top: 1px solid #333;
   color: #fff;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   margin-bottom: 32px;
 }
 
+.total {
+  align-items: center;
+  font-family: "IM FELL DW Pica";
+  font-size: 2rem;
+  font-weight: 100;
+  padding: 24px 0;
+}
+
 .checkoutBtn {
-  width: 100%; padding: 16px;
-  background-color: #e0e0e0; color: #000;
-  border: none; border-radius: 4px; font-weight: 600; font-size: 1rem;
-  cursor: pointer; margin-bottom: 12px;
-  &:hover { background-color: #fff; }
+  width: 100%;
+  padding: 16px;
+  background-color: #e0e0e0;
+  color: #000;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-bottom: 12px;
+  font-size: 1.6rem;
+  &:hover {
+    background-color: #ffba7d;
+  }
 }
 
 .continueBtn {
-  width: 100%; padding: 16px;
-  background: transparent; color: #fff;
-  border: 1px solid #333; border-radius: 4px; font-weight: 500; font-size: 1rem;
-  cursor: pointer; margin-bottom: 32px;
-  &:hover { border-color: #666; }
+  width: 100%;
+  padding: 16px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 4px;
+  font-size: 1.6rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #666;
+  }
 }
 
-.noteWrapper label { display: block; margin-bottom: 12px; font-size: 0.9rem; color: #ccc; }
-.noteWrapper textarea {
-  width: 100%; height: 80px;
-  background-color: #222; border: none; border-radius: 4px;
-  padding: 12px; color: #fff; resize: none;
-  &:focus { outline: 1px solid #666; }
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
-/* --- RESPONSIVE --- */
-/* Mobile/Tablet: Chuyển về 1 cột dọc */
+.modalContent {
+  background-color: #1a1a1a;
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 440px;
+  width: 90%;
+  border: 1px solid #333;
+}
+
+.modalTitle {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.modalText {
+  font-family: '"IM FELL DW Pica", serif';
+  font-size: 1.5rem;
+  color: #ccc;
+  line-height: 1.6;
+  margin-bottom: 28px;
+}
+
+.modalActions {
+  display: flex;
+  gap: 12px;
+}
+
+.modalCancelBtn {
+  flex: 1;
+  padding: 14px;
+  background: transparent;
+  color: #fff;
+  border: 1px solid #333;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 500;
+  cursor: pointer;
+
+  &:hover {
+    border-color: #666;
+    background-color: #222;
+  }
+}
+
+.modalConfirmBtn {
+  flex: 1;
+  padding: 14px;
+  background-color: #dc2626;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.5rem;
+  font-weight: 600;
+  cursor: pointer;
+
+  &:hover {
+    background-color: #b91c1c;
+  }
+}
+
 @media (max-width: 1024px) {
   .layoutGrid {
     grid-template-columns: 1fr;
@@ -245,10 +401,12 @@
     flex-direction: column;
     padding: 16px;
   }
+
   .imageBox {
     width: 100%;
     height: 300px;
   }
+
   .cardDetails {
     gap: 16px;
   }

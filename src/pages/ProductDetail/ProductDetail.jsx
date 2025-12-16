@@ -7,6 +7,8 @@ import { faHeart } from '@fortawesome/free-regular-svg-icons';
 import { faMinus, faPlus, faSpinner } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../../components/UI/Button/Button';
+import DetailTab from './DetailTab';
+
 const listInfo = [
   {name: "Description", id: 1},
   {name: "Composition", id: 2},
@@ -22,7 +24,7 @@ const Product = () => {
   const [variantId, setVariantId] = useState(0)
   const [size, setSize] = useState(0)
   const [quantity, setQuantity] = useState(1)
-
+  const [tab, setTab] = useState("Composition")
   const [loading, setLoading] = useState(true)
 
   useEffect(() => {
@@ -51,6 +53,15 @@ const Product = () => {
 
   function handleChangeVariant(variantId) {
     setVariantId(variantId)
+  }
+
+  function handleInputQuantity(e){
+    let userInput = e.target.value.trim()
+    if(userInput == ""){
+      setQuantity(1)
+      return
+    }
+    setQuantity(Number(userInput))
   }
   return (
        <div className={clsx("grid wide")}>
@@ -104,20 +115,59 @@ const Product = () => {
                   <div className={styles.quantity_form}>
                     <p>Quantity</p>
                     <div className={styles.spinner_wrap}>
-                      <Button disabled = {quantity === 1} className={styles.minus}>
+                      <Button disabled = {quantity === 1} className={styles.minus} onClick={() => setQuantity(quantity - 1)}>
                       <FontAwesomeIcon icon={faMinus} />
 
                       </Button>
 
-                      <span className={styles.quantity}>1</span>
-
-                      <Button className={styles.plus}>
+                      
+                      <input type="number"
+                        className={styles.input_quan}
+                        value={quantity}
+                        
+                        onChange={(e) => handleInputQuantity(e)}
+                      />
+                      <Button className={styles.plus} onClick={() => setQuantity(quantity + 1)}>
                         <FontAwesomeIcon icon={faPlus} />
                       </Button>
                     </div>
                   </div>
 
                   <Button primary className={clsx(styles.btn_cta)}>Add to Bag</Button>
+
+                    <ul className={styles.tab_container}>
+                    {listInfo.map((tab) => {
+                      return <li key={tab.id} onClick={() => setTab(tab.name)}>{tab.name}</li>
+                    })}
+                  </ul>
+                  <DetailTab title={tab} prod={product}></DetailTab>
+                </div>
+
+                
+
+               
+
+              </div>
+            </div>
+            {/* row ảnh phụ */}
+            <div className={clsx("row medium-gutter", styles.sub_img_wrapper)}>
+              <div className={clsx("col lg-6")}>
+                <div className={styles.img_des}>
+                  <p >{product.description}</p>
+                </div>
+                
+              </div>
+
+              {product.variants[variantId].images.map((img) => {
+                return <div className={clsx("col lg-6", styles.container_col)}>
+                  <div className={styles.prod_main_img}>
+                    <img src={`${img}`} alt="anh" />
+                  </div>
+                </div>
+              })}
+              <div className={clsx("col lg-6")}>
+                <div className={styles.img_last_des}>
+                  <p >{product.shortDescription}</p>
                 </div>
               </div>
             </div>
