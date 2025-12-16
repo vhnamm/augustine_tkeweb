@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import styles from "./Cart.module.scss";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 
 const Cart = () => {
   const [showDeleteModal, setShowDeleteModal] = useState(false);
@@ -7,65 +9,61 @@ const Cart = () => {
   const [cartItems, setCartItems] = useState([
     {
       id: 1,
-      name: "Augustine Silk Shirt",
+      name: "Sweater Loose Fit",
       size: "XL",
       color: "Black",
       price: 2500.0,
       quantity: 1,
-      image:
-        "https://theselfishmeme.co.uk/wp-content/uploads/2025/09/meme-anh-da-den-om-dau-15.webp?w=400&h=400&fit=crop",
+      image: "assets/Him/Sweater/loose_blk1.png?w=400&h=400&fit=crop",
     },
     {
       id: 2,
-      name: "Premium Denim Jeans",
+      name: "Polyester Shirt",
       size: "32",
-      color: "Blue",
+      color: "White",
       price: 1800.0,
       quantity: 1,
-      image:
-        "/assets/f6ed0820-c180-44c8-b098-8e59b183e54e.jpg?w=400&h=400&fit=crop",
+      image: "assets/Him/SoMi/polyeste/somipoly.png?w=400&h=400&fit=crop",
     },
     {
       id: 3,
-      name: "Cashmere Sweater",
+      name: "Knit Socks",
       size: "L",
-      color: "Grey",
+      color: "Blue",
       price: 3200.0,
       quantity: 2,
-      image: "/assets/áo1.jpg?w=400&h=400&fit=crop",
+      image: "assets/Him/SoMi/KeSoc/kexanh1.png?w=400&h=400&fit=crop",
     },
     {
       id: 4,
-      name: "Leather Jacket",
+      name: "Boxy T-Shirt",
       size: "M",
-      color: "Brown",
+      color: "Black",
       price: 4500.0,
       quantity: 1,
       image:
-        "https://images.unsplash.com/photo-1551028719-00167b16eac5?w=400&h=400&fit=crop",
+        "assets/Him/AoThun/ThunInBoxy/thunBoxy-black.png?w=400&h=400&fit=crop",
     },
     {
       id: 5,
-      name: "Cotton T-Shirt",
+      name: "Puffer Jacket",
       size: "L",
-      color: "White",
+      color: "Black",
       price: 890.0,
       quantity: 3,
       image:
-        "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=400&fit=crop",
+        "assets/Him/AoPhao/ChanBongCoTuiFormLose/chanBong-black.png?w=400&h=400&fit=crop",
     },
     {
       id: 6,
-      name: "Wool Blazer",
+      name: "Hoodie Boxy",
       size: "XL",
-      color: "Navy",
+      color: "Grey",
       price: 3800.0,
       quantity: 1,
-      image:
-        "https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=400&h=400&fit=crop",
+      image: "assets/Him/Hoodie/Boxy/hoodieboxy.webp?w=400&h=400&fit=crop",
     },
   ]);
-
   const updateQuantity = (id, change) => {
     setCartItems((prev) =>
       prev.map((item) => {
@@ -152,12 +150,6 @@ const Cart = () => {
             </div>
 
             <div className={styles.productList}>
-              <div className={styles.product}>
-                Products
-                <span className={styles.productCount}>
-                  {cartItems.length} product{cartItems.length > 1 ? "s" : ""}
-                </span>
-              </div>
               {cartItems.map((item) => (
                 <div key={item.id} className={styles.productCard}>
                   <div className={styles.imageBox}>
@@ -226,7 +218,6 @@ const Cart = () => {
               <div className={styles.columnHeader}>
                 <span className={styles.colTitle}>Total</span>
               </div>
-              <div className={styles.total}>Total</div>
               <div className={styles.summaryCard}>
                 <div className={styles.summaryRow}>
                   <span>Subtotal</span>
@@ -240,10 +231,9 @@ const Cart = () => {
                   <span>Total</span>
                   <span>{formatPrice(total)}</span>
                 </div>
-
-                <button className={styles.checkoutBtn}>
+                <Link to="/checkout" className={clsx(styles.checkoutBtn)}>
                   Proceed to Checkout
-                </button>
+                </Link>
                 <button className={styles.continueBtn}>
                   Continue Shopping
                 </button>

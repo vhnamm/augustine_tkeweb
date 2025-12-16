@@ -1,64 +1,14 @@
 import React, { useState } from "react";
 import styles from "./Checkout.module.scss";
 import clsx from "clsx";
-
-const MOCK_CART_ITEMS = [
-  {
-    id: 1,
-    name: "Product name",
-    color: "Black",
-    size: "XL",
-    price: 2500.0,
-    quantity: 1,
-    image: "https://via.placeholder.com/400x400/808080/808080",
-  },
-];
-
-const SHIPPING_METHODS = [
-  { id: "pick-up", name: "Pick up in Store" },
-  { id: "door-to-door", name: "Door to Door Delivery" },
-];
-
-const PAYMENT_METHODS = [
-  { id: "cod", name: "Cash on Delivery", icon: "DollarSign" },
-  { id: "credit-card", name: "Credit/Debit Card", icon: "CreditCard" },
-  { id: "bank-transfer", name: "Bank Transfer", icon: "Bank" },
-];
-
-const PACKAGING_OPTIONS = [
-  { id: "standard", name: "Standard Packaging" },
-  { id: "gift", name: "Gift Packaging" },
-];
-
-const MOCK_ADDRESS = {
-  name: "Your Name",
-  phone: "(+84) 0123456789",
-  street: "123, Nguyen Trai Street, Ha Dong District, Ha Noi",
-};
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBagShopping, faTruck } from "@fortawesome/free-solid-svg-icons";
 
 const formatPrice = (num) =>
-  "$" +
   num.toLocaleString("en-US", {
     minimumFractionDigits: 2,
     maximumFractionDigits: 2,
-  });
-
-// Icons
-const CheckIcon = () => (
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    width="20"
-    height="20"
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-  >
-    <polyline points="20 6 9 17 4 12"></polyline>
-  </svg>
-);
+  }) + " đ";
 
 const ChevronRightIcon = () => (
   <svg
@@ -128,33 +78,13 @@ const BankIcon = () => (
   </svg>
 );
 
-const getPaymentIcon = (iconName) => {
-  switch (iconName) {
-    case "DollarSign":
-      return <DollarSignIcon />;
-    case "CreditCard":
-      return <CreditCardIcon />;
-    case "Bank":
-      return <BankIcon />;
-    default:
-      return null;
-  }
-};
-
 const Checkout = () => {
-  const [selectedShipping, setSelectedShipping] = useState(
-    SHIPPING_METHODS[1].id
-  );
-  const [selectedPayment, setSelectedPayment] = useState(PAYMENT_METHODS[0].id);
-  const [selectedPackaging, setSelectedPackaging] = useState(
-    PACKAGING_OPTIONS[0].id
-  );
+  const [selectedShipping, setSelectedShipping] = useState("door-to-door");
+  const [selectedPayment, setSelectedPayment] = useState("cod");
+  const [selectedPackaging, setSelectedPackaging] = useState("standard");
   const [showPackagingDropdown, setShowPackagingDropdown] = useState(false);
 
-  const subtotal = MOCK_CART_ITEMS.reduce(
-    (acc, item) => acc + item.price * item.quantity,
-    0
-  );
+  const subtotal = 2500.0;
   const taxes = 227.27;
   const total = subtotal + taxes;
 
@@ -206,7 +136,6 @@ const Checkout = () => {
       <Header />
       <div className={styles.mainContent}>
         <div className={styles.checkoutLayoutGrid}>
-          {/* Left Column */}
           <div className={styles.leftColumn}>
             {/* Shipping Method */}
             <div className={styles.section}>
@@ -214,78 +143,97 @@ const Checkout = () => {
                 <span className={styles.sectionTitle}>Shipping Method</span>
               </div>
               <div className={styles.optionsList}>
-                {SHIPPING_METHODS.map((method) => (
-                  <div
-                    key={method.id}
-                    className={
-                      selectedShipping === method.id
-                        ? styles.optionCardSelected
-                        : styles.optionCard
-                    }
-                    onClick={() => setSelectedShipping(method.id)}
-                  >
-                    <span className={styles.optionName}>{method.name}</span>
-                    {selectedShipping === method.id ? (
-                      <CheckIcon />
-                    ) : (
-                      <span className={styles.checkboxPlaceholder}></span>
-                    )}
+                <div
+                  className={
+                    selectedShipping === "pick-up"
+                      ? styles.optionCardSelected
+                      : styles.optionCard
+                  }
+                  onClick={() => setSelectedShipping("pick-up")}
+                >
+                  <div className={styles.optionDetails}>
+                    <span className={styles.optionIcon}>
+                      <FontAwesomeIcon icon={faBagShopping} />
+                    </span>
+                    <span className={styles.optionName}>Pick up in Store</span>
                   </div>
-                ))}
+                  <input
+                    type="checkbox"
+                    checked={selectedShipping === "pick-up"}
+                    readOnly
+                  />
+                </div>
+
+                <div
+                  className={
+                    selectedShipping === "door-to-door"
+                      ? styles.optionCardSelected
+                      : styles.optionCard
+                  }
+                  onClick={() => setSelectedShipping("door-to-door")}
+                >
+                  <div className={styles.optionDetails}>
+                    <span className={styles.optionIcon}>
+                      <FontAwesomeIcon icon={faTruck} />
+                    </span>
+                    <span className={styles.optionName}>
+                      Door to Door Delivery
+                    </span>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={selectedShipping === "door-to-door"}
+                    readOnly
+                  />
+                </div>
               </div>
             </div>
 
-            {/* Shipping Address */}
             <div className={styles.section}>
               <div className={styles.sectionHeader}>
                 <span className={styles.sectionTitle}>Shipping Address</span>
               </div>
               <div className={styles.addressCard}>
                 <div className={styles.addressDetails}>
-                  <div className={styles.addressName}>{MOCK_ADDRESS.name}</div>
-                  <div className={styles.addressPhone}>{MOCK_ADDRESS.phone}</div>
-                  <div className={styles.addressStreet}>{MOCK_ADDRESS.street}</div>
+                  <div className={styles.addressName}>Your Name</div>
+                  <div className={styles.addressPhone}>(+84) 0123456789</div>
+                  <div className={styles.addressStreet}>
+                    123, Nguyen Trai Street, Ha Dong District, Ha Noi
+                  </div>
                 </div>
                 <ChevronRightIcon />
               </div>
             </div>
 
-            {/* Order Summary */}
             <div className={styles.section}>
               <div className={styles.sectionHeader}>
                 <span className={styles.sectionTitle}>Order Summary</span>
-                <span className={styles.colCount}>
-                  {MOCK_CART_ITEMS.length} product
-                </span>
+                <span className={styles.colCount}>1 product</span>
               </div>
-              
-              {/* Product Items */}
-              {MOCK_CART_ITEMS.map((item) => (
-                <div key={item.id} className={styles.orderSummaryCard}>
-                  <div className={styles.orderItemImage}>
-                    <img
-                      src={item.image}
-                      alt={item.name}
-                      className={styles.img}
-                    />
-                  </div>
-                  <div className={styles.orderItemDetails}>
-                    <div className={styles.productInfo}>
-                      <div className={styles.productNameSmall}>
-                        {item.name}
-                      </div>
-                      <div className={styles.productVariant}>{item.color}</div>
-                      <div className={styles.productSize}>{item.size}</div>
+
+              <div className={styles.orderSummaryCard}>
+                <div className={styles.orderItemImage}>
+                  <img
+                    src="/assets/áo1.jpg"
+                    alt="Product"
+                    className={styles.img}
+                  />
+                </div>
+                <div className={styles.orderItemDetails}>
+                  <div className={styles.productInfo}>
+                    <div className={styles.productNameSmall}>Product name</div>
+                    <div className={styles.productVariant}>Black</div>
+                    <div className={styles.productPriceSmall}>
+                      {formatPrice(2500.0)}
                     </div>
                   </div>
-                  <div className={styles.productPriceSmall}>
-                    {formatPrice(item.price)}
-                  </div>
-                  <div className={styles.itemQuantity}>x{item.quantity}</div>
                 </div>
-              ))}
+                <div className={styles.sizeQuantity}>
+                  <div className={styles.productSize}>XL</div>
+                  <div className={styles.itemQuantity}>x1</div>
+                </div>
+              </div>
 
-              {/* Packaging Dropdown */}
               <div className={styles.packagingSection}>
                 <div
                   className={styles.packagingCard}
@@ -294,67 +242,127 @@ const Checkout = () => {
                   }
                 >
                   <div className={styles.packagingLabel}>
-                    {PACKAGING_OPTIONS.find((p) => p.id === selectedPackaging)
-                      ?.name}
+                    <img
+                      className={styles.img}
+                      src={
+                        selectedPackaging === "standard"
+                          ? "/assets/pack2.png"
+                          : "/assets/id-11134207-7r98s-lrwr71lvzgp28f.jpg"
+                      }
+                      alt="Packaging"
+                    />
+                    {selectedPackaging === "standard"
+                      ? "Standard Packaging"
+                      : "Gift Packaging"}
                   </div>
-                  <ChevronRightIcon />
+
+                  <div
+                    className={`${styles.packagingArrow} ${
+                      showPackagingDropdown ? styles.arrowOpen : ""
+                    }`}
+                  >
+                    <ChevronRightIcon />
+                  </div>
                 </div>
 
                 {showPackagingDropdown && (
                   <div className={styles.packagingDropdown}>
-                    {PACKAGING_OPTIONS.map((option) => (
-                      <div
-                        key={option.id}
-                        className={
-                          selectedPackaging === option.id
-                            ? styles.packagingOptionSelected
-                            : styles.packagingOption
-                        }
-                        onClick={() => {
-                          setSelectedPackaging(option.id);
-                          setShowPackagingDropdown(false);
-                        }}
-                      >
-                        <span>{option.name}</span>
-                      </div>
-                    ))}
+                    <div
+                      className={
+                        selectedPackaging === "standard"
+                          ? styles.packagingOptionSelected
+                          : styles.packagingOption
+                      }
+                      onClick={() => {
+                        setSelectedPackaging("standard");
+                        setShowPackagingDropdown(false);
+                      }}
+                    >
+                      <span>Standard Packaging</span>
+                    </div>
+                    <div
+                      className={
+                        selectedPackaging === "gift"
+                          ? styles.packagingOptionSelected
+                          : styles.packagingOption
+                      }
+                      onClick={() => {
+                        setSelectedPackaging("gift");
+                        setShowPackagingDropdown(false);
+                      }}
+                    >
+                      <span>Gift Packaging</span>
+                    </div>
                   </div>
                 )}
               </div>
             </div>
 
-            {/* Payment Method */}
             <div className={styles.section}>
               <div className={styles.sectionHeader}>
                 <span className={styles.sectionTitle}>Payment Method</span>
               </div>
               <div className={styles.optionsList}>
-                {PAYMENT_METHODS.map((method) => (
-                  <div
-                    key={method.id}
-                    className={
-                      selectedPayment === method.id
-                        ? styles.optionCardSelected
-                        : styles.optionCard
-                    }
-                    onClick={() => setSelectedPayment(method.id)}
-                  >
-                    <div className={styles.optionDetails}>
-                      {getPaymentIcon(method.icon)}
-                      <span className={styles.optionName}>{method.name}</span>
-                    </div>
-                    {selectedPayment === method.id ? (
-                      <CheckIcon />
-                    ) : (
-                      <span className={styles.checkboxPlaceholder}></span>
-                    )}
+                <div
+                  className={
+                    selectedPayment === "cod"
+                      ? styles.optionCardSelected
+                      : styles.optionCard
+                  }
+                  onClick={() => setSelectedPayment("cod")}
+                >
+                  <div className={styles.optionDetails}>
+                    <DollarSignIcon />
+                    <span className={styles.optionName}>Cash on Delivery</span>
                   </div>
-                ))}
+                  <input
+                    type="checkbox"
+                    checked={selectedPayment === "cod"}
+                    readOnly
+                  />
+                </div>
+
+                <div
+                  className={
+                    selectedPayment === "credit-card"
+                      ? styles.optionCardSelected
+                      : styles.optionCard
+                  }
+                  onClick={() => setSelectedPayment("credit-card")}
+                >
+                  <div className={styles.optionDetails}>
+                    <CreditCardIcon />
+                    <span className={styles.optionName}>Credit/Debit Card</span>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={selectedPayment === "credit-card"}
+                    readOnly
+                  />
+                </div>
+
+                <div
+                  className={
+                    selectedPayment === "bank-transfer"
+                      ? styles.optionCardSelected
+                      : styles.optionCard
+                  }
+                  onClick={() => setSelectedPayment("bank-transfer")}
+                >
+                  <div className={styles.optionDetails}>
+                    <BankIcon />
+                    <span className={styles.optionName}>Bank Transfer</span>
+                  </div>
+                  <input
+                    type="checkbox"
+                    checked={selectedPayment === "bank-transfer"}
+                    readOnly
+                  />
+                </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column */}
           <div className={styles.rightColumn}>
             <div className={styles.columnHeader}>
               <span className={styles.colTitle}>Total</span>
