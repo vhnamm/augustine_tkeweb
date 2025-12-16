@@ -139,26 +139,21 @@ function handleCloseModal(){
     )}
       
       <form onSubmit={(e) => handleSearch(e)} className={clsx(styles.search_wrapper)}>
-      <input
-        type="text"
-        placeholder="Tìm kiếm sản phẩm..."
-        spellCheck={false}
-        onChange={(e) => handleInput(e)}
+        <Button onClick={handleSearch} className={clsx(styles["search-btn"])}>
+          <FontAwesomeIcon icon={faMagnifyingGlass} />
+        </Button>
+        <input
+          type="text"
+          placeholder="Search for products..."
+          spellCheck={false}
+          onChange={(e) => handleInput(e)}
 
-        onFocus={() => setOpenModal(true)}
-        value={keyword}
-      />
-      <Button className={clsx(styles["clear-btn"])}>
-        <FontAwesomeIcon icon={faCircleXmark} />
-      </Button>
-      <FontAwesomeIcon
-        className={clsx(styles["loading-icon"])}
-        icon={faSpinner}
-      />
+          onFocus={() => setOpenModal(true)}
+          value={keyword}
+        />
+      
 
-      <Button onClick={handleSearch} className={clsx(styles["search-btn"])}>
-        <FontAwesomeIcon icon={faMagnifyingGlass} />
-      </Button>
+      
     </form>
     </>
   );
