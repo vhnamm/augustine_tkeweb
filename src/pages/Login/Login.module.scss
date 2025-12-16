@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
 
-$bg-color: #050505;   
+$bg-color: #050505;
 $card-bg: #151515;
 $text-light: #e0e0e0;
 $text-dim: #797777;
@@ -11,7 +11,7 @@ $border-color: #333333;
 
 $font-serif: 'Playfair Display', serif;
 $font-sans: 'Inter', sans-serif;
-$font-logo:  'IM Fell DW Pica', serif;
+$font-logo: 'IM Fell DW Pica', serif;
 $font-body: 'PT Sans', sans-serif;
 
 @keyframes fadeInUp {
@@ -28,18 +28,21 @@ $font-body: 'PT Sans', sans-serif;
 .animateEnter {
     opacity: 0;
     animation: fadeInUp 0.8s ease-in-out forwards;
-    will-change: opacity, transform; 
+    will-change: opacity, transform;
 }
 
 .loginContainer {
     width: 100vw;
-    height: 100vh;
+    min-height: 100vh; 
     background-color: $bg-color;
     display: flex;
     flex-direction: column;
     align-items: center;
     color: $text-light;
     font-family: $font-body;
+
+    padding: 0 1rem; 
+    padding-bottom: 2rem;
 
     .brandLogo {
         width: 100%;
@@ -48,8 +51,14 @@ $font-body: 'PT Sans', sans-serif;
         font-weight: 400;
         font-size: 2.2rem;
         font-style: italic;
-        margin-bottom: 5rem;
-        margin-top: 8rem;
+        margin-bottom: 3rem;
+        margin-top: 5rem;
+
+        @media (max-width: 768px) {
+            margin-top: 3rem;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
     }
 }
 
@@ -59,34 +68,56 @@ $font-body: 'PT Sans', sans-serif;
     align-items: center;
     justify-content: center;
     gap: 2rem;
+    height: 52rem;
+    min-height: auto; 
     
-    height: auto;
-    min-height: 44.755rem;
-    width: 87.5rem;
-    max-width: 90vw;
+    width: 100%; 
+    max-width: 87.5rem;
+    
     background-color: $card-bg;
     border-radius: 0.625rem;
     position: relative;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+
     padding: 5rem 5.5rem;
+
+    @media (max-width: 1024px) {
+        width: 90vw;
+        padding: 4rem 3rem;
+    }
+
+    @media (max-width: 768px) {
+        height: auto;
+        width: 100%;
+        padding: 3rem 1.5rem;
+        gap: 1.5rem;
+    }
 
     .btnBack {
         font-size: 1rem;
         position: absolute;
         top: 3rem;
         left: 3rem;
+
         background: none;
         border: none;
         color: $text-light;
         cursor: pointer;
         display: flex;
         align-items: center;
+        gap: 0.5rem;
         opacity: 0.7;
         transition: opacity 0.3s ease-in-out, scale 0.3s ease-in-out;
-        
+
+        @media (max-width: 768px) {
+            top: 1.5rem;
+            left: 1.5rem;
+            font-size: 0.9rem;
+        }
+
         &:hover {
             opacity: 1;
-            scale:1.05;
+            scale: 1.05;
         }
     }
 
@@ -97,6 +128,10 @@ $font-body: 'PT Sans', sans-serif;
             font-size: 1.8rem;
             font-style: normal;
             margin-bottom: 0.5rem;
+
+            @media (max-width: 768px) {
+                font-size: 1.5rem;
+            }
         }
         p {
             color: $text-dim;
@@ -120,13 +155,19 @@ $font-body: 'PT Sans', sans-serif;
             width: 100%;
             background: transparent;
             border: none;
-            border-bottom: 1px solid $border-color; 
+            border-bottom: 1px solid $border-color;
+            
             padding: 0.8rem 0;
             color: $text-light;
             font-size: 1.25rem;
             font-family: $font-sans;
+            
             outline: none;
-            transition: border-color 0.3s;
+            transition: border-color 0.3s ease-in-out;
+
+            @media (max-width: 768px) {
+                font-size: 1.1rem;
+            }
 
             &::placeholder {
                 color: $text-dim;
@@ -145,7 +186,7 @@ $font-body: 'PT Sans', sans-serif;
             background: $accent-color;
             transform: scaleX(0);
             transform-origin: center;
-            transition: transform 0.4s ease-in-out;
+            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         &:focus-within::after {
@@ -170,17 +211,17 @@ $font-body: 'PT Sans', sans-serif;
             background-color: darken($text-light, 10%);
             scale: 1.02;
         }
-
+        
         &:active {
-            scale:0.96;
+            scale: 0.96;
             background-color: darken($text-light, 20%);
-            transition: transform 0.05s ease-in-out;
         }
     }
 
     .socialLogin {
         text-align: center;
-        p {
+
+        .dividerText {
             font-size: 0.875rem;
             color: $text-dim;
             margin-bottom: 1.5rem;
@@ -199,24 +240,28 @@ $font-body: 'PT Sans', sans-serif;
                 border: 1px solid $border-color;
                 color: $text-light;
                 font-size: 1.2rem;
+
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                text-decoration: none;
+                
                 cursor: pointer;
-                transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.3s;
+                transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
 
                 &:hover {
                     background-color: rgba(255, 255, 255, 0.1);
                     transform: scale(1.1);
                     border-color: $text-light;
                 }
-                &.google{ color: #DB4437; }
-                &.facebook{ color: #4267B2; }
-                &.apple{ color: #ffffff; }
+
                 &:active {
-                    scale:0.96;
-                    transition: transform 0.05s ease-in-out;
+                    transform: scale(0.92);
                 }
+
+                &.google { color: #DB4437; }
+                &.facebook { color: #4267B2; }
+                &.apple { color: #ffffff; }
             }
         }
     }
@@ -229,14 +274,14 @@ $font-body: 'PT Sans', sans-serif;
 
         a {
             color: $text-light;
-            text-decoration: none;
+            text-decoration: underline;
             margin-left: 0.3rem;
-            border-bottom: 1px solid transparent;
-            transition: border-color 0.3s;
+            transition: color 0.3s;
             
             &:hover {
-                border-bottom-color: $text-light;
+                color: #fff;
             }
         }
     }
+    
 }
