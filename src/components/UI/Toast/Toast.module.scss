@@ -1,0 +1,18 @@
+.wrapper{
+
+    min-width: 100px;
+    min-height: 100px;
+    padding: 16px;
+    position: absolute;
+    z-index: 100;
+    border-radius: 8px;
+    border: 1px solid var(--secondary-text);
+    background-color: var(--text);
+    box-shadow: rgba(169, 169, 169, 0.508) 0px 2px 8px 0px;
+}
+
+.wrapper.right{
+    top: 10vh;
+    right: 20px;
+    
+}

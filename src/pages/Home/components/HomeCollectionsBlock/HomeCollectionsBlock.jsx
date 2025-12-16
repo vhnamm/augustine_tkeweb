@@ -27,7 +27,7 @@ const HomeCollectionsBlock = ({ products, collection }) => {
         <div className={clsx("row", styles["item-row"], "small-gutter")}>
           {products.map((product) => {
             return (
-              <Link to={`/product/${product.slug}`} className={clsx("col", "lg-3", styles["home-item"])} key={product.id}>
+              <Link to={`/product/${product.slug}`} className={clsx("col", "lg-3 md-4 sm-12", styles["home-item"])} key={product.id}>
                 <Card  className={clsx(styles.item_in_col)}>
                   <div className={clsx(styles["collection_item-img"])}>
                     <img

@@ -49,8 +49,11 @@ export const routes = (
      
      <Route path="cart" element={<Cart />} />
     </Route>
+
     <Route path="/login" element={<Login />}/>
+    
     <Route path="/signup" element={<SignUpLayout />}>
+
       <Route index element={<Navigate to="step_1" replace />} />
       <Route path="step_1" element={<Step1_Account />} />
       <Route path="step_2" element={<Step2_Name />} />
