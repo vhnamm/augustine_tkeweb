@@ -139,6 +139,12 @@ const Cart = () => {
 
   return (
     <div className={styles.pageContainer}>
+      <div className={styles.backButton}>
+        <Link to="/" className={styles.backLink}>
+          <span className={styles.backArrow}>&lt;</span>
+          Back to Home
+        </Link>
+      </div>
       <div className={`${styles.mainContent} grid wide`}>
         <div className={styles.layoutGrid}>
           <div className={styles.leftColumn}>
