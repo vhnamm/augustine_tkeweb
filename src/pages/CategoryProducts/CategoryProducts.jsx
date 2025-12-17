@@ -83,8 +83,8 @@ const CategoryProducts = () => {
                                 <div className={styles.item_foot_wrap}>
                                     <span className={styles.sold}>Sold {prod.soldCount}</span>
                                     <div>
-                                    <span className={styles.rating}>{prod.rating}/5</span>
-                                    <FontAwesomeIcon icon={faStar} className={styles.star}/>
+                                        <span className={styles.rating}>{prod.rating}/5</span>
+                                        <FontAwesomeIcon icon={faStar} className={styles.star}/>
                                     </div>
                                 </div>
         

@@ -12,13 +12,13 @@ const Modal = ({ children, className, type= null,  color="", closeBtn=false, onC
      onClick={() => onClose()}
      className={clsx(styles.overlay, {
       [styles.left] : type === "left",
-      
+      [styles.center] : type === "center"
     })}
     >
       
       <div 
        onClick={(e) => e.stopPropagation()}
-      className={classes}
+        className={classes}
       >
         {children}
       </div>

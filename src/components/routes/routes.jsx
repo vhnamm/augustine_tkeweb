@@ -8,7 +8,7 @@ import Home from "~/pages/Home/Home";
 import SearchResult from "~/pages/SearchResult/SearchResult";
 import Cart from "~/pages/Cart/Cart";
 
-import Collection from "~/pages/Collection/Collection";
+
 import Category from "../../pages/Category/Category";
 import ProductDetail from "../../pages/ProductDetail/ProductDetail";
 import SpringCollection from "~/pages/SpringCollection/SpringCollection";
@@ -28,34 +28,35 @@ import Step4_Completed from "~/pages/SignUp/SignUp_Step4";
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
-      <Route index element={<Home />} />
-      <Route path="collection/spring-2025" element={<SpringCollection />} />
-      <Route path="collection/summer-2025" element={<SummerCollection />} />
-      <Route path="collection/winter-2025" element={<WinterCollection />} />
-      <Route path="collection/autumn-2025" element={<AutumnCollection />} />
-      <Route path="collection/:slug">
-        <Route index element={<Collection/>}/>
-      </Route>
+          <Route index element={<Home />} />
+          <Route path="collection/spring-2025" element={<SpringCollection />} />
+          <Route path="collection/summer-2025" element={<SummerCollection />} />
+          <Route path="collection/winter-2025" element={<WinterCollection />} />
+          <Route path="collection/autumn-2025" element={<AutumnCollection />} />
 
-      <Route path="product/:slug" element={<ProductDetail/>}/>
-      <Route path="search" element={<SearchResult/>} />
 
-      <Route path="category/:slug" element={<Category/>}>
-        <Route index element={<CategoryProducts />} />
-        <Route path=":subcategorySlug" element={<SubcategoryProducts />} />
-        <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
+          <Route path="product/:slug" element={<ProductDetail/>}/>
+          <Route path="search" element={<SearchResult/>} />
+
+          <Route path="category/:slug" element={<Category/>}>
+            <Route index element={<CategoryProducts />} />
+            <Route path=":subcategorySlug" element={<SubcategoryProducts />} />
+            <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
+            
+          </Route>
         
-      </Route>
-     
-     <Route path="cart" element={<Cart />} />
+        <Route path="cart" element={<Cart />} />
     </Route>
+
     <Route path="/login" element={<Login />}/>
+    
     <Route path="/signup" element={<SignUpLayout />}>
-      <Route index element={<Navigate to="step_1" replace />} />
-      <Route path="step_1" element={<Step1_Account />} />
-      <Route path="step_2" element={<Step2_Name />} />
-      <Route path="step_3" element={<Step3_Categories />} />
-      <Route path="step_4" element={<Step4_Completed />} />
+
+    <Route index element={<Navigate to="step_1" replace />} />
+        <Route path="step_1" element={<Step1_Account />} />
+        <Route path="step_2" element={<Step2_Name />} />
+        <Route path="step_3" element={<Step3_Categories />} />
+        <Route path="step_4" element={<Step4_Completed />} />
     </Route>
     <Route path="/dashboard" element={<AdminOverview />}></Route>
   </>
