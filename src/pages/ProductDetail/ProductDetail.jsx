@@ -92,7 +92,7 @@ const Product = () => {
        <>
        {openSizeChart && 
           <Modal onClose={() => setOpenSizeChart(false)} type="center">
-              <Button onClick={() => setOpenSizeChart(false)} className={styles.btn_close_chart} primary size="medium">X</Button>
+              <Button onClick={() => setOpenSizeChart(false)} className={styles.btn_close_chart} primary size="small">X</Button>
               <div className={styles.size_chart_img}></div>
           </Modal>
        }
