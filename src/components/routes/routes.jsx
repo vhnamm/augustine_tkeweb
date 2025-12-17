@@ -23,6 +23,7 @@ import Step1_Account from "~/pages/SignUp/SignUp_Step1";
 import Step2_Name from "~/pages/SignUp/SignUp_Step2";
 import Step3_Categories from "~/pages/SignUp/SignUp_Step3";
 import Step4_Completed from "~/pages/SignUp/SignUp_Step4";
+import OrderPlaced from "../../pages/OrderPlaced/OrderPlaced";        
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
@@ -49,6 +50,7 @@ export const routes = (
 
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<Checkout />} />
+      <Route path="order-placed" element={<OrderPlaced />} />
     </Route>
 
     <Route path="/login" element={<Login />} />
