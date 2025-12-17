@@ -34,9 +34,7 @@ export const routes = (
       <Route path="collection/winter-2025" element={<WinterCollection />} />
       <Route path="collection/autumn-2025" element={<AutumnCollection />} />
 
-      <Route path="collection/:slug">
-        <Route index element={<Collection />} />
-      </Route>
+
 
       <Route path="product/:slug" element={<ProductDetail />} />
       <Route path="search" element={<SearchResult />} />
