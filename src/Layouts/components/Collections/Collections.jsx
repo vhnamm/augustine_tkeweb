@@ -31,7 +31,7 @@ const Collections = () => {
           {collections.map((collection) => {
             return (
               <li className={clsx(styles.option_item)} key={collection.id}>
-                <Link className={clsx(styles.link)} to={`collection/${collection.slug}`}>
+                <Link className={clsx(styles.link)} to={`/collection/${collection.slug}`}>
                   {collection.name}
 
                   <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
