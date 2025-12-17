@@ -5,7 +5,7 @@ import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popper from "~/components/UI/Popper/Popper";
 import { Link } from "react-router-dom";
-const Collections = () => {
+const Collections = ({className}) => {
   const [collections, setCollections] = useState([]);
 
   useEffect(() => {
@@ -23,7 +23,7 @@ const Collections = () => {
   }, []);
 
   return (
-    <div className={clsx(styles.collections_wrap)}>
+    <div className={clsx( className,styles.collections_wrap)}>
       <h2>Collections</h2>
 
       <Popper className={clsx(styles.collections_dropdown)}>

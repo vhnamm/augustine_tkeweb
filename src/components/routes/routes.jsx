@@ -6,7 +6,8 @@ import MainLayout from "~/layouts/MainLayout/MainLayout";
 import Home from "~/pages/Home/Home";
 import SearchResult from "~/pages/SearchResult/SearchResult";
 import Cart from "~/pages/Cart/Cart";
-import Collection from "~/pages/Collection/Collection";
+
+
 import Category from "../../pages/Category/Category";
 import ProductDetail from "../../pages/ProductDetail/ProductDetail";
 import SpringCollection from "~/pages/SpringCollection/SpringCollection";
@@ -56,11 +57,12 @@ export const routes = (
     <Route path="/login" element={<Login />} />
 
     <Route path="/signup" element={<SignUpLayout />}>
-      <Route index element={<Navigate to="step_1" replace />} />
-      <Route path="step_1" element={<Step1_Account />} />
-      <Route path="step_2" element={<Step2_Name />} />
-      <Route path="step_3" element={<Step3_Categories />} />
-      <Route path="step_4" element={<Step4_Completed />} />
+
+    <Route index element={<Navigate to="step_1" replace />} />
+        <Route path="step_1" element={<Step1_Account />} />
+        <Route path="step_2" element={<Step2_Name />} />
+        <Route path="step_3" element={<Step3_Categories />} />
+        <Route path="step_4" element={<Step4_Completed />} />
     </Route>
     <Route path="/dashboard" element={<AdminOverview />}></Route>
   </>
