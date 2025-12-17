@@ -116,3 +116,36 @@
   margin-left: 4px;
   font-size: 14px;
 }
+
+//pagin
+.pagination {
+  display: flex;
+  align-items: baseline;
+  gap: 32px;
+  justify-content: center;
+  margin: 50px 0;
+}
+
+
+.btn_prev,
+.btn_next {
+  background-color: transparent;
+  border: none;
+  font-weight: 600;
+  color: #666;
+  font-size: 2.4rem;
+
+  &:hover{
+    cursor:default;
+    
+  }
+}
+
+.pagin_item{
+  color: var(--primary);
+  font-size: 1.6rem;
+  font-weight: bolder;
+  padding: 12px 16px;
+  background-color: #fff;
+  border-radius: 8px;
+}
