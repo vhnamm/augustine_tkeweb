@@ -30,9 +30,12 @@
 .home-item {
   position: relative;
   margin-bottom: 20px;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.4s ease;
+  will-change: transform;
   &:hover {
     cursor: pointer;
-    transform: translateY(-3px);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px rgba(7, 7, 7, 0.15);
   }
 }
 .collection_banner_text {
@@ -43,10 +46,9 @@
   text-align: left;
 }
 .collection_banner-title {
-
   font-size: 2.4rem;
   color: #fff;
-  
+
   font-family: work sans;
   font-weight: 300;
   font-style: italic;
@@ -73,7 +75,7 @@
   font-size: 2rem;
   color: var(--text);
   margin: 50px 0 50px 10px;
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 .discover-btn {
   position: absolute;

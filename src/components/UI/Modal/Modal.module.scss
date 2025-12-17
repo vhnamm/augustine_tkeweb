@@ -20,14 +20,13 @@
   overflow-y: scroll;
 }
 
-.close_btn{
+.close_btn {
   position: absolute;
   bottom: 20px;
   right: 44%;
-  
 }
 
-.overlay.left{
+.overlay.left {
   width: 100vw;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
@@ -35,21 +34,33 @@
   top: 0;
   left: 0;
   z-index: 99;
-  
-  .modal{
+
+  .modal {
     width: 28%;
     min-height: 100vh;
     background-color: #fff;
     position: absolute;
-    
+
     right: 0;
     padding: 20px 2%;
     max-height: 100vh;
     overflow-y: scroll;
   }
 
-  .modal.dark{
+  .modal.dark {
     background-color: var(--primary);
     width: 36%;
+  }
+}
+
+.overlay.center {
+  .modal {
+    padding: 20px 2%;
+    top: 20%;
+    left: 40%;
+    width: 24%;
+    min-height: 50vh;
+    overflow: hidden;
+    border-radius: 8px;
   }
 }

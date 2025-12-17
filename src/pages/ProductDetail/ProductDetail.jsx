@@ -9,6 +9,7 @@ import { faArrowRight, faMinus, faPlus, faSpinner, faStar, faXmark } from '@fort
 import Button from '../../components/UI/Button/Button';
 import DetailTab from './DetailTab';
 import Toast from '../../components/UI/Toast/Toast';
+import Modal from '../../components/UI/Modal/Modal';
 
 const listInfo = [
   {name: "Description", id: 1},
@@ -29,7 +30,9 @@ const Product = () => {
   const [loading, setLoading] = useState(true)
   const [openToast, setOpenToast] = useState(false)
   const [animation, setAnimation] = useState(false)
-  
+  const [openSizeChart, setOpenSizeChart] = useState(false)
+
+
   useEffect(() => {
     let timeId;
     async function fetchProduct(){
@@ -80,17 +83,28 @@ const Product = () => {
 
   function handleOpenToast(){
     setOpenToast(true)
+    setAnimation(true)
   }
+
 
 
   return (
        <>
+       {openSizeChart && 
+          <Modal onClose={() => setOpenSizeChart(false)} type="center">
+              <Button onClick={() => setOpenSizeChart(false)} className={styles.btn_close_chart} primary size="medium">X</Button>
+              <div className={styles.size_chart_img}></div>
+          </Modal>
+       }
        {openToast && 
-        <Toast>
+        <Toast className={clsx( styles.toast,{[styles.animate] : animation})}>
           <div className={styles.confirm_content}>
             <div className={styles.confirm_header}>
               <span>Add to cart success</span>
-              <button className={styles.btn_close_toast}><FontAwesomeIcon icon={faXmark} /></button>
+
+              <button onClick={() => setOpenToast(false)} className={styles.btn_close_toast}>
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
             </div>
 
             <div className={styles.confirm_body}>
@@ -116,7 +130,8 @@ const Product = () => {
 
             <Button to="/cart" className={styles.cta_viewcart}>View cart</Button>
           </div>
-        </Toast>}
+        </Toast>
+        }
 
 
         <div className={clsx("grid wide")}>
@@ -156,7 +171,7 @@ const Product = () => {
                   <div className={styles.size_wrap}>
                     <div className={styles.size_header}>
                         <span>Size</span>
-                        <span className={styles.size_chart}>Size chart</span>
+                        <span onClick={() => setOpenSizeChart(true)} className={styles.size_chart}>Size chart</span>
                     </div>
                     <ul className={styles.size_list}>
                       {
