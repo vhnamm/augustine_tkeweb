@@ -108,13 +108,17 @@
 }
 
 .rightColumn {
-  position: sticky;
-  top: 40px;
+  display: flex;
+  flex-direction: column;
   height: fit-content;
 }
 
 .section {
-  margin-bottom: 48px;
+  margin-top: 80px;
+
+  &:first-child {
+    margin-top: 0;
+  }
 }
 
 .sectionHeader {
@@ -224,7 +228,13 @@
 .addressStreet {
   color: #999;
 }
-
+.addressIconBtn {
+  font-size: 3rem;
+  color: #ffffff;
+  margin-right: 20;
+  display: flex;
+  align-items: center;
+}
 .orderSummaryCard {
   min-height: 250px;
   background-color: #141414;
@@ -333,8 +343,9 @@
 }
 
 .packagingArrow {
-  margin-right: 40px;
-  color: #999;
+  font-size: 3rem;
+  margin-right: 44px;
+  color: #ffffff;
   display: flex;
   align-items: center;
   transition: transform 0.25s ease;
@@ -375,6 +386,8 @@
 }
 
 .columnHeader {
+  border-bottom: 1px solid #2a2a2a;
+  padding-bottom: 16px;
   margin-bottom: 24px;
 }
 
@@ -411,23 +424,51 @@
 }
 
 .checkoutBtn {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
   padding: 16px;
-  background-color: #e0e0e0;
+  width: 100%;
+  background: #ffffff;
   color: #000;
-  border: none;
-  border-radius: 6px;
+  border-radius: 3px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 12px;
-  font-size: 15px;
-  transition: background-color 0.2s;
+  text-decoration: none;
 
   &:hover {
-    background-color: #fff;
+    background-color: #d9d9d9;
+  }
+}
+.backButton {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 120px 80px 0;
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.6rem;
+  padding: 8px 16px;
+  border: 2px solid #333;
+  border-radius: 8px;
+  transition: all 0.2s;
+
+  &:hover {
+    background: #111;
+    border-color: #555;
   }
 }
 
+.backArrow {
+  font-size: 2rem;
+}
 .continueBtn {
   width: 100%;
   padding: 16px;
