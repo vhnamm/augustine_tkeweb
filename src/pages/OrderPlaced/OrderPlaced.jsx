@@ -7,16 +7,15 @@ import styles from "./OrderPlaced.module.scss";
 const OrderPlaced = () => {
   return (
     <div className={styles.pageContainer}>
-      
-
-      <div className={styles.emptyStateWrapper}>
-        <div className={styles.emptyIconBox}>
-          <div className={styles.backButton}>
+      <div className={styles.backButton}>
         <Link to="/" className={styles.backLink}>
           <span className={styles.backArrow}>&lt;</span>
           Back to Home
         </Link>
       </div>
+
+      <div className={styles.emptyStateWrapper}>
+        <div className={styles.emptyIconBox}>
           <div className={styles.bagIcon}>
             <div className={styles.bagTop}></div>
             <div className={styles.bagBody}></div>
