@@ -40,8 +40,10 @@ import AddAddress from "~/pages/Profile/AddAddress";
 import PaymentMethod from "../../pages/Profile/PaymentMethod";
 import AddNewCard from "../../pages/Profile/AddNewCard";
 import CardDetails from "../../pages/Profile/CardDetails";
-
-     
+import AdminLayout from "../../Layouts/AdminLayout/AdminLayout";
+import ProductManagement from "../../pages/ProductMangement/ProductManagement";
+import QuanLyDanhMuc from "../../pages/QuanLyDanhMuc/QuanLydanhMuc";
+import OrderPlaced from "../../pages/OrderPlaced/OrderPlaced";        
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
@@ -81,7 +83,7 @@ export const routes = (
         <Route path="step_3" element={<Step3_Categories />} />
         <Route path="step_4" element={<Step4_Completed />} />
     </Route>
-    <Route path="/dashboard" element={<AdminOverview />}></Route>
+   
 
     <Route path="/profile" element={<HeaderOnly/>}>
       <Route index element={<Navigate to="overview" replace />} />
@@ -107,6 +109,12 @@ export const routes = (
         <Route path = "addNewCard/cardDetails" element ={<CardDetails/>}/>
         <Route path="editCard/cardDetails" element ={<CardDetails/>}/>
       </Route>
+    </Route>
+
+    <Route path="/dashboard" element={<AdminLayout></AdminLayout>}>
+      <Route index element={<AdminOverview></AdminOverview>}></Route>
+      <Route path="quan-ly-san-pham" element={<ProductManagement></ProductManagement>}></Route>
+      <Route path="quan-ly-danh-muc" element={<QuanLyDanhMuc></QuanLyDanhMuc>}></Route>
     </Route>
   </>
 );

@@ -13,6 +13,7 @@ import {
   faBook,
 } from "@fortawesome/free-solid-svg-icons";
 import clsx from "clsx";
+import { Link } from "react-router-dom";
 
 
 const SideBar = () => {
@@ -38,6 +39,7 @@ const SideBar = () => {
       id: "dashboard",
       title: "Dashboard",
       icon: faChartLine,
+      index: true
     },
     {
       id: "management",
@@ -92,7 +94,7 @@ const SideBar = () => {
       <div className={styles.sidebarHeader}>
         <div className={styles.logo}>
           <span className={styles.logoIcon}>...</span>
-          <span className={styles.logoText}>Tao là bố chúng mày</span>
+          <span className={styles.logoText}>Augustine</span>
         </div>
       </div>
 
@@ -110,10 +112,10 @@ const SideBar = () => {
 
           const isActive = activeMenu === item.id;
           const isOpen = openSubmenus[item.id];
-
+          const toURL = item.index? "/dashboard" : `/dashboard/${item.id}`
 
           return (
-            <div key={item.id} className={styles.menuItemWrapper}>
+            <Link to={toURL} key={item.id} className={styles.menuItemWrapper}>
               <div
                 className={clsx(styles.menuItem, {
                   [styles.active]: isActive,
@@ -139,7 +141,7 @@ const SideBar = () => {
                   </span>
                 )}
               </div>
-            </div>
+            </Link>
           );
         })}
       </nav>
