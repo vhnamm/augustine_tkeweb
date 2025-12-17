@@ -13,13 +13,13 @@ const Menu = ({className}) => {
       <Popper className={clsx(styles.menu_dropdown)}>
         <ul className={clsx(styles.menu_options)}>
           <li className={clsx(styles.option_nam)}>
-            <Link className={clsx(styles.link)} to="category/for-him">For him
+            <Link className={clsx(styles.link)} to="/category/for-him">For him
               <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
             </Link>
             
           </li>
           <li className={clsx(styles.option_nu)}>
-            <Link className={clsx(styles.link)} to="category/for-her">For her
+            <Link className={clsx(styles.link)} to="/category/for-her">For her
               <FontAwesomeIcon className={styles.icon} icon={faChevronRight} />
             </Link>
             

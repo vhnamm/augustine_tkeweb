@@ -1,12 +1,19 @@
-import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGoogle, faApple, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 import { faChevronLeft } from '@fortawesome/free-solid-svg-icons';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
 import styles from './Login.module.scss';
+import { useNavigate } from 'react-router-dom';
+
+
+
 
 const Login = () => {
+    const navigate = useNavigate();
+    const handleSubmit = (e) => {
+        navigate('/');
+    };
     return (
         <div className={styles.loginContainer}>
             <div className={clsx(styles.brandLogo, styles.animateEnter)} style={{ animationDelay: '0.1s' }}>
@@ -23,7 +30,7 @@ const Login = () => {
                     <p>We're glad to see you again</p>
                 </div>
                 
-                <form className={styles.loginForm}>
+                <form className={styles.loginForm} onSubmit={handleSubmit}>
                     <div className={clsx(styles.inputGroup, styles.animateEnter)} style={{ animationDelay: '0.4s' }}>
                         <input type="text" placeholder="Email/Phone Number" required />
                     </div>

@@ -1,11 +1,234 @@
-.wrapper {
-  width: 100px;
-  height: 300px;
-  margin-top: 80px;
-  color: #fff;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+
+// --- VARIABLES ---
+$bg-color: #0B0B0B;
+$block-color: #949494;
+$text-main: #FFFFFF;
+$text-sub: #CCCCCC;
+$font-svn: 'Inter', sans-serif;
+
+.container {
+  background-color: $bg-color;
+  color: $text-main;
+  font-family: $font-svn;
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.icon {
-  color: blue;
-  font-size: 50px;
+/* --- HERO --- */
+.hero {
+  width: 100%;
+  height: 56.125rem; // 898px
+  
+  // 1. Màu nền dự phòng (khi ảnh chưa load kịp)
+  background-color: $block-color; 
+
+  // 2. THÊM ẢNH NỀN (Bạn thay link ảnh thật của bạn vào trong dấu ngoặc đơn)
+  background-image: url("/assets/Collections/spring/spring.png");
+  background-attachment: fixed;
+  
+  // 3. Căn chỉnh ảnh nền
+  background-size: cover;        // Ảnh phủ kín toàn bộ khung
+  background-position: center;   // Căn giữa ảnh
+  background-repeat: no-repeat;  // Không lặp lại ảnh
+  
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  padding-bottom: 2.5rem; // 40px
+
+  // Mũi tên chỉ xuống
+  .scrollDown {
+      color: #fff; // Đảm bảo mũi tên màu trắng để nổi trên nền ảnh
+      font-size: 2rem;
+      cursor: pointer;
+      opacity: 0.8;
+      animation: bounce 2s infinite;
+      z-index: 2; // Đảm bảo mũi tên nằm đè lên trên ảnh
+  }
+  
+  // (Tùy chọn) Thêm lớp phủ đen mờ để làm tối ảnh nền một chút nếu ảnh quá sáng
+  &::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.2); // Độ tối 20%
+      z-index: 1;
+  }
+}
+
+.introSection {
+  padding: 7.5rem 1.25rem; // 120px 20px
+  text-align: center;
+  max-width: 56.25rem; // 900px
+  margin: 0 auto;
+  
+  h2 { 
+    font-size: 2rem; // 32px
+    font-weight: 700; 
+    margin-bottom: 2.5rem; // 40px
+    text-transform: uppercase; 
+  }
+  
+  p { 
+    font-size: 1rem; // 16px
+    line-height: 1.6; 
+    text-align: justify; 
+    text-align-last: center; 
+  }
+}
+
+/* --- ZIGZAG SECTION (Structure mới của bạn) --- */
+.zigzagSection {
+  max-width: 112.5rem; // 1800px
+  margin: 0 auto 9.375rem; // 150px
+  padding: 0 3.75rem; // 60px
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 7.5rem; // 120px
+  margin-bottom: 6.25rem; // 100px
+
+  /* Row 1: Chỉ có ảnh, căn phải */
+  &:first-child {
+    justify-content: flex-end;
+  }
+
+  /* Row Reverse: Ảnh Phải - Text Trái */
+  &.reverse {
+    flex-direction: row-reverse;
+    
+    .textItem {
+      text-align: right;
+      align-items: flex-end;
+      p { text-align: right; }
+    }
+  }
+
+  /* Row thường: Ảnh Trái - Text Phải */
+  &:not(.reverse) {
+    .textItem {
+      text-align: left;
+      align-items: flex-start;
+      p { text-align: left; }
+    }
+  }
+}
+
+.imageItem {
+  background-color: $block-color;
+  flex-shrink: 0;
+  // Width/Height sẽ set inline trong JSX để chính xác từng pixel
+}
+
+.textItem {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  
+  h2 { 
+    font-size: 1.375rem; // 22px
+    font-weight: 700; 
+    margin-bottom: 0.75rem; // 12px
+    color: #fff;
+    letter-spacing: 0.03125rem; // 0.5px
+  }
+  
+  p { 
+    font-size: 0.8125rem; // 13px
+    line-height: 1.6; 
+    color: $text-sub; 
+    max-width: 28.125rem; // 450px
+  }
+}
+
+/* --- CENTER SECTION (Ảnh 5) --- */
+.centerSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 12.5rem; // 200px
+  padding: 0 2.5rem; // 40px
+
+  .imageBox { 
+    background-color: $block-color; 
+    margin-bottom: 3.125rem; // 50px
+    max-width: 100%;
+  }
+  
+  .textBox {
+    max-width: 43.75rem; // 700px
+    
+    h2 { 
+      font-size: 1.625rem; // 26px
+      font-weight: 700; 
+      margin-bottom: 1rem; // 16px
+      letter-spacing: 0.03125rem; // 0.5px
+    }
+    
+    p { 
+      font-size: 0.875rem; // 14px
+      color: $text-sub; 
+      line-height: 1.7;
+    }
+  }
+}
+
+/* --- FOOTER BANNER --- */
+.banner {
+  background-color: $block-color;
+  height: 25rem; // 400px
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  
+  h2 { 
+    font-size: 1.5rem; // 24px
+    letter-spacing: 0.125rem; // 2px
+    color: #fff; 
+  }
+  
+  .arrowRight { 
+    font-size: 1.5rem; // 24px
+    color: #fff; 
+    margin-top: 0.625rem; // 10px
+  }
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-0.625rem);}
+    60% {transform: translateY(-0.3125rem);}
+}
+
+/* Responsive Mobile */
+@media (max-width: 64rem) { // 1024px
+  .zigzagSection { padding: 0 2.5rem; }
+
+  .row {
+    flex-direction: column !important;
+    gap: 2.5rem;
+    margin-bottom: 3.75rem;
+    
+    &:first-child { justify-content: center; }
+  }
+
+  .textItem {
+    text-align: center !important;
+    align-items: center !important;
+    p { text-align: center !important; }
+  }
+
+  .imageItem {
+    width: 100% !important;
+    height: auto !important;
+    aspect-ratio: 4/3;
+  }
 }

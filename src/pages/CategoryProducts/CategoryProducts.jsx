@@ -4,10 +4,13 @@ import { Link } from 'react-router-dom';
 
 import styles from "./CategoryProducts.module.scss";
 import clsx from 'clsx';
-import { faAngleDown, faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleDown, faAngleLeft, faAngleRight, faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import Modal from '../../components/UI/Modal/Modal';
 import Filter from '../../components/UI/Filter/Filter'
+import Button from '../../components/UI/Button/Button';
+
+
 const CategoryProducts = () => {
 
     const {category} = useOutletContext()
@@ -93,9 +96,24 @@ const CategoryProducts = () => {
                     </div>
                 )
                 })}
-    
-                
+      
             </div>
+
+            <ul className={styles.pagination}>
+                <li>
+                    <Button size="small" className={styles.btn_prev}>
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                    </Button>
+                </li>
+                <li className={styles.pagin_item}>
+                    1
+                </li>
+                <li>
+                    <Button size="small" className={styles.btn_next} >
+                        <FontAwesomeIcon icon={faAngleRight} />
+                    </Button>
+                </li>
+            </ul>
         </div>
         </>
     )

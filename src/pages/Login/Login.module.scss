@@ -30,7 +30,6 @@ $font-body: 'PT Sans', sans-serif;
     animation: fadeInUp 0.8s ease-in-out forwards;
     will-change: opacity, transform;
 }
-
 .loginContainer {
     width: 100vw;
     min-height: 100vh; 
@@ -150,7 +149,6 @@ $font-body: 'PT Sans', sans-serif;
     .inputGroup {
         position: relative;
         width: 100%;
-
         input {
             width: 100%;
             background: transparent;
