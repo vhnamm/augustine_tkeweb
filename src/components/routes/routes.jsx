@@ -24,6 +24,9 @@ import Step1_Account from "~/pages/SignUp/SignUp_Step1";
 import Step2_Name from "~/pages/SignUp/SignUp_Step2";
 import Step3_Categories from "~/pages/SignUp/SignUp_Step3";
 import Step4_Completed from "~/pages/SignUp/SignUp_Step4";
+import OrderPlaced from "../../pages/OrderPlaced/OrderPlaced";   
+import PayMent from "~/pages/PayMent/PayMent";     
+import QrPayment from "~/pages/QrPayment/QrPayment";
 import HeaderOnly from "~/layouts/HeaderOnly/HeaderOnly";
 import ProfileOverview from "~/pages/Profile/ProfileOverview";
 import Processing from "~/pages/Profile/MyOrders";
@@ -62,6 +65,8 @@ export const routes = (
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="order-placed" element={<OrderPlaced />} />
+      <Route path="payment" element={<PayMent />} />
+      <Route path="qr-payment" element={<QrPayment />} />
     </Route>
     <Route path="collection" element={<HeaderOnly/>}>
       <Route path="spring-2025" element={<SpringCollection />} />
