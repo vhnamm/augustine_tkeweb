@@ -55,9 +55,9 @@ const Header = () => {
           </div>
            <CartHeader />
           
-          <div className={styles.ava}>
-            <img src="/assets/531d8d6e6b86f200b46cf8cf07cbcbf7.jpg" alt="ava" />
-          </div>
+          <Link to="/profile" className={styles.ava}>
+            <img src="/assets/Profile/494459034_24045947711679416_562608663695031876_n.jpg" alt="ava" />
+          </Link>
         </div>
       </div>
     </header>
