@@ -8,7 +8,7 @@
   min-height: 100vh;
   background-color: #0a0a0a;
   color: #fff;
-  overflow-x: hidden;
+  overflow-x: clip;
   display: flex;
   flex-direction: column;
   font-size: 1.6rem;
@@ -66,17 +66,20 @@
 }
 
 .columnHeader {
+  position: sticky;
   display: flex;
   justify-content: space-between;
   align-items: baseline;
   margin-bottom: 24px;
   border-bottom: 1px solid transparent;
+  padding: 80px 0 0 0;
 }
 
 .colTitle {
   font-family: "IM FELL DW Pica";
   font-weight: 500;
   color: #ffffff;
+  font-size: 2rem;
 }
 
 .colCount {
@@ -98,9 +101,7 @@
   &:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 24px rgba(255, 255, 255, 0.1);
-    border: 1px solid transparent;
-    background: linear-gradient(#141414, #141414) padding-box,
-      linear-gradient(45deg, #ff8c00, #3f0101) border-box;
+    border: 1px solid #404040;
     background-size: 100% 100%, 300% 300%;
     animation: gradientRotate 3s linear infinite;
   }
@@ -244,7 +245,8 @@
 
 .stickyWrapper {
   position: sticky;
-  top: 20px;
+  top: 31px;
+  width: 100%;
 }
 
 .summaryCard {
@@ -282,18 +284,21 @@
 }
 
 .checkoutBtn {
-  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
   padding: 16px;
-  background-color: #e0e0e0;
+  width: 100%;
+  background: #ffffff;
   color: #000;
-  border: none;
-  border-radius: 4px;
+  border-radius: 3px;
+  font-size: 15px;
   font-weight: 600;
   cursor: pointer;
-  margin-bottom: 12px;
-  font-size: 1.6rem;
+
   &:hover {
-    background-color: #ffba7d;
+    background-color: #d9d9d9;
   }
 }
 
@@ -376,8 +381,8 @@
 .modalConfirmBtn {
   flex: 1;
   padding: 14px;
-  background-color: #dc2626;
-  color: #fff;
+  background-color: #d9d9d9;
+  color: #000000;
   border: none;
   border-radius: 6px;
   font-size: 1.5rem;
@@ -385,7 +390,7 @@
   cursor: pointer;
 
   &:hover {
-    background-color: #b91c1c;
+    background-color: #959595;
   }
 }
 

@@ -29,18 +29,21 @@ const Header = () => {
           <Chat setOpenCenter={setOpenCenter}></Chat>
         </Modal>
       )}
+
+
       <header className="wrapper_header">
       <div className={clsx(styles.header_wrap, "grid", "wide")}>
+
         <div className={clsx(styles.header_left_wrap)}>
           <div className={clsx(styles.logo)}>
             <Link to="/" className={styles.name_web}>augustine</Link>
           </div>
 
-          <Menu />
-          <Collections />
+          <Menu className={styles.pc_menu}/>
+          <Collections className={styles.pc_collection}/>
         </div>
 
-        <SearchForm />
+        <SearchForm className={styles.search_form}/>
 
         <div className={clsx(styles.header_actions)}>
          

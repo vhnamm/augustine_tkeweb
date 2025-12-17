@@ -14,7 +14,7 @@ import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
 
-const SearchForm = () => {
+const SearchForm = ({className}) => {
   const [keyword, setKeyword] = useState('')
   const navigate = useNavigate()
   const [openModal, setOpenModal] = useState(false);
@@ -138,7 +138,7 @@ function handleCloseModal(){
 
     )}
       
-      <form onSubmit={(e) => handleSearch(e)} className={clsx(styles.search_wrapper)}>
+      <form onSubmit={(e) => handleSearch(e)} className={clsx(className,styles.search_wrapper)}>
         <Button onClick={handleSearch} className={clsx(styles["search-btn"])}>
           <FontAwesomeIcon icon={faMagnifyingGlass} />
         </Button>

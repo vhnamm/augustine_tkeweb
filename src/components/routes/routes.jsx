@@ -3,12 +3,11 @@ import { Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import MainLayout from "~/layouts/MainLayout/MainLayout";
 
-
 import Home from "~/pages/Home/Home";
 import SearchResult from "~/pages/SearchResult/SearchResult";
 import Cart from "~/pages/Cart/Cart";
 
-import Collection from "~/pages/Collection/Collection";
+
 import Category from "../../pages/Category/Category";
 import ProductDetail from "../../pages/ProductDetail/ProductDetail";
 import SpringCollection from "~/pages/SpringCollection/SpringCollection";
@@ -18,7 +17,7 @@ import WinterCollection from "~/pages/WinterCollection/WinterCollection";
 import AutumnCollection from "~/pages/AutumnCollection/AutumnCollection";
 import CategoryProducts from "../../pages/CategoryProducts/CategoryProducts";
 import SubcategoryProducts from "../../pages/SubcategoryProducts/SubcategoryProducts";
-
+import Checkout from "../../pages/Checkout/Checkout";
 import Login from "~/pages/Login/Login";
 import SignUpLayout from "~/pages/SignUp/SignUpLayout";
 import Step1_Account from "~/pages/SignUp/SignUp_Step1";
@@ -40,22 +39,28 @@ import AddNewCard from "../../pages/Profile/AddNewCard";
 import CardDetails from "../../pages/Profile/CardDetails";
 
 
+import OrderPlaced from "../../pages/OrderPlaced/OrderPlaced";        
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
       <Route index element={<Home />} />
 
-      <Route path="product/:slug" element={<ProductDetail/>}/>
-      <Route path="search" element={<SearchResult/>} />
 
-      <Route path="category/:slug" element={<Category/>}>
+
+      <Route path="product/:slug" element={<ProductDetail />} />
+      <Route path="search" element={<SearchResult />} />
+      <Route path="category/:slug" element={<Category />}>
         <Route index element={<CategoryProducts />} />
         <Route path=":subcategorySlug" element={<SubcategoryProducts />} />
-        <Route path=":subcategorySlug/:productType" element={<SubcategoryProducts />} />
-        
+        <Route
+          path=":subcategorySlug/:productType"
+          element={<SubcategoryProducts />}
+        />
       </Route>
-     
-     <Route path="cart" element={<Cart />} />
+
+      <Route path="cart" element={<Cart />} />
+      <Route path="checkout" element={<Checkout />} />
+      <Route path="order-placed" element={<OrderPlaced />} />
     </Route>
     <Route path="collection" element={<HeaderOnly/>}>
       <Route path="spring-2025" element={<SpringCollection />} />
@@ -65,11 +70,12 @@ export const routes = (
     </Route>
     <Route path="/login" element={<Login />}/>
     <Route path="/signup" element={<SignUpLayout />}>
-      <Route index element={<Navigate to="step_1" replace />} />
-      <Route path="step_1" element={<Step1_Account />} />
-      <Route path="step_2" element={<Step2_Name />} />
-      <Route path="step_3" element={<Step3_Categories />} />
-      <Route path="step_4" element={<Step4_Completed />} />
+
+    <Route index element={<Navigate to="step_1" replace />} />
+        <Route path="step_1" element={<Step1_Account />} />
+        <Route path="step_2" element={<Step2_Name />} />
+        <Route path="step_3" element={<Step3_Categories />} />
+        <Route path="step_4" element={<Step4_Completed />} />
     </Route>
     <Route path="/dashboard" element={<AdminOverview />}></Route>
 

@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
 
         <div className={clsx(styles.about_wrap, "row")}>
-          <div className={clsx("col", "lg-3")}>
+          <div className={clsx("col", "lg-3 md-6 sm-12")}>
             <div className={clsx(styles.item_wrap)}>
               <h3>The company</h3>
               <ul>
@@ -36,7 +36,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className={clsx("col", "lg-3")}>
+          <div className={clsx("col", "lg-3 md-6 sm-12")}>
             <div className={clsx(styles.item_wrap)}>
               <h3>Our services</h3>
               <ul>
@@ -50,7 +50,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className={clsx("col", "lg-3")}>
+          <div className={clsx("col", "lg-3 md-6 sm-12")}>
             <div className={clsx(styles.item_wrap)}>
               <h3>Need help?</h3>
               <ul>
@@ -64,7 +64,7 @@ const Footer = () => {
             </div>
           </div>
 
-          <div className={clsx("col", "lg-3")}>
+          <div className={clsx("col", "lg-3 md-6 sm-12")}>
             <div className={clsx(styles.item_wrap)}>
               <h3>Contact us</h3>
               <ul>
@@ -89,7 +89,7 @@ const Footer = () => {
             1234/I/5678 and 9876/I/1423
           </h4>
         </div>
-        <h2>augustine</h2>
+        <h2 className="sm-0">augustine</h2>
       </div>
     </div>
   );

@@ -5,9 +5,9 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Popper from "~components/UI/Popper/Popper";
 import { Link } from "react-router-dom";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
-const Menu = () => {
+const Menu = ({className}) => {
   return (
-    <div className={clsx(styles.menu_wrap)}>
+    <div className={clsx( className,styles.menu_wrap)}>
       <h2>Menu</h2>
 
       <Popper className={clsx(styles.menu_dropdown)}>

@@ -4,10 +4,12 @@ import clsx from 'clsx';
 import { Link, useParams } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
-import { faArrowRight, faMinus, faPlus, faSpinner, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight, faMinus, faPlus, faSpinner, faStar, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../../components/UI/Button/Button';
 import DetailTab from './DetailTab';
+import Toast from '../../components/UI/Toast/Toast';
+import Modal from '../../components/UI/Modal/Modal';
 
 const listInfo = [
   {name: "Description", id: 1},
@@ -26,6 +28,10 @@ const Product = () => {
   const [quantity, setQuantity] = useState(1)
   const [tabId, setTabId] = useState(1)
   const [loading, setLoading] = useState(true)
+  const [openToast, setOpenToast] = useState(false)
+  const [animation, setAnimation] = useState(false)
+  const [openSizeChart, setOpenSizeChart] = useState(false)
+
 
   useEffect(() => {
     let timeId;
@@ -49,6 +55,17 @@ const Product = () => {
   }, [slug])
   console.log(product)
 
+  useEffect(() => {
+    let timeoutId
+    if(openToast){
+      timeoutId = setTimeout(() => {
+        setOpenToast(false)
+      }, 3000)
+    }
+
+    return (() => clearTimeout(timeoutId))
+  }, [openToast])
+
   if(loading) return <div className={styles.loading}><FontAwesomeIcon icon={faSpinner} className={styles.iconLoading}/></div>
 
   function handleChangeVariant(variantId) {
@@ -63,14 +80,67 @@ const Product = () => {
     }
     setQuantity(Number(userInput))
   }
+
+  function handleOpenToast(){
+    setOpenToast(true)
+    setAnimation(true)
+  }
+
+
+
   return (
-       <div className={clsx("grid wide")}>
+       <>
+       {openSizeChart && 
+          <Modal onClose={() => setOpenSizeChart(false)} type="center">
+              <Button onClick={() => setOpenSizeChart(false)} className={styles.btn_close_chart} primary size="small">X</Button>
+              <div className={styles.size_chart_img}></div>
+          </Modal>
+       }
+       {openToast && 
+        <Toast className={clsx( styles.toast,{[styles.animate] : animation})}>
+          <div className={styles.confirm_content}>
+            <div className={styles.confirm_header}>
+              <span>Add to cart success</span>
+
+              <button onClick={() => setOpenToast(false)} className={styles.btn_close_toast}>
+                <FontAwesomeIcon icon={faXmark} />
+              </button>
+            </div>
+
+            <div className={styles.confirm_body}>
+
+              <div className={styles.confirm_img}>
+                <img src={product.variants[variantId].images[0]} alt="anh" />
+              </div>
+
+              <div className={styles.confirm_info}>
+                <h4 className={styles.confirm_product_name}>
+                  {product.name}
+                </h4>
+
+                <span>SKU: {product.variants[variantId].sizes[size].sku}</span>
+
+                <div className={styles.price_quan}>
+                  <h5>{product.price}đ</h5>
+                  <span style={{fontSize: "11px"}}>x{quantity}</span>
+                </div>
+
+              </div>
+            </div>
+
+            <Button to="/cart" className={styles.cta_viewcart}>View cart</Button>
+          </div>
+        </Toast>
+        }
+
+
+        <div className={clsx("grid wide")}>
          <div className={styles.container}>
             <div className={clsx("row large-gutter")}>
               <div className={clsx(styles.image_col, "col lg-6")}>
                 
                 <div className={styles.prod_main_img}>
-                  {product && <img src={`${product.variants[variantId].images[0]}`} alt="anh" />}
+                  {product && <img src={product.variants[variantId].images[0]} alt="anh" />}
                 </div>
               </div>
 
@@ -101,7 +171,7 @@ const Product = () => {
                   <div className={styles.size_wrap}>
                     <div className={styles.size_header}>
                         <span>Size</span>
-                        <span className={styles.size_chart}>Size chart</span>
+                        <span onClick={() => setOpenSizeChart(true)} className={styles.size_chart}>Size chart</span>
                     </div>
                     <ul className={styles.size_list}>
                       {
@@ -135,7 +205,9 @@ const Product = () => {
                     </div>
                   </div>
 
-                  <Button primary className={clsx(styles.btn_cta)}>Add to Bag</Button>
+                  <Button primary className={clsx(styles.btn_cta)}
+                    onClick={() => handleOpenToast()}
+                  >Add to Bag</Button>
 
                     <ul className={styles.tab_container}>
                     {listInfo.map((tab) => {
@@ -214,6 +286,7 @@ const Product = () => {
           </div>
          </div>
        </div>
+       </>
   );
 };
 

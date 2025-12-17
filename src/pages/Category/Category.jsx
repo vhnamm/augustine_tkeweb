@@ -78,7 +78,9 @@ const Category = () => {
                 >
                   <Link to={`/category/${slug}/${subcategory.slug}`} className={clsx(styles["subcate_item-name"],
                     {[styles.active] : activeCategory === subcategory.id}
-                  )}>{subcategory.name}</Link>
+                  )}>
+                    {subcategory.name}
+                  </Link>
                 </li>)
               })
             }

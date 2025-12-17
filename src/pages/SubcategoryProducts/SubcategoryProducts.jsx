@@ -3,9 +3,9 @@ import { useParams, useOutletContext } from 'react-router-dom';
 import { Link } from 'react-router-dom';
 import styles from "./SubcategoryProducts.module.scss";
 import clsx from 'clsx';
-import { faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
+import { faAngleLeft, faAngleRight, faFilter, faStar } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
+import Button from '../../components/UI/Button/Button';
 
 const SubcategoryProducts = () => {
   const { subcategorySlug, productType } = useParams();
@@ -124,6 +124,22 @@ const SubcategoryProducts = () => {
               })}
         </div>
       </div>
+
+      <ul className={styles.pagination}>
+                <li>
+                    <Button size="small" className={styles.btn_prev}>
+                        <FontAwesomeIcon icon={faAngleLeft} />
+                    </Button>
+                </li>
+                <li className={styles.pagin_item}>
+                    1
+                </li>
+                <li>
+                    <Button size="small" className={styles.btn_next} >
+                        <FontAwesomeIcon icon={faAngleRight} />
+                    </Button>
+                </li>
+            </ul>
     </div>
   );
 };
