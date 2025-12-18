@@ -38,6 +38,10 @@ server.use((req, res, next) => {
 server.use(router);
 
 const PORT = 3000;
-server.listen(PORT, () => {
-  console.log(`JSON Server running at http://localhost:${PORT}`);
+// Thêm '0.0.0.0' để server mở cho tất cả các thiết bị trong mạng
+server.listen(PORT, '0.0.0.0', () => {
+  console.log(`JSON Server running at:`);
+  console.log(`- Local:   http://localhost:${PORT}`);
+  // Hiển thị IP thật để bạn dễ biết đường dẫn cho điện thoại
+  console.log(`- Network: http://[IP_MAY_TINH_CUA_BAN]:${PORT}`); 
 });

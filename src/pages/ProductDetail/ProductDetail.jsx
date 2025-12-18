@@ -137,14 +137,14 @@ const Product = () => {
         <div className={clsx("grid wide")}>
          <div className={styles.container}>
             <div className={clsx("row large-gutter")}>
-              <div className={clsx(styles.image_col, "col lg-6")}>
+              <div className={clsx(styles.image_col, "col lg-6 md-12 sm-12")}>
                 
                 <div className={styles.prod_main_img}>
                   {product && <img src={product.variants[variantId].images[0]} alt="anh" />}
                 </div>
               </div>
 
-              <div className={clsx(styles.info_col, "col lg-6")}>
+              <div className={clsx(styles.info_col, "col lg-6 md-12 sm-12")}>
                 <div className={styles.info_wrap}>
                   <div className={styles.info_header}>
                     <h3 className={styles.product_name}>{product.name}</h3>
