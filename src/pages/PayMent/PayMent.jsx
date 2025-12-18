@@ -34,16 +34,18 @@ const Payment = () => {
 
   return (
     <div className={styles.pageContainer}>
+      <div className={styles.backButton}>
+        <Link to="/checkout" className={styles.backLink}>
+          <span className={styles.backArrow}>&lt;</span>
+          Back
+        </Link>
+      </div>
       <div className={styles.mainContent}>
         <header className={styles.paymentHeader}>
-          <button onClick={() => navigate(-1)} className={styles.backBtn}>
-            <FontAwesomeIcon icon={faChevronLeft} /> Quay lại
-          </button>
           <div className={styles.orderIdentity}>
             <span className={styles.label}>ĐANG THANH TOÁN ĐƠN HÀNG</span>
             <h1 className={styles.orderNumber}>#0126749</h1>
           </div>
-          <div className={styles.placeholder}></div>
         </header>
 
         <div className={styles.paymentLayoutGrid}>
