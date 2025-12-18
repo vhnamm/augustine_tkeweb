@@ -43,7 +43,7 @@ import CardDetails from "../../pages/Profile/CardDetails";
 import AdminLayout from "../../Layouts/AdminLayout/AdminLayout";
 import ProductManagement from "../../pages/ProductMangement/ProductManagement";
 import QuanLyDanhMuc from "../../pages/QuanLyDanhMuc/QuanLydanhMuc";
-import OrderPlaced from "../../pages/OrderPlaced/OrderPlaced";        
+       
 export const routes = (
   <>
     <Route path="/" element={<MainLayout />}>
