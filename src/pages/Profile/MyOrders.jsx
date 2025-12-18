@@ -1,6 +1,8 @@
 import styles from './MyOrders.module.scss';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx'; 
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const Processing = () => {
   return (
@@ -29,19 +31,19 @@ const Processing = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <Link to="/profile/overview" className={styles.backBtn}>
-            &lt; Overview
+            <FontAwesomeIcon icon={faAngleLeft} />Overview
           </Link>
         </div>
 
         <h3 className={styles.sectionTitle}>
-          Processing Orders (2 orders)
+          Processing Orders (1 order)
         </h3>
 
         <div className={styles.orderList}>
-             <div className={styles.orderCard}>
+             <Link to ="/checkout" className={styles.orderCard}>
                 <div className={styles.imageCol}>
-                  <div className={`${styles.imgBox} ${styles.stacked}`}>
-                     <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?ixlib=rb-4.0.3&auto=format&fit=crop&w=100&q=80" alt="Product 1" />
+                  <div className={clsx(styles.imgBox,styles.stacked)}>
+                     <img src="/assets/so_mi_nam.webp" alt="Product 1" />
                   </div>
                 </div>
                 <div className={styles.infoCol}>
@@ -55,7 +57,7 @@ const Processing = () => {
                 <div className={styles.actionCol}>
                   <span className={styles.arrow}>&gt;</span>
                 </div>
-             </div>
+             </Link>
         </div>
       </div>
     </div>
