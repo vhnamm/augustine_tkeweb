@@ -62,8 +62,7 @@ const QuanLyDanhMuc = () => {
               </span>
               <h3>Nữ</h3>
             </div>
-            <button className={styles.addSubBtn}>+ Thêm Danh Mục Con<
-              /button>
+            <button className={styles.addSubBtn}>+ Thêm Danh Mục Con</button>
           </div>
 
           <div className={styles.subCategoriesList}>
