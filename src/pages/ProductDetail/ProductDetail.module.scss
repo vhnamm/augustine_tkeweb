@@ -427,3 +427,11 @@ li.active {
     opacity: 1;
   }
 }
+
+
+@media screen and (max-width: 1113px) {
+
+  .tab_container{
+    gap: 20px;
+  }
+}
