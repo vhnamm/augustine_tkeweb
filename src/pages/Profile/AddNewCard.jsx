@@ -1,9 +1,10 @@
 import React from 'react';
 import styles from './AddNewCard.module.scss';
 import { Link } from 'react-router-dom';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AddNewCard = () => {
-  // Dữ liệu danh sách thẻ
   const cardTypes = [
     {
       id: 'visa',
@@ -32,8 +33,8 @@ const AddNewCard = () => {
       <div className={styles.container}>
 
         <div className={styles.header}>
-          <Link to="/profile/payment-method" className={styles.backBtn}>
-            &lt; Add New Card
+          <Link to="/profile/payment/payment-method" className={styles.backBtn}>
+            <FontAwesomeIcon icon={faAngleLeft} />Add New Card
           </Link>
         </div>
 

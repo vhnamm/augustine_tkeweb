@@ -1,5 +1,7 @@
 import styles from './AddressBook.module.scss';
 import { Link } from 'react-router-dom';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AddressBook = () => {
   const defaultAddress = {
@@ -30,7 +32,7 @@ const AddressBook = () => {
 
         <div className={styles.header}>
           <Link to="/profile/overview" className={styles.backBtn}>
-            &lt; Overview
+            <FontAwesomeIcon icon={faAngleLeft} />Overview
           </Link>
         </div>
 

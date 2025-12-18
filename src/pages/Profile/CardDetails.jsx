@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './CardDetails.module.scss';
 import { Link } from 'react-router-dom';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const CardDetails = () => {
   return (
@@ -10,7 +12,7 @@ const CardDetails = () => {
         <div className={styles.header}>
 
           <Link to="/profile/payment/payment-method" className={styles.backBtn}>
-            &lt; Payment Method
+            <FontAwesomeIcon icon={faAngleLeft} />Payment Method
           </Link>
         </div>
 

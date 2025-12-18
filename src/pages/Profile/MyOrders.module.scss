@@ -11,7 +11,7 @@ $base-font: 'Helvetica Neue', sans-serif;
   color: $text-color;
   font-family: $base-font;
   padding-top: 70px; 
-  padding-bottom: 0px;
+  padding-bottom: 40px;
 }
 
 .statusTabs {
@@ -29,7 +29,7 @@ $base-font: 'Helvetica Neue', sans-serif;
   .tabBtn {
     background: none;
     border: none;
-    font-size: 1.2rem; 
+    font-size: 1.6rem; 
     font-family: 'Helvetica Neue', sans-serif; 
     cursor: pointer;
     padding: 5px 0;
@@ -57,16 +57,18 @@ $base-font: 'Helvetica Neue', sans-serif;
 .header {
   margin: 20px;
   .backBtn {
+    display: inline-block;
     background: none;
     border: none;
     color: $text-color;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: $accent-font;
     cursor: pointer;
     padding: 0;
+    transition: scale 0.3s ease-in-out;
     
     &:hover {
-      text-decoration: underline;
+      scale: 1.05;
     }
   }
 }
@@ -74,7 +76,7 @@ $base-font: 'Helvetica Neue', sans-serif;
 .sectionTitle {
   font-family: $accent-font;
   font-weight: 400;
-  font-size: 1rem;
+  font-size: 1.2rem;
   color: #ccc;
   margin-bottom: 20px;
   font-style: italic;
@@ -138,7 +140,7 @@ $base-font: 'Helvetica Neue', sans-serif;
   }
 
   .productName {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 400;
     margin: 0 0 8px 0;
     color: $text-color;
@@ -146,7 +148,7 @@ $base-font: 'Helvetica Neue', sans-serif;
 
   .orderId {
     color: $text-muted;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-style: italic;
     font-family: $accent-font;
     margin: 0 0 25px 0;
@@ -159,7 +161,7 @@ $base-font: 'Helvetica Neue', sans-serif;
     max-width: 300px;
     .label {
       color: $text-muted;
-      font-size: 0.9rem;
+      font-size: 1.2rem;
     }
     
     .price {
