@@ -1,4 +1,3 @@
-// Biến màu
 $bg-color: #0a0a0a;
 $card-bg: #1f1f1f;
 $text-color: #ffffff;
@@ -23,19 +22,19 @@ $accent-font: "Times New Roman", serif;
   padding: 0 20px;
 }
 
-// Header
 .header {
   margin-bottom: 30px;
   .backBtn {
+    display: inline-block;
     text-decoration: none;
     color: $text-color;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: $accent-font;
-    &:hover { text-decoration: underline; }
+    transition: scale 0.3s ease-in-out;
+    &:hover { scale: 1.05 }
   }
 }
 
-// Form Card
 .formCard {
   background-color: $card-bg;
   border-radius: 8px;
@@ -47,7 +46,6 @@ $accent-font: "Times New Roman", serif;
   }
 }
 
-// Input Styles
 .inputGroup {
   display: flex;
   flex-direction: column;
@@ -55,7 +53,7 @@ $accent-font: "Times New Roman", serif;
   width: 100%;
 
   label {
-    font-size: 0.85rem;
+    font-size: 1.2rem;
     color: $text-muted;
     margin-bottom: 8px;
   }
@@ -64,8 +62,8 @@ $accent-font: "Times New Roman", serif;
     background-color: transparent;
     border: none;
     border-bottom: 1px solid $border-color;
-    color: $text-color;
-    font-size: 1rem;
+    color: rgb(106, 104, 104);
+    font-size: 1.2rem;
     padding: 10px 0;
     width: 100%;
     outline: none;
@@ -76,18 +74,16 @@ $accent-font: "Times New Roman", serif;
   }
 }
 
-// Layout: 2 Cột (Date & CVC)
 .twoColRow {
   display: grid;
-  grid-template-columns: 1fr 1fr; // Chia đôi
+  grid-template-columns: 1fr 1fr; 
   gap: 40px;
   
   @media (max-width: 600px) {
-    grid-template-columns: 1fr; // Mobile 1 cột
+    grid-template-columns: 1fr; 
     gap: 0;
   }
 
-  // Custom Select Arrow
   .selectWrapper {
     position: relative;
     &::after {
@@ -107,7 +103,6 @@ $accent-font: "Times New Roman", serif;
   }
 }
 
-// Checkbox
 .checkboxRow {
   display: flex;
   align-items: center;
@@ -116,7 +111,7 @@ $accent-font: "Times New Roman", serif;
     display: flex;
     align-items: center;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     color: $text-color;
     user-select: none;
 
@@ -145,7 +140,6 @@ $accent-font: "Times New Roman", serif;
   }
 }
 
-// Actions
 .actions {
   display: flex;
   justify-content: flex-end;
@@ -156,7 +150,7 @@ $accent-font: "Times New Roman", serif;
     border-radius: 4px;
     font-weight: 600;
     cursor: pointer;
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     transition: opacity 0.2s;
   }
 

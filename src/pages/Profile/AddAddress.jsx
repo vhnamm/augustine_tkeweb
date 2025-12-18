@@ -1,5 +1,7 @@
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
 import styles from './EditAddress.module.scss';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const AddAddress = () => {
   return (
@@ -8,7 +10,7 @@ const AddAddress = () => {
 
         <div className={styles.header}>
           <Link to="/profile/address-book" className={styles.backBtn}>
-            &lt; Address Book
+            <FontAwesomeIcon icon={faAngleLeft} /> Address Book
           </Link>
         </div>
 
