@@ -95,7 +95,7 @@ const Payment = () => {
           <div className={styles.rightColumn}>
             <div className={styles.paymentSidebar}>
               <div className={styles.sidebarLabel}>TỔNG CẦN THANH TOÁN</div>
-              <div className={styles.finalPrice}>2,727.27 đ</div>
+              <div className={styles.finalPrice}>2.727.000 đ</div>
 
               <div className={styles.orderBriefBox}>
                 <div className={styles.briefRow}>

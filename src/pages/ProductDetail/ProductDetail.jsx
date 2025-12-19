@@ -66,7 +66,10 @@ const Product = () => {
     return (() => clearTimeout(timeoutId))
   }, [openToast])
 
-  if(loading) return <div className={styles.loading}><FontAwesomeIcon icon={faSpinner} className={styles.iconLoading}/></div>
+  if(loading) return <div className={styles.loading}>
+    <FontAwesomeIcon icon={faSpinner} className={styles.iconLoading}/>
+    <p style={{color: "#fff", fontSize: "12px", marginTop: "8px"}}>Loading...</p>
+    </div>
 
   function handleChangeVariant(variantId) {
     setVariantId(variantId)
@@ -133,7 +136,7 @@ const Product = () => {
         </Toast>
         }
 
-
+        {/* phan san pham */}
         <div className={clsx("grid wide")}>
          <div className={styles.container}>
             <div className={clsx("row large-gutter")}>
@@ -150,10 +153,16 @@ const Product = () => {
                     <h3 className={styles.product_name}>{product.name}</h3>
                     <FontAwesomeIcon icon={faHeart} className={styles.icon}/>
                   </div>
-                  {/* SKU */}
-                  <p className={styles.product_sku}>{product.variants[variantId].sizes[size].sku}</p>
+                  {/* SKU  + price*/}
 
-                  <h3 className={styles.price}>{product.price + " VND"}</h3>
+                  <div className={styles.sku_price_wrap}>
+                     <h3 className={styles.price}>{product.price + " VND"}</h3>
+                    <p className={styles.product_sku}>{product.variants[variantId].sizes[size].sku}</p>
+
+                  </div>
+                  
+
+                 
 
                   <div className={styles.color_wrap}>
                     <span>Color</span>

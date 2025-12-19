@@ -20,7 +20,7 @@ $base-font: 'Helvetica Neue', sans-serif;
   align-items: center;
   gap: 40px;
   position: sticky;   
-  top: 80px;             
+  top: 90px;             
   
   z-index: 9;
   background-color: rgb(24, 24, 24);
@@ -56,6 +56,7 @@ $base-font: 'Helvetica Neue', sans-serif;
 
 .header {
   margin: 20px;
+  margin-top: 40px;
   .backBtn {
     display: inline-block;
     background: none;

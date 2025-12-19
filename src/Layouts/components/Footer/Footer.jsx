@@ -89,7 +89,7 @@ const Footer = () => {
             1234/I/5678 and 9876/I/1423
           </h4>
         </div>
-        <h2 className="sm-0">augustine</h2>
+        <h2>augustine</h2>
       </div>
     </div>
   );
