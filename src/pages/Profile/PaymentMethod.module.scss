@@ -24,24 +24,26 @@ $btn-bg-light: #e0e0e0;
 .header {
   margin-bottom: 40px;
   .backBtn {
+    display: inline-block;
     text-decoration: none;
     color: $text-color;
-    font-size: 1.2rem;
+    font-size: 1.6rem;
     font-family: $accent-font;
+    transition: scale 0.3s ease-in-out;
     
-    &:hover { text-decoration: underline; }
+    &:hover { scale: 1.05; }
   }
 }
 
 .sectionHeader {
   display: flex;
-  justify-content: space-between;
+  justify-content:space-between;
   align-items: center;
   margin-bottom: 15px;
 
   .title {
     font-family: $accent-font;
-    font-size: 1rem;
+    font-size: 1.6rem;
     font-weight: 400;
     margin: 0;
   }
@@ -50,7 +52,7 @@ $btn-bg-light: #e0e0e0;
     background: none;
     border: none;
     color: $text-muted;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     cursor: pointer;
     &:hover { color: $text-color; }
   }
@@ -104,20 +106,20 @@ $btn-bg-light: #e0e0e0;
       flex-direction: column;
       
       .cardName {
-        font-size: 1rem;
+        font-size: 1.6rem;
         font-weight: 500;
         margin: 0 0 2px 0;
         color: $text-color;
       }
 
       .status {
-        font-size: 0.75rem;
+        font-size: 1.2rem;
         color: $text-muted;
         margin-bottom: 5px;
       }
 
       .cardNumber {
-        font-size: 0.9rem;
+        font-size: 1.2rem;
         color: $text-color;
         margin: 0;
         letter-spacing: 1px;
@@ -128,7 +130,7 @@ $btn-bg-light: #e0e0e0;
   .cardRight {
     .arrow {
       color: $text-color;
-      font-size: 1.2rem;
+      font-size: 1.6rem;
     }
   }
 
@@ -152,7 +154,7 @@ $btn-bg-light: #e0e0e0;
     border: none;
     border-radius: 4px;
     padding: 12px 40px;
-    font-size: 0.9rem;
+    font-size: 1.6rem;
     font-weight: 600;
     cursor: pointer;
     transition: opacity 0.2s;

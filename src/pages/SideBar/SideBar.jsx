@@ -147,14 +147,14 @@ const SideBar = () => {
       </nav>
 
 
-      <div className={styles.sidebarFooter}>
+      <Link to= "/login" className={styles.sidebarFooter}>
         <div className={styles.logoutButton}>
           <span className={styles.menuIcon}>
             <FontAwesomeIcon icon={faRightFromBracket} />
           </span>
           <span className={styles.menuTitle}>Đăng xuất</span>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };

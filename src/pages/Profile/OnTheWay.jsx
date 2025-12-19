@@ -2,6 +2,8 @@ import React from 'react';
 import styles from './MyOrders.module.scss';
 import { Link } from 'react-router-dom';
 import clsx from 'clsx';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const OnTheWay = () => {
   return (
@@ -27,17 +29,17 @@ const OnTheWay = () => {
       <div className={styles.container}>
         <div className={styles.header}>
           <Link to="/profile/overview" className={styles.backBtn}>
-            &lt; Overview
+            <FontAwesomeIcon icon={faAngleLeft} />Overview
           </Link>
         </div>
         <h3 className={styles.sectionTitle}>
-          On The Way Orders (2 orders)
+          On The Way Orders (7 orders)
         </h3>
         <div className={styles.orderList}>
-          <div className={styles.orderCard}>
+          <Link to ="/checkout" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -54,11 +56,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -75,11 +78,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -96,11 +100,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -117,11 +122,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -138,11 +144,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -159,11 +166,12 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
+          </Link>
+
+          <Link to ="/assets/so_mi_nam.webp" className={styles.orderCard}>
             <div className={styles.imageCol}>
               <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
+                 <img src="/assets/so_mi_nam.webp" alt="Product 2" />
               </div>
             </div>
 
@@ -180,28 +188,7 @@ const OnTheWay = () => {
             <div className={styles.actionCol}>
               <span className={styles.arrow}>&gt;</span>
             </div>
-          </div>
-          <div className={styles.orderCard}>
-            <div className={styles.imageCol}>
-              <div className={styles.imgBox}>
-                 <img src="https://via.placeholder.com/100" alt="Product 2" />
-              </div>
-            </div>
-
-            <div className={styles.infoCol}>
-              <h4 className={styles.productName}>Product Name</h4>
-              <p className={styles.orderId}>#0381125</p>
-              
-              <div className={styles.priceRow}>
-                <span className={styles.label}>Total</span>
-                <span className={styles.price}>$802.00</span>
-              </div>
-            </div>
-
-            <div className={styles.actionCol}>
-              <span className={styles.arrow}>&gt;</span>
-            </div>
-          </div>
+          </Link>
 
         </div>
       </div>

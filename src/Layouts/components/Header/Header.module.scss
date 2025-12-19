@@ -53,7 +53,20 @@
   }
 }
 
-@media screen and (max-width: 739px) {
+.hamburger {
+  display: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search_mobile{
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 1113px) {
   .pc_menu {
     display: none;
   }
@@ -91,14 +104,23 @@
     order: 2;
   }
 
-  .search_form {
-    order: 1;
-    max-width: 50px;
-    height: 36px !important;
-    border-radius: 8px !important;
-  }
+  
 
   .header_actions {
     order: 3;
+  }
+
+  .search_form{
+    display: none !important;
+  }
+  .header_mobi_left{
+    display: flex;
+    gap: 12px;
+  }
+  .hamburger,
+  .search_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

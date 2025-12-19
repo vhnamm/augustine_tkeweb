@@ -2,18 +2,17 @@ import React from "react";
 import { Route } from "react-router-dom";
 import { Navigate } from "react-router-dom";
 import MainLayout from "~/layouts/MainLayout/MainLayout";
-
 import Home from "~/pages/Home/Home";
 import SearchResult from "~/pages/SearchResult/SearchResult";
 import Cart from "~/pages/Cart/Cart";
 
 import Category from "../../pages/Category/Category";
 import ProductDetail from "../../pages/ProductDetail/ProductDetail";
-import SpringCollection from "~/pages/SpringCollection/SpringCollection";
-import SummerCollection from "~/pages/SummerCollection/SummerCollection";
+import SpringCollection from "~/pages/Collection/SpringCollection";
+import SummerCollection from "~/pages/Collection/SummerCollection";
 import AdminOverview from "../../pages/AdminOverview/AdminOverview";
-import WinterCollection from "~/pages/WinterCollection/WinterCollection";
-import AutumnCollection from "~/pages/AutumnCollection/AutumnCollection";
+import WinterCollection from "~/pages/Collection/WinterCollection";
+import AutumnCollection from "~/pages/Collection/AutumnCollection";
 import CategoryProducts from "../../pages/CategoryProducts/CategoryProducts";
 import SubcategoryProducts from "../../pages/SubcategoryProducts/SubcategoryProducts";
 import Checkout from "../../pages/Checkout/Checkout";
@@ -57,7 +56,6 @@ export const routes = (
           element={<SubcategoryProducts />}
         />
       </Route>
-
       <Route path="cart" element={<Cart />} />
       <Route path="checkout" element={<Checkout />} />
       <Route path="order-placed" element={<OrderPlaced />} />
@@ -81,7 +79,8 @@ export const routes = (
 
     <Route path="/profile" element={<HeaderOnly />}>
       <Route index element={<Navigate to="overview" replace />} />
-      <Route path="overview" element={<ProfileOverview />} />
+      <Route path="overview" element={<ProfileOverview />}/>
+
       <Route path="my-orders">
         <Route index element={<Navigate to="processing" replace />} />
         <Route path="processing" element={<Processing />} />
@@ -90,6 +89,7 @@ export const routes = (
         <Route path="return" element={<Return />} />
         <Route path="cancelled" element={<Cancelled />} />
       </Route>
+
       <Route path="address-book">
         <Route index element={<Navigate to="list" replace />} />
         <Route path="list" element={<AddressBook />} />

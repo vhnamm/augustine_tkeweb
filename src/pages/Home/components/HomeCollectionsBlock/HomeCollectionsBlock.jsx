@@ -60,7 +60,7 @@ const HomeCollectionsBlock = ({ products, collection }) => {
         </div>
       </div>
 
-      <Button to={`collection/${collection.slug}/products`} outlined rounded size="large" className={clsx(styles.more_btn)}>
+      <Button to={`/search/?keyword=a`} outlined rounded size="large" className={clsx(styles.more_btn)}>
         Shop now <FontAwesomeIcon icon={faArrowRight} />
       </Button>
     </div>

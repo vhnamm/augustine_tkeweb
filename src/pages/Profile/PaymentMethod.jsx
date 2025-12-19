@@ -1,6 +1,8 @@
 import React from 'react';
 import styles from './PaymentMethod.module.scss';
 import { Link } from 'react-router-dom';
+import { faAngleLeft } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const PaymentMethod = () => {
   return (
@@ -9,7 +11,7 @@ const PaymentMethod = () => {
 
         <div className={styles.header}>
           <Link to="/profile/overview" className={styles.backBtn}>
-            &lt; Overview
+            <FontAwesomeIcon icon={faAngleLeft} />Overview
           </Link>
         </div>
 

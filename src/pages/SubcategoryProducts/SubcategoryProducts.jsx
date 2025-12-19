@@ -97,7 +97,7 @@ const SubcategoryProducts = () => {
         <div className={clsx("row", styles.list_prod_wrap)}>
           {products.map(prod => {
               return (
-                  <div className={clsx("col", "lg-3")} key={prod.id}>
+                  <div className={clsx("col", "lg-3 md-6 sm-12")} key={prod.id}>
                       <div className={styles.card_item}>
                           <Link to={`/product/${prod.slug}`} className={styles.item_link}>
                           <div className={clsx(styles.item_img)}>

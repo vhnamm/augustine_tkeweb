@@ -131,7 +131,7 @@ const Checkout = () => {
               <div className={styles.orderSummaryCard}>
                 <div className={styles.orderItemImage}>
                   <img
-                    src="/assets/Him/AoThun/BoxyMickey/mickey_phong_black1.png"
+                    src="/assets/Him/AoThun/AoThunSSS/sssDen1.webp"
                     alt="Product"
                     className={styles.img}
                   />
