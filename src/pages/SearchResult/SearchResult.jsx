@@ -80,20 +80,16 @@ const SearchResult = () => {
       }
       <div className={clsx(styles.wrapper)}>
       <div className={clsx("grid wide")}>
-        {searchResults.length > 0 ? <h2 className={styles.text_label}>
-          Kết quả tìm kiếm cho: <span className={styles.keyword}>{keyword}</span> <span className={styles.number_prod}>{totalProds} sản phẩm</span>
-          </h2> : 
         
-          <h2>Không tìm thấy sản phẩm nào cho: {keyword}</h2>
-        }
 
         <div className={styles.option_wrapper}>
-          <div className={styles.order_by}>
-            
-              <span>Price</span>
-              <FontAwesomeIcon icon={faAngleDown} className={styles.angle_down}/>
-          </div>
 
+        {searchResults.length > 0 ? <h2 className={styles.text_label}>
+                  Kết quả tìm kiếm cho: <span className={styles.keyword}>{keyword}</span> <span className={styles.number_prod}>{totalProds} sản phẩm</span>
+                  </h2> : 
+                
+                  <h2>Không tìm thấy sản phẩm nào cho: {keyword}</h2>
+                }
             
           
 
