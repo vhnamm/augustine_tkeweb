@@ -79,7 +79,6 @@ const SpringCollection = () => {
       </div>
       <div className={styles.centerSection}>
           <div className={clsx(styles.imageBox, styles.imageCenter)}></div>
-          
           <div className={styles.textBox}>
               <h2>Modern Muse Trench</h2>
               <p>
