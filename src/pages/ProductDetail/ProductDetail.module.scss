@@ -54,6 +54,12 @@
   }
 }
 
+.sku_price_wrap{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 16px 0 28px;
+}
 .product_sku {
   font-size: 1.2rem;
   color: var(--primary-btn);
@@ -141,7 +147,11 @@
 }
 
 .quantity_form {
-  margin-bottom: 20px;
+  margin-bottom: 28px;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   p {
     font-size: 1.4rem;
     color: var(--text);
@@ -149,7 +159,7 @@
   }
 
   .input_quan {
-    max-width: 30px;
+    width: 50px;;
     background-color: transparent;
     color: var(--text);
 

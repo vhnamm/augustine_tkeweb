@@ -21,12 +21,12 @@ const SearchForm = ({className}) => {
   const [searchResult, setSearchResult] = useState([])
   const [animate, setAnimate] = useState(false);
 
-
+  
  function handleSearch(e){
   e.preventDefault()
   if(keyword.trim() == "") return
   setOpenModal(false)
-  navigate(`search/?keyword=${encodeURIComponent(keyword.trim())}`)
+  navigate(`/search/?keyword=${encodeURIComponent(keyword.trim())}`)
 
  }
 

@@ -109,7 +109,7 @@
 }
 
 .filter_wrap {
-  border: 1px solid #666;
+  background-color: #2f2f2f;
   border-radius: 10px;
   padding: 6px 8px;
   &:hover {
@@ -123,6 +123,7 @@
   .filter_icon {
     font-size: 1.6rem;
     margin-right: 6px;
+
   }
 }
 
