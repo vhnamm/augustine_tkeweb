@@ -57,10 +57,6 @@ const SearchForm = ({className}) => {
         const rawRes = await fetch(`http://localhost:3000/products?${queryString}`)
         const res = await rawRes.json()
 
-        // const filteredData = res.filter((prod) => {
-        //   return serperatedKeywords.every((word) =>
-        //     prod.name.toLowerCase().includes(word.toLowerCase())
-        //   );
         // });
         console.log(res)
         setSearchResult(res);

@@ -222,7 +222,8 @@
             { "size": "S", "stock": 15, "sku": "SSS-BRW-S" },
             { "size": "M", "stock": 20, "sku": "SSS-BRW-M" },
             { "size": "L", "stock": 25, "sku": "SSS-BRW-L" },
-            { "size": "XL", "stock": 10, "sku": "SSS-BRW-XL" }
+            { "size": "XL", "stock": 10, "sku": "SSS-BRW-XL" },
+            { "size": "XL", "stock": 10, "sku": "SSS-BRW-XXL" }
           ]
         },
         {

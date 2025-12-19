@@ -18,7 +18,7 @@ const Category = () => {
 
   
 
-  console.log("re-render")
+  
   useEffect(() => {
     const fetchCategoryData = async () => {
       const cateRawRes = await fetch(`http://localhost:3000/categories?slug=${slug}`)
@@ -43,12 +43,7 @@ const Category = () => {
     setSubcategoryName("");
   }, [slug]);
 
-  useEffect(() => {
-    document.body.classList.add("category-page");
-    return () => {
-      document.body.classList.remove("category-page");
-    };
-  }, []);
+  
 
   if (loading) return <div className={clsx(styles.loading)}>Loading...</div>;
   
