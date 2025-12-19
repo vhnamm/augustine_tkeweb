@@ -57,7 +57,7 @@ const HomeProducts = () => {
             
           };
         });
-        console.log(productsWithCollection)
+        
         limit = 1;
         return (
           <HomeCollectionsBlock

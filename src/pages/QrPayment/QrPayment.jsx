@@ -23,11 +23,7 @@ const QrPayment = () => {
     transferContent: "Ô Mài Gót",
   };
 
-  const handleCopy = (text, field) => {
-    navigator.clipboard.writeText(text);
-    setCopied(field);
-    setTimeout(() => setCopied(null), 2000);
-  };
+
 
   return (
     <div className={styles.pageContainer}>
@@ -99,9 +95,7 @@ const QrPayment = () => {
                     </span>
                     <button
                       className={styles.copyBtn}
-                      onClick={() =>
-                        handleCopy(paymentInfo.accountNumber, "acc")
-                      }
+                      
                       title="Sao chép"
                     >
                       {copied === "acc" ? (
