@@ -14,6 +14,9 @@ $font-sans: 'Inter', sans-serif;
 $font-logo:  'IM Fell DW Pica', serif;
 $font-body: 'PT Sans', sans-serif;
 
+html{
+    font-size: 11px;
+}
 @keyframes fadeInUp {
     from { opacity: 0; transform: translateY(30px); }
     to { opacity: 1; transform: translateY(0); }
@@ -23,6 +26,7 @@ $font-body: 'PT Sans', sans-serif;
     opacity: 0;
     animation: fadeInUp 0.8s ease-in-out forwards;
     will-change: opacity, transform; 
+    
 }
 
 .signUpContainer {
@@ -35,8 +39,7 @@ $font-body: 'PT Sans', sans-serif;
     color: $text-light;
     font-family: $font-body;
 
-    padding: 0 1rem;
-    padding-bottom: 2rem; 
+    padding: 0 1rem 2rem 1rem;
 
     .brandLogo {
         width: 100%;
@@ -220,12 +223,6 @@ $font-body: 'PT Sans', sans-serif;
             scale: 0.96;
             background-color: darken($text-light, 20%);
         }
-
-        &:disabled {
-            opacity: 0.5;
-            cursor: not-allowed;
-            &:hover { scale: 1; background-color: $text-light; }
-        }
     }
 
     .acceptTerms, .toLogin {
@@ -272,7 +269,7 @@ $font-body: 'PT Sans', sans-serif;
             z-index: 1;
             
             background-size: cover;
-            background-position: center;
+            background-position:center;
             background-repeat: no-repeat;
 
             display: flex;
@@ -334,7 +331,7 @@ $font-body: 'PT Sans', sans-serif;
             }
         }
         &::-webkit-scrollbar {
-        display: none;
-    }
+            display: none;
+        }
     }
 }

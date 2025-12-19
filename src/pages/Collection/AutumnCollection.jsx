@@ -9,6 +9,14 @@ const AutumnCollection = () => {
   return (
     <div className={styles.container}>
       <div className={styles.hero}>
+        <div className={styles.heroContent}>
+            <span className={styles.subTitle}>FALL WINTER '25</span>
+            <h1 className={styles.mainTitle}>The Golden Hour</h1>
+            <p className={styles.description}>
+              Khoảnh khắc giao mùa tuyệt đẹp được dệt nên từ những gam màu đất nung, <br/>
+              cam cháy và chất liệu da lộn cổ điển.
+            </p>
+        </div>
         <div className={styles.scrollDown}>
             <FontAwesomeIcon icon={faChevronDown} />
         </div>

@@ -26,7 +26,7 @@ const Step2_Name = () => {
                     <input type="text" placeholder="Your Name" required autoFocus />
                 </div>
 
-                <button type="submit" className={clsx(styles.submitBtn, styles.animateEnter)} style={{animationDelay: '0.4s',marginTop: '2rem'}}>
+                <button type="submit" className={clsx(styles.submitBtn, styles.animateEnter)} style={{animationDelay: '0.4s'}}>
                     Continue
                 </button>
             </form>
