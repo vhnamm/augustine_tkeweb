@@ -46,7 +46,7 @@ $font-sans: 'Inter', sans-serif;
 }
 
 .grid {
-    display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 4rem; // Thêm margin bottom để tách với List bên dưới
+    display: grid; grid-template-columns: 2fr 1fr; gap: 2rem; margin-bottom: 4rem;
     @media (max-width: 1024px) { grid-template-columns: 1fr; }
 }
 

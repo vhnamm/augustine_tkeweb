@@ -7,6 +7,7 @@ import styles from './SignUp.module.scss';
 const Step1_Account = () => {
     const navigate = useNavigate();
     const handleSubmit = (e) => {
+        e.preventDefault();
         navigate('/signup/step_2');
     };
 

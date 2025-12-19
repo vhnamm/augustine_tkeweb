@@ -6,7 +6,6 @@ $img-row4: '/assets/Collections/winter/photo-1516762689617-e1cffcef479d.avif';
 $img-center: '/assets/Collections/winter/photo-1520975661595-6453be3f7070.avif';
 $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
 
-
 .container {
   width: 100%;
   overflow-x: hidden;
@@ -18,13 +17,11 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
   width: 100%;
   height: 100vh;
   position: relative;
-  
   display: flex;
   align-items: center;
   justify-content: center;
   padding-left: 0;
 
-  
   &::before {
     content: '';
     position: absolute;
@@ -43,12 +40,12 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
     z-index: 1;
     max-width: 700px;
     text-align: center;
-    color: #761d09;
+    color: #FF9933;
     text-shadow: 0 4px 20px rgba(0,0,0,1);
 
     .subTitle {
       font-size: 1.4rem;
-      letter-spacing:3px;
+      letter-spacing: 3px;
       font-weight: 700;
       display: block;
       margin-bottom: 15px;
@@ -72,6 +69,7 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
       font-weight: bold;
     }
   }
+
   .scrollDown {
     position: absolute;
     bottom: 30px;
@@ -135,6 +133,17 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
         text-align: justify;
       }
     }
+
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        text-align: center;
+        gap: 40px;
+        &.reverse { flex-direction: column; }
+        .textItem {
+            text-align: center;
+            p { text-align: center; }
+        }
+    }
   }
 
   .imageItem {
@@ -145,30 +154,16 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
     box-shadow: 0 15px 40px rgba(0,0,0,0.5);
     transition: transform 0.3s;
     &:hover { transform: scale(1.02); } 
+    @media (max-width: 1024px) {
+        width: 100%;
+        height: 450px;
+    }
   }
 
-  .imageRow1 { 
-    width: 42.8rem; height: 40.6rem; 
-    background-image: url($img-row1);
-  }
-  .imageRow2 { 
-    width: 49.1rem; height: 34.1rem; 
-    background-image: url($img-row2);
-  }
-  .imageRow3 { 
-    width: 49.1rem; height: 48.6rem; 
-    background-image: url($img-row3);
-  }
-  .imageRow4 { 
-    width: 64.7rem; height: 35.9rem; 
-    background-image: url($img-row4);
-  }
-
-  @media (max-width: 1024px) {
-    .row, .row.reverse { flex-direction: column; text-align: center; gap: 40px; }
-    .textItem { text-align: center !important; p { text-align: center !important; } }
-    .imageItem, .imageRow1, .imageRow2, .imageRow3, .imageRow4 { width: 100% !important; height: 450px !important; }
-  }
+  .imageRow1 { width: 42.8rem; height: 40.6rem; background-image: url($img-row1); }
+  .imageRow2 { width: 49.1rem; height: 34.1rem; background-image: url($img-row2); }
+  .imageRow3 { width: 49.1rem; height: 48.6rem; background-image: url($img-row3); }
+  .imageRow4 { width: 64.7rem; height: 35.9rem; background-image: url($img-row4); }
 }
 
 .centerSection {
@@ -179,20 +174,20 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
   margin-bottom: 120px;
   gap: 40px;
 
-  .imageBox { background-color: transparent; }
-  
   .imageCenter {
-    width: 53.5rem; height: 61.8rem;
-    background-image: url($img-center) !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
-    background-color: transparent !important;
+    background: transparent url($img-center) center / cover no-repeat;
+    width: 53.5rem; 
+    height: 61.8rem;
+    
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     transition: transform 0.3s;
+    
     &:hover { transform: scale(1.02); } 
     
-    @media (max-width: 1024px) { width: 90% !important; height: 550px !important; }
+    @media (max-width: 1024px) { 
+        width: 90%; 
+        height: 550px; 
+    }
   }
 
   .textBox {
@@ -201,6 +196,7 @@ $img-banner: '/assets/Collections/winter/image-33349-800.jpg';
     p { color: #b0b0b0; line-height: 1.8; font-size: 1.6rem; }
   }
 }
+
 .banner {
   width: 100%; height: 450px;
   display: flex; justify-content: center; align-items: center; position: relative;

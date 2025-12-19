@@ -157,7 +157,7 @@ const ProductManagement = () => {
                         <tr>
                             <td>
                                 <div className={styles.colProduct}>
-                                    <img src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?q=80&w=100" alt="" />
+                                    <img src="/assets/Collections/spring/photo-1515886657613-9f3515b0c78f.avif" alt="" />
                                     <div className={styles.productInfo}>
                                         <span className={styles.productName}>Linen Summer Dress</span>
                                         <span className={styles.productID}>#8764</span>
@@ -179,7 +179,7 @@ const ProductManagement = () => {
                         <tr>
                             <td>
                                 <div className={styles.colProduct}>
-                                    <img src="https://images.unsplash.com/photo-1566174053879-31528523f8ae?q=80&w=100" alt="" />
+                                    <img src="/assets/Collections/spring/photo-1566174053879-31528523f8ae.avif" alt="" />
                                     <div className={styles.productInfo}>
                                         <span className={styles.productName}>Velvet Evening Gown</span>
                                         <span className={styles.productID}>#8765</span>
