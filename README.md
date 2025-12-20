@@ -38,15 +38,16 @@ Website mô phỏng các chức năng cơ bản của một trang thương mại
 * **Hoài Nam**
 * **Thi**
 * **Mạnh**
+* * **Khánh**
 > Dự án là kết quả của quá trình làm việc nhóm, mỗi thành viên đều có đóng góp vào quá trình xây dựng giao diện, logic và hoàn thiện sản phẩm.
 ---
 
 ## Cách sử dụng mã nguồn
 
 ### Bước 1: Clone project về máy & cài cái thư viện cần thiết
-
+* Mở VSCode
 ```bash
-git clone <link-repository>
+git clone https://github.com/vhnamm/augustine_tkeweb
 cd augustine_tkeweb
 npm install
 ```
