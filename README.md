@@ -38,7 +38,7 @@ Website mô phỏng các chức năng cơ bản của một trang thương mại
 * **Hoài Nam**
 * **Thi**
 * **Mạnh**
-* * **Khánh**
+* **Khánh**
 > Dự án là kết quả của quá trình làm việc nhóm, mỗi thành viên đều có đóng góp vào quá trình xây dựng giao diện, logic và hoàn thiện sản phẩm.
 ---
 
