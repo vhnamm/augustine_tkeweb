@@ -44,7 +44,7 @@ Website mô phỏng các chức năng cơ bản của một trang thương mại
 
 ## Cách sử dụng mã nguồn
 
-### Bước 1: Clone project về máy & cài cái thư viện cần thiết
+### Bước 1: Clone project về máy & cài các thư viện cần thiết
 * Mở VSCode
 ```bash
 git clone https://github.com/vhnamm/augustine_tkeweb
