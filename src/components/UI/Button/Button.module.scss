@@ -16,15 +16,15 @@
 }
 
 .btn.disabled {
-  opacity: 0.5;
+  opacity: 0.3;
   &:hover {
     cursor: default;
   }
 }
 
 .primary {
-  color: #fff;
-  background: var(--primary-color);
+  color: var(--primary);
+  background: var(--primary-btn);
   border: none;
   font-weight: bold;
 }
@@ -34,9 +34,9 @@
 }
 
 .outlined {
-  color: var(--primary-color);
+  color: var(--primary-btn);
   background-color: transparent;
-  border: 1px solid var(--primary-color);
+  border: 1px solid var(--primary-btn);
   font-weight: bold;
 }
 

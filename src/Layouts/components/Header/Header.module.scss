@@ -1,122 +1,126 @@
-.wrapper {
-  --search-btn-width: 52px;
-  --search-container-width: 400px;
-  height: 80px;
-  box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
-  background-color: var(--black);
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 3;
-  width: 100%;
+.header_left_wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-
 .header_wrap {
-  // background-color: #ccc;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 .logo {
-  h2 {
-    font-size: 3rem;
+  .name_web {
+    font-family: "IM FELL DW Pica";
+    font-size: 3.6rem;
+    font-weight: lighter;
+    font-style: italic;
     color: #fff;
-  }
-}
-.search_wrapper {
-  width: var(--search-container-width);
-  height: 44px;
-  padding-left: 16px;
-  background-color: #fff;
-  border: 1.5px solid transparent;
-  border-radius: 92px;
-  overflow: hidden;
-  display: flex;
-
-  position: relative;
-
-  input {
-    flex: 1;
-    height: 100%;
-    color: var(--black);
-    caret-color: var(--primary);
-    font-size: 1.5rem;
-    line-height: 1.6rem;
-    padding: 12px 0;
-    background: transparent;
-
-    &::placeholder {
-      color: var(--ui-text-placeholder);
-    }
-  }
-  // If you want to check whether the input field is empty or not you can try this:
-  input:not(:placeholder-shown) ~ .search-btn {
-    color: rgba(22, 24, 35, 0.75);
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    right: 52px;
-    height: 70%;
-    width: 1px;
-    background-color: rgba(22, 24, 35, 0.12);
-  }
-
-  &:focus-within {
-    border: 1.5px solid rgba(22, 24, 35, 0.2);
-  }
-
-  .search-btn {
-    width: var(--search-btn-width);
-    height: 100%;
-    font-size: 2rem;
-    color: rgba(22, 24, 35, 0.34);
-    background-color: transparent;
-    border: none;
-    &:hover {
-      background-color: rgba(22, 24, 35, 0.03);
-      cursor: pointer;
-    }
-    &:active {
-      background-color: rgba(22, 24, 35, 0.06);
-    }
-  }
-
-  .loading-icon,
-  .clear-btn {
-    color: rgba(22, 24, 35, 0.34);
-    background-color: transparent;
-    border: none;
-    font-size: 1.6rem;
-    position: absolute;
-    right: calc(var(--search-btn-width) + 10px);
-    top: 50%;
-    transform: translateY(-50%);
+    letter-spacing: 6px;
   }
 }
 
 .header_actions {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: 24px;
   .user-icon,
   .cart-icon {
     color: #fff;
     font-size: 2rem;
   }
 }
-.category_wrap {
-  display: flex;
-  align-items: center;
-  gap: 3rem;
 
-  .link {
-    color: #fff;
-    font-size: 1.7rem;
-    line-height: 1.9rem;
+.contact {
+  padding: 12px 16px;
+}
+
+.fav_icon {
+  font-size: 20px;
+  color: #fff;
+}
+.ava {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid var(--text);
+  img {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.hamburger {
+  display: none;
+  font-size: 22px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.search_mobile{
+  display: none;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+@media screen and (max-width: 1113px) {
+  .pc_menu {
+    display: none;
+  }
+
+  .pc_collection {
+    display: none;
+  }
+
+  .header_wrap {
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .name_web {
+      font-size: 24px;
+    }
+  }
+
+  .header_actions {
+    gap: 19px;
+  }
+
+  .header_wrap {
+    min-width: 100%;
+    padding: 0 4px;
+  }
+  .contact {
+    display: none !important;
+  }
+  .favourite {
+    display: none;
+  }
+  .header_left_wrap {
+    order: 2;
+  }
+
+  
+
+  .header_actions {
+    order: 3;
+  }
+
+  .search_form{
+    display: none !important;
+  }
+  .header_mobi_left{
+    display: flex;
+    gap: 12px;
+  }
+  .hamburger,
+  .search_mobile {
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

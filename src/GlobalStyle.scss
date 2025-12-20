@@ -1,18 +1,38 @@
 :root {
   --ui-text-placeholder: rgba(0, 0, 0, 0.34);
   --primary: rgb(24, 24, 24);
+  --primary-btn: #d9d9d9;
   --black: rgb(24, 24, 24);
-  --text: #333;
+  --text: #fff;
+  --secondary-text: #ccc;
   --text-lighter-color: rgba(22, 24, 35, 0.5);
+  --header-height: 90px;
 }
+@import url("https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Lobster&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 html {
   font-size: 62.5%;
+  font-family: "Montserrat";
 }
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: var(--primary);
+  overflow-x: hidden;
+  user-select: none;
+
+  &::-webkit-scrollbar{
+     width: 4px;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: rgba(255, 254, 254, 0.6);
+        border-radius: 8px;
+    }
+}
+
 button,
 input,
 [tabindex] {
@@ -20,11 +40,24 @@ input,
   border: none;
 }
 a[href] {
-  color: #333;
   text-decoration: none;
 }
 li {
   list-style: none;
+}
+
+.wrapper_header {
+  --search-btn-width: 50px;
+  --search-container-width: 400px;
+  height: var(--header-height);
+  box-shadow: 0 1px 1px rgb(0 0 0 / 12%);
+  background-color: var(--black);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
 }
 
 /* grid */
@@ -99,13 +132,13 @@ li {
   max-width: 100%;
 }
 /* tablet gridsystem 740 <= x <= 1023 */
-@media screen and (min-width: 46.25em) and (max-width: 63.9375em) {
+@media screen and (min-width: 740) and (max-width: 1023) {
   .wide {
     width: 64.4em; /*644px*/
   }
 }
 /* pc low-resolution  gridsystem 1024 <= x <= 1239 */
-@media screen and (min-width: 64em) and (max-width: 77.4375em) {
+@media screen and (min-width: 1024) and (max-width: 1239px) {
   .wide {
     width: 98.4em; /*984px*/
   }
@@ -206,14 +239,15 @@ li {
     max-width: 12.5%;
   }
 }
+
 /* pc normal  gridsystem 1240 <= x <= 1439 */
-@media screen and (min-width: 77.5em) and (max-width: 89.9375em) {
+@media screen and (min-width: 1240px) and (max-width: 1439px) {
   .wide {
     width: 120em; /*1200px*/
   }
 }
 /* pc high resolution  gridsystem >= 1440px */
-@media screen and (min-width: 90em) {
+@media screen and (min-width: 1440px) {
   .wide {
     width: 90vw; /*1400px*/
   }
@@ -243,6 +277,7 @@ li {
     padding-left: 5px;
     padding-right: 5px;
   }
+  
   .md-1,
   .md-2,
   .md-3,
@@ -325,6 +360,26 @@ li {
     padding-left: 12px;
     padding-right: 12px;
   }
+  
+
+  .row.large-gutter{
+    margin-left: -80px;
+    margin-right: -80px;
+  }
+  .row.large-gutter .col{
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .row.medium-gutter{
+    margin-left: -20px;
+    margin-right: -20px;
+  }
+  .row.medium-gutter .col{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
   .row.small-gutter {
     margin-left: -5px;
     margin-right: -5px;
@@ -407,9 +462,9 @@ li {
     flex: 0 0 100%;
     max-width: 100%;
   }
-  .lg-12-5 {
-    flex: 0 0 12.5%;
-    max-width: 12.5%;
+  .lg-2-5 {
+    flex: 0 0 20%;
+    max-width: 20%;
   }
 }
 

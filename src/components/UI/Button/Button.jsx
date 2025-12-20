@@ -2,6 +2,7 @@ import clsx from "clsx";
 import { faSpinner } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from "./Button.module.scss";
+import { Link } from "react-router-dom";
 
 function Button({
   children,
@@ -12,10 +13,18 @@ function Button({
   loading = false,
   disabled = false,
   className,
+  to=null,
   size,
   ...props
 }) {
-  const Component = href ? "a" : "button";
+  let Component = "button";
+
+  if (href) {
+    Component = "a";
+  } else if (to) {
+    Component = Link; 
+    props.to = to;    
+  }
   const classes = clsx(styles.btn, className, styles[size], {
     [styles.primary]: primary,
     [styles.rounded]: rounded,
